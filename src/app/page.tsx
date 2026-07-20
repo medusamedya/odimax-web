@@ -19,7 +19,7 @@ export default function Home() {
       <TestimonialsSection />
       <SimpleFeatures />
       <StepsSlider />
-      <FaqSection />
+      
       {/* Diğer section'lar buraya gelecek */}
     </>
   );

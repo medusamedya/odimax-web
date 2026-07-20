@@ -8,6 +8,10 @@ import Link from "next/link"; // Next.js'in hızlı sayfa geçişi için eklendi
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  menuItems: {
+    name: string;
+    path: string;
+  }[]; // Dizi olduğunu belirtiyoruz
 }
 
 // Masaüstü (Header) menüsü ile birebir senkronize edilmiş rota yapısı
@@ -21,7 +25,7 @@ const menuItems = [
   { name: "İletişim", path: "/contact" },
 ];
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose,menuItems }: MobileMenuProps) {
   // Menü açıkken arkadaki sayfanın kaydırılmasını (scroll) engelleriz
   useEffect(() => {
     if (isOpen) {
