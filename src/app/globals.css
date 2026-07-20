@@ -1,19 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ana zemin rengi "Nötr Zemin" olarak ayarlandı */
+  --background: #F2F5F8;
+  /* Genel metin rengi otorite ve uyum için "Koyu Lacivert" yapıldı */
+  --foreground: #0D2E6E;
+
+  /* Odimax Kurumsal Renk Paleti */
+  --brand-dark: #0D2E6E;
+  --brand-dark-hover: #00173f; /* Koyu Lacivert (Hover) */
+  --brand-blue: #1E7FD8;   /* Kurumsal Mavi */
+  --brand-light: #D6E8F7;  /* Açık Mavi */
+  --brand-neutral: #F2F5F8;/* Nötr Zemin */
+  --brand-text :#54595F;
+  --brand-header-text: #222324; /* Başlık Metin Rengi */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Tailwind için özel renk sınıfları */
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-light: var(--brand-light);
+  --color-brand-neutral: var(--brand-neutral);
+  --color-brand-text: var(--brand-text);
+  --color-brand-header-text: var(--brand-header-text);
+  --color-brand-dark-hover: var(--brand-dark-hover);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Dark mode için şimdilik varsayılan renkler korundu, tasarımı etkilememesi için ileride kurumsal renklere göre güncellenebilir */
     --background: #0a0a0a;
     --foreground: #ededed;
   }
@@ -23,4 +47,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes text-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-text-gradient {
+  animation: text-gradient 4s ease infinite;
 }

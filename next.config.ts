@@ -1,7 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**", // Bu domainden gelen tüm görsel yollarına izin ver
+      },
+      {
+        protocol: "https",
+        hostname: "odimax.com.tr",
+        port: "",
+        pathname: "/**", 
+      },
+    ],
+  },
 };
 
 export default nextConfig;
