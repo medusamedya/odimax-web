@@ -18,8 +18,7 @@ const FEATURES = [
       "İşitme cihazlarını marka, model, seri numarası ve GTIN bilgileriyle takip edin. Stok giriş-çıkışları, satış hareketleri ve ÜTS süreçleri aynı akış içinde izlenebilir hale gelsin.",
     benefit:
       "Hangi cihazın nerede olduğunu, hangi hastaya satıldığını ve stok durumunu daha güvenli şekilde yönetirsiniz.",
-    image:
-      "/home/02Stok.webp",
+    image: "/home/02Stok.webp",
   },
   {
     id: "satis-sureci",
@@ -28,8 +27,7 @@ const FEATURES = [
       "İşitme cihazı satışlarını hasta, cihaz, kulak yönü, fiyat, iskonto, KDV ve ödeme bilgileriyle birlikte düzenli şekilde kaydedin. Her satış aynı akış içinde tamamlanabilir hale gelsin.",
     benefit:
       "Satış sonrası geriye dönük kontrol kolaylaşır; hasta, cihaz ve ödeme bilgileri eksik kalmadan merkez hafızasına işlenir.",
-    image:
-      "/home/03Satıs.webp",
+    image: "/home/03Satıs.webp",
   },
   {
     id: "hasta-bilgileri",
@@ -38,8 +36,7 @@ const FEATURES = [
       "Hasta kayıtları, iletişim bilgileri, cihaz geçmişi, randevular, satışlar ve ödeme durumları tek hasta kartında düzenli şekilde tutulur.",
     benefit:
       "Personel değişse bile hasta geçmişi kaybolmaz; merkeziniz hastayı kaldığı yerden takip etmeye devam eder.",
-    image:
-      "/home/04Hasta.webp",
+    image: "/home/04Hasta.webp",
   },
   {
     id: "randevu-takip",
@@ -48,8 +45,7 @@ const FEATURES = [
       "Randevuları, kontrol görüşmelerini ve hasta takip süreçlerini takvim üzerinden düzenli şekilde planlayın. Hatırlatma ve iletişim akışlarını merkezin standart işleyişine dahil edin.",
     benefit:
       "Randevu karışıklıkları azalır, hasta iletişimi daha düzenli ilerler ve takip edilmesi gereken işler gözden kaçmaz.",
-    image:
-      "/home/05Randevu.webp",
+    image: "/home/05Randevu.webp",
   },
 ];
 
@@ -58,20 +54,22 @@ export default function FeatureBlocks() {
     <section className="py-24 bg-brand-neutral overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24 lg:gap-32">
         {FEATURES.map((feature, index) => {
-          // Çift indeksler (0, 2, 4) için normal akış (Yazı solda, Görsel sağda)
-          // Tek indeksler (1, 3) için ters akış (Görsel solda, Yazı sağda)
+          // Çift indeksler için normal akış, tek indeksler için ters akış
           const isReverse = index % 2 !== 0;
 
           return (
             <div
               key={feature.id}
-              className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${
-                isReverse ? "lg:flex-row-reverse" : ""
-              }`}
+              // Flex yerine Grid kullandık: Alignment sorunlarına kesin çözüm.
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
             >
               {/* Metin Alanı */}
-              <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                <h2 className="font-sans mb-6 text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+              <div 
+                className={`flex flex-col justify-center ${
+                  isReverse ? "lg:order-2" : "lg:order-1"
+                }`}
+              >
+                <h2 className="font-sans mb-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide leading-tight inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
                   {feature.title}
                 </h2>
 
@@ -80,7 +78,7 @@ export default function FeatureBlocks() {
                 </p>
 
                 {/* Fayda Kutusu (Callout) */}
-                <div className="bg-brand-light border-l-4 border-brand-blue p-5 rounded-r-xl shadow-sm">
+                <div className="bg-[#eaf3fa] border-l-[3px] border-brand-blue p-5 rounded-r-lg shadow-sm">
                   <div className="flex items-start gap-4">
                     <CheckCircle2
                       className="text-brand-blue w-6 h-6 flex-shrink-0 mt-0.5"
@@ -94,23 +92,30 @@ export default function FeatureBlocks() {
               </div>
 
               {/* Görsel Alanı */}
-              <div className="w-full lg:w-1/2 relative">
-                {/* Arka Plan Dekoratif Parlaması */}
-                <div className="absolute inset-0 bg-brand-light rounded-3xl transform rotate-3  -z-10 opacity-50 "></div>
-
-                {/* 
-    aspect-[16/10] ile tüm görsellerin standart bir boyutta (yatay dikdörtgen) kalmasını sağlıyoruz. 
-    shadow-2xl ile görseldeki gibi derin ve yumuşak bir gölge ekliyoruz.
-  */}
-                <div className="relative aspect-[18/10] w-full rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white">
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    // object-cover ile görselin kutuyu tamamen doldurmasını ve boşluk kalmamasını sağlıyoruz
-                    className="object-cover w-full h-full "
-                  />
+              <div 
+                className={`relative w-full max-w-2xl mx-auto ${
+                  isReverse ? "lg:order-1" : "lg:order-2"
+                }`}
+              >
+                {/* Havada Asılı Kurumsal Çerçeve (Floating Container) */}
+                <div className="relative bg-white p-2 md:p-3 rounded-[20px] md:rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-black/[0.04]">
+                  
+                  {/* İç Görsel Kutusu */}
+                  <div className="relative rounded-[12px] md:rounded-[18px] overflow-hidden border border-black/[0.03] bg-gray-50/50">
+                    {/* 
+                      Fill yerine width/height kullanarak görselin doğal olarak esnemesini sağladık.
+                      Bu sayede "zoom" veya "kırpılma" ihtimali tamamen ortadan kalktı.
+                    */}
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="w-full h-auto object-contain transition-transform duration-700 hover:scale-[1.02]"
+                    />
+                  </div>
+                  
                 </div>
               </div>
             </div>

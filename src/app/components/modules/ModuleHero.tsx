@@ -1,28 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-export default function Hero() {
+interface ModuleHeroProps {
+  badge: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export default function ModuleHero({
+  badge,
+  title,
+  description,
+  image,
+}: ModuleHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-neutral">
+    <section className="relative pt-32  lg:pt-40  overflow-hidden bg-brand-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Başlık ve Alt Metin */}
-        <div className="max-w-6xl mx-auto space-y-6">
+        {/* Başlık, Rozet (Badge) ve Alt Metin */}
+        <div className="max-w-6xl mx-auto space-y-6 flex flex-col items-center">
+          {/* Dinamik Rozet */}
+          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
+            {badge}
+          </span>
+
+          {/* Dinamik Başlık */}
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
-            İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde
-            Düzenleyin
+            {title}
           </h1>
+
+          {/* Dinamik Açıklama */}
           <p className="font-sans text-lg md:text-xl text-brand-text max-w-3xl mx-auto leading-relaxed">
-            Hasta takibi, randevu, stok, tahsilat, ÜTS işlemleri ve Tamir &
-            Servis entegrasyonları ayrı ayrı yönetilmesin. Odimax ile
-            merkezinizin günlük işleyişindeki kritik süreçlerini tek panelde
-            görün, takip edin ve kontrol edin.
+            {description}
           </p>
         </div>
 
-        {/* Aksiyon Butonları (CTA) */}
+        {/* Aksiyon Butonu (CTA) - Anasayfa ile birebir aynı animasyonlu yapı */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-          {/* Primary Button */}
           <Link
             href="/demo"
             className="font-sans flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue via-[#02b6da] to-brand-dark bg-[length:200%_auto] animate-text-gradient text-white font-medium py-3.5 px-8 rounded-full transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg hover:scale-105"
@@ -30,22 +45,14 @@ export default function Hero() {
             15 Günlük Demo Talep Et
             <ArrowRight className="w-5 h-5" />
           </Link>
-          {/* Secondary Button */}
-          <Link
-            href="/video"
-            className="font-sans flex items-center justify-center gap-2 bg-white hover:bg-brand-light text-brand-dark font-medium py-3.5 px-8 rounded-full transition-colors duration-300 w-full sm:w-auto border border-black/5 shadow-sm"
-          >
-            <PlayCircle className="w-5 h-5" />
-            Videoyu İzle
-          </Link>
         </div>
 
-        {/* Panel Görseli (Mockup) */}
+        {/* Dinamik Panel Görseli (Mockup) */}
         <div className="mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
           <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl border border-white/40 bg-white">
             <Image
-              src="/home/hero.webp"
-              alt="Odimax Tek Panel Yönetim Ekranı"
+              src={image}
+              alt={title}
               width={1600}
               height={1200}
               className="w-full object-cover"

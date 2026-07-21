@@ -6,6 +6,7 @@ const MENU_ITEMS = [
   { name: "Hakkımızda", path: "/about" },
   { name: "Modüller", path: "/modules" },
   { name: "Fiyatlandırma", path: "/pricing" },
+  { name: "Blog", path: "/blog" },
   { name: "İletişim", path: "/contact" },
 ];
 
@@ -51,7 +52,8 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-white font-sans border-t border-white/10 pt-20 pb-8">
+    // CTA'nın tersi yönünde akıcı bir gradient geçişi uygulandı
+    <footer className="bg-gradient-to-bl from-brand-blue via-[#1a2642] to-brand-dark text-white font-sans  pt-20 pb-8">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Üst Kısım: Grid Yapısı */}
@@ -60,12 +62,12 @@ export default function Footer() {
           {/* 1. Kolon: Logo, Açıklama ve Dinamik SVG Sosyal Medya Grubu */}
           <div className="lg:col-span-2 flex flex-col">
             <Link href="/" className="mb-6 inline-block">
-              <span className="text-3xl font-bold tracking-widest text-white">
+              <span className="text-3xl font-bold tracking-widest text-white drop-shadow-sm">
                 ODIMAX
               </span>
             </Link>
             
-            <p className="text-white/90 text-sm leading-relaxed max-w-md mb-8">
+            <p className="text-white/80 text-sm leading-relaxed max-w-md mb-8">
               Odimax, Medusa Global tarafından, işitme cihazı satış ve uygulama merkezlerinin gerçek operasyonel ihtiyaçları dikkate alınarak geliştirilmiştir.
             </p>
 
@@ -76,7 +78,7 @@ export default function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.name}
-                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:border-brand-blue hover:text-brand-blue transition-all duration-300 hover:-translate-y-1"
+                  className="w-10 h-10 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:border-[#6fe7ff] hover:text-[#6fe7ff] hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-sm"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -105,7 +107,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link 
                     href={item.path}
-                    className="text-white/90 text-sm hover:text-white transition-colors duration-300"
+                    className="text-white/80 text-sm hover:text-[#6fe7ff] transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
@@ -122,18 +124,17 @@ export default function Footer() {
             <ul className="space-y-6">
               
               {/* E-posta */}
-              <li className="flex items-start gap-4">
-                {/* Temiz inline-svg kullanımı */}
-                <svg className="w-5 h-5 text-white flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <a href="mailto:destek@odimax.com.tr" className="text-white/90 text-sm hover:text-white transition-colors">
+              <li className="flex items-start gap-4 group">
+                <svg className="w-5 h-5 text-[#6fe7ff] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:destek@odimax.com.tr" className="text-white/80 text-sm hover:text-white transition-colors">
                   destek@odimax.com.tr
                 </a>
               </li>
 
               {/* Telefonlar */}
-              <li className="flex items-start gap-4">
-                <svg className="w-5 h-5 text-white flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <div className="flex flex-col space-y-1.5 text-white/90 text-sm">
+              <li className="flex items-start gap-4 group">
+                <svg className="w-5 h-5 text-[#6fe7ff] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <div className="flex flex-col space-y-1.5 text-white/80 text-sm">
                   <a href="tel:08503026353" className="hover:text-white transition-colors">0 850 302 63 53</a>
                   <a href="tel:05337203695" className="hover:text-white transition-colors">0 533 720 36 95</a>
                   <a href="tel:05010773500" className="hover:text-white transition-colors">0 501 077 35 00</a>
@@ -141,9 +142,9 @@ export default function Footer() {
               </li>
 
               {/* Adres */}
-              <li className="flex items-start gap-4">
-                <svg className="w-5 h-5 text-white flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span className="text-white/90 text-sm leading-relaxed">
+              <li className="flex items-start gap-4 group">
+                <svg className="w-5 h-5 text-[#6fe7ff] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span className="text-white/80 text-sm leading-relaxed">
                   1511. Sokak, No:3/A, Umurbey Mah.<br />
                   Alsancak, Konak/İzmir
                 </span>
@@ -156,15 +157,18 @@ export default function Footer() {
 
         {/* Alt Kısım: Copyright ve Linkler */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white text-xs">
+          <p className="text-white/60 text-xs">
             © {new Date().getFullYear()} Medusa Global. Tüm hakları saklıdır.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-white text-xs hover:text-white transition-colors">
+            <Link href="/privacy" className="text-white/60 text-xs hover:text-[#6fe7ff] transition-colors">
               Gizlilik Politikası
             </Link>
-            <Link href="/terms" className="text-white text-xs hover:text-white transition-colors">
+            <Link href="/terms" className="text-white/60 text-xs hover:text-[#6fe7ff] transition-colors">
               Kullanım Koşulları
+            </Link>
+            <Link href="/kvkk" className="text-white/60 text-xs hover:text-[#6fe7ff] transition-colors">
+              Kişisel Verilerin Korunması
             </Link>
           </div>
         </div>

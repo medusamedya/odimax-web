@@ -15,10 +15,10 @@ export default function Home() {
       <AboutSection />  
       <ModulesSection />
       <FeatureBlocks />
-      <CtaSection />
       <TestimonialsSection />
-      <SimpleFeatures />
       <StepsSlider />
+      <CtaSection />
+
       
       {/* Diğer section'lar buraya gelecek */}
     </>

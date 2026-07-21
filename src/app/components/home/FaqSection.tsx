@@ -52,7 +52,7 @@ export default function FaqSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Üst Başlık ve İletişim Alanı */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
             <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Sıkça sorulanlar.
           </h2>
@@ -83,16 +83,16 @@ export default function FaqSection() {
                   onClick={() => toggleFaq(faq.id)}
                   className="w-full py-6 flex items-center justify-between gap-4 text-left focus:outline-none group"
                 >
-                  <span className="font-sans text-[16px] md:text-lg font-medium text-brand-header-text group-hover:text-brand-text transition-colors duration-300">
+                  <span className="font-sans text-[16px] md:text-lg font-medium text-brand-header-text group-hover:text-brand-blue transition-colors duration-300">
                     {faq.question}
                   </span>
                   
                   {/* İkon Çerçevesi */}
                   <div className="flex-shrink-0 w-8 h-8 rounded-full border border-black/[0.1] flex items-center justify-center bg-white transition-colors duration-300 group-hover:border-brand-blue/30">
                     {isOpen ? (
-                      <X className="w-4 h-4 text-brand-dark" />
+                      <X className="w-4 h-4 text-brand-dark group-hover:text-brand-blue" />
                     ) : (
-                      <Plus className="w-4 h-4 text-brand-dark" />
+                      <Plus className="w-4 h-4 text-brand-dark group-hover:text-brand-blue" />
                     )}
                   </div>
                 </button>

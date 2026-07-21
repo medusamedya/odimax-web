@@ -1,7 +1,7 @@
 import InnerHero from "../components/general/InnerHero";
 import FaqSection from "../components/home/FaqSection";
-import AboutDetailSection from "./components/AboutDetailSection";
-import CoreFeatures from "./components/CoreFeatures";
+import AboutDetailSection from "../components/about/AboutDetailSection";
+import CoreFeatures from "../components/about/CoreFeatures";
 
 export default function AboutPage() {
   return (
