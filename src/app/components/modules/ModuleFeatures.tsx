@@ -33,7 +33,7 @@ export default function ModuleFeatures({ features }: { features: Feature[] }) {
                 </span>
               </div>
 
-              <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+              <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
                 Süreçlerinizi Dijital <br className="hidden md:block" /> Hafızaya Taşıyın
               </h2>
             </div>
@@ -74,7 +74,7 @@ export default function ModuleFeatures({ features }: { features: Feature[] }) {
                     <span className="text-6xl md:text-7xl lg:text-8xl font-light font-mono text-brand-blue/10 leading-none -mt-2">
                       {formattedIndex}
                     </span>
-                    <h3 className="font-bold text-3xl md:text-4xl text-brand-dark leading-tight mt-2">
+                    <h3 className="capitalize font-semibold text-3xl md:text-4xl text-brand-dark leading-tight mt-2">
                       {feature.title}
                     </h3>
                   </div>

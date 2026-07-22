@@ -132,8 +132,8 @@ export default function StepsSlider() {
          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-4">
   ODIMAX
 </span>
-          <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
-            İşitme merkezinizin temel yönetim sistemi adım adım kurulsun.
+          <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            İşitme Merkezinizin Temel Yönetim Sistemi Adım Adım Kurulsun.
           </h2>
         </div>
 

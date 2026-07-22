@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
         
         {/* Başlık Alanı */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Merkezlerin Odimax Deneyimi
           </h2>
           <p className="

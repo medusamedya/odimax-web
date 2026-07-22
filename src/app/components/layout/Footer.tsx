@@ -4,7 +4,6 @@ import Link from "next/link";
 const MENU_ITEMS = [
   { name: "Anasayfa", path: "/" },
   { name: "Hakkımızda", path: "/about" },
-  { name: "Modüller", path: "/modules" },
   { name: "Fiyatlandırma", path: "/pricing" },
   { name: "Blog", path: "/blog" },
   { name: "İletişim", path: "/contact" },

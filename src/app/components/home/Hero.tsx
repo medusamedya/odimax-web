@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Başlık ve Alt Metin */}
         <div className="max-w-6xl mx-auto space-y-6">
-          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde
             Düzenleyin
           </h1>

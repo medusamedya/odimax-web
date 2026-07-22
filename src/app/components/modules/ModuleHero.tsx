@@ -26,7 +26,7 @@ export default function ModuleHero({
           </span>
 
           {/* Dinamik Başlık */}
-          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h1 className="capitalize font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide pb-1 leading-tight inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
             {title}
           </h1>
 

@@ -126,7 +126,7 @@ export default function ModulesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bölüm Başlığı */}
         <div className="mb-12">
-          <h2 className="mb-4 font-sans text-4xl md:text-5xl font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h2 className="mb-4 font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Tüm Süreçler Tek Platformda
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-text max-w-3xl leading-relaxed">

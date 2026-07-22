@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import MobileBottomNav from "./components/general/MobileBottomNav";
 
 // Projemizin yeni kurumsal fontu: Plus Jakarta Sans
 const plusJakarta = Plus_Jakarta_Sans({
@@ -24,22 +25,27 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      // Geist yerine kendi tanımladığımız font değişkenini kullanıyoruz
       className={`${plusJakarta.variable} h-full antialiased`}
     >
-      {/* font-sans sınıfını ekleyerek fontun tüm uygulamaya yayılmasını garantiliyoruz */}
       <body className="min-h-screen flex flex-col bg-brand-neutral text-brand-dark font-sans">
         
-        {/* Tüm sayfalarda üstte sabit kalacak Header */}
+        {/* Üstte sabit kalacak Header */}
         <Header />
         
-        {/* Ana içerik alanı. flex-1 sayesinde sayfada içerik az olsa bile Footer'ı en alta iter. */}
-        <main className="flex-1 flex flex-col w-full">
+        {/* 
+          Ana içerik alanı. 
+          pb-20 (mobilde), masaüstünde md:pb-0 ekleyerek 
+          mobil alt barın içeriği kesmesini engelliyoruz.
+        */}
+        <main className="flex-1 flex flex-col w-full pb-20 md:pb-0">
           {children}
         </main>
 
-        {/* Tüm sayfalarda altta sabit kalacak Footer */}
+        {/* Altta yer alacak Footer */}
         <Footer />
+
+        {/* Sadece mobilde aktif olacak alt navigasyon barı */}
+        <MobileBottomNav />
         
       </body>
     </html>

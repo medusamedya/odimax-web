@@ -1,127 +1,194 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 const FEATURES = [
   {
     id: "kasa-kontrol",
+    tag: "FİNANS YÖNETİMİ",
     title: "Kasa Kontrolü Tek Ekranda",
     description:
-      "Günlük gelir, gider ve toplam bakiyenizi anlık olarak görün. Tekli veya çoklu kasa yapısıyla nakit ve banka hareketlerini ayrı ayrı takip edin. Odimax CRM, kasadaki durumu sürekli görünür kılar. Sürpriz yok, belirsizlik yok.",
-    benefit:
-      "Gün sonunda merkezin finansal durumu daha net görünür; eksik, geciken veya gözden kaçan ödemeleri takip etmek kolaylaşır.",
-    image: "/home/01Kasa.webp",
+      "Günlük gelir, gider ve toplam bakiyenizi anlık olarak görün. Nakit ve banka hareketlerini ayrı ayrı takip edin. Sürpriz yok, belirsizlik yok.",
+    benefit: "Gün sonunda merkezin finansal durumu daha net görünür.",
+    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
   {
     id: "cihaz-stok",
+    tag: "STOK & ENVANTER",
     title: "Cihaz ve Stok Süreçleri Karışmasın",
     description:
-      "İşitme cihazlarını marka, model, seri numarası ve GTIN bilgileriyle takip edin. Stok giriş-çıkışları, satış hareketleri ve ÜTS süreçleri aynı akış içinde izlenebilir hale gelsin.",
-    benefit:
-      "Hangi cihazın nerede olduğunu, hangi hastaya satıldığını ve stok durumunu daha güvenli şekilde yönetirsiniz.",
-    image: "/home/02Stok.webp",
+      "İşitme cihazlarını marka, model, seri numarası ve GTIN ile takip edin. Stok giriş-çıkışları, satış ve ÜTS süreçleri aynı akışta izlensin.",
+    benefit: "Hangi cihazın nerede olduğunu güvenli şekilde yönetirsiniz.",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: "satis-sureci",
-    title: "Satış Süreci Eksiksiz ve Standart İlerlesin",
+    tag: "SATIŞ & OPERASYON",
+    title: "Satış Süreci Eksiksiz İlerlesin",
     description:
-      "İşitme cihazı satışlarını hasta, cihaz, kulak yönü, fiyat, iskonto, KDV ve ödeme bilgileriyle birlikte düzenli şekilde kaydedin. Her satış aynı akış içinde tamamlanabilir hale gelsin.",
-    benefit:
-      "Satış sonrası geriye dönük kontrol kolaylaşır; hasta, cihaz ve ödeme bilgileri eksik kalmadan merkez hafızasına işlenir.",
-    image: "/home/03Satıs.webp",
+      "Satışları hasta, cihaz, kulak yönü, iskonto ve ödeme bilgileriyle birlikte kaydedin. Geriye dönük kontrol merkez hafızasında korunsun.",
+    benefit: "Satış sonrası geriye dönük kontrol kolaylaşır.",
+    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
   {
     id: "hasta-bilgileri",
+    tag: "HASTA KARTLARI",
     title: "Hasta Bilgileri Kişilere Bağlı Kalmasın",
     description:
-      "Hasta kayıtları, iletişim bilgileri, cihaz geçmişi, randevular, satışlar ve ödeme durumları tek hasta kartında düzenli şekilde tutulur.",
-    benefit:
-      "Personel değişse bile hasta geçmişi kaybolmaz; merkeziniz hastayı kaldığı yerden takip etmeye devam eder.",
-    image: "/home/04Hasta.webp",
+      "İletişim bilgileri, cihaz geçmişi, randevular ve satışlar tek hasta kartında tutulur. Personel değişse bile veri kaybolmaz.",
+    benefit: "Personel değişse bile hasta geçmişi kaybolmaz.",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: "randevu-takip",
+    tag: "TAKVİM & PLANLAMA",
     title: "Randevu ve Takip Süreci Aksamadan İlerlesin",
     description:
-      "Randevuları, kontrol görüşmelerini ve hasta takip süreçlerini takvim üzerinden düzenli şekilde planlayın. Hatırlatma ve iletişim akışlarını merkezin standart işleyişine dahil edin.",
-    benefit:
-      "Randevu karışıklıkları azalır, hasta iletişimi daha düzenli ilerler ve takip edilmesi gereken işler gözden kaçmaz.",
-    image: "/home/05Randevu.webp",
+      "Kontrol görüşmelerini takvim üzerinden planlayın. Hatırlatma akışlarını merkezin standart işleyişine zahmetsizce dahil edin.",
+    benefit: "Randevu karışıklıkları azalır, takip işleri gözden kaçmaz.",
+    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
 ];
 
+const TAB_DURATION = 6000;
+
 export default function FeatureBlocks() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % FEATURES.length);
+    }, TAB_DURATION);
+
+    return () => clearTimeout(timerId);
+  }, [activeIndex]);
+
+  const handleTabClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
   return (
-    <section className="py-24 bg-brand-neutral overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24 lg:gap-32">
-        {FEATURES.map((feature, index) => {
-          // Çift indeksler için normal akış, tek indeksler için ters akış
-          const isReverse = index % 2 !== 0;
+    <section className="py-24 lg:py-32 bg-brand-neutral font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="mb-16  max-w-3xl">
+          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-4">
+            GÜNLÜK OPERASYONLAR
+          </span>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight pb-2 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde Düzenleyin
+          </h2>
+        </div>
 
-          return (
-            <div
-              key={feature.id}
-              // Flex yerine Grid kullandık: Alignment sorunlarına kesin çözüm.
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
-            >
-              {/* Metin Alanı */}
-              <div 
-                className={`flex flex-col justify-center ${
-                  isReverse ? "lg:order-2" : "lg:order-1"
-                }`}
-              >
-                <h2 className="font-sans mb-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide leading-tight inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
-                  {feature.title}
-                </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* SOL KISIM: Sekmeler */}
+          <div className="lg:col-span-5 flex flex-col space-y-2">
+            {FEATURES.map((feature, index) => {
+              const isActive = activeIndex === index;
 
-                <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mb-8">
-                  {feature.description}
-                </p>
+              return (
+                <div
+                  key={feature.id}
+                  onClick={() => handleTabClick(index)}
+                  className={`relative cursor-pointer pl-6 py-5 pr-4 rounded-xl transition-all duration-500 ${
+                    isActive 
+                      ? "bg-white shadow-[0_8px_30px_-4px_rgba(0,0,0,0.06)]" 
+                      : "hover:bg-black/[0.02]"
+                  }`}
+                >
+                  <div 
+                    className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 rounded-r-full bg-brand-blue transition-all duration-500 ${
+                      isActive ? "h-1/2 opacity-100" : "h-0 opacity-0"
+                    }`}
+                  ></div>
 
-                {/* Fayda Kutusu (Callout) */}
-                <div className="bg-[#eaf3fa] border-l-[3px] border-brand-blue p-5 rounded-r-lg shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2
-                      className="text-brand-blue w-6 h-6 flex-shrink-0 mt-0.5"
-                      strokeWidth={2.5}
-                    />
-                    <p className="font-sans text-brand-text font-medium leading-relaxed">
-                      {feature.benefit}
-                    </p>
+                  <h3 
+                    className={`text-xl font-bold transition-colors duration-300 mb-2 ${
+                      isActive ? "text-brand-dark" : "text-brand-dark/50"
+                    }`}
+                  >
+                    {feature.title}
+                  </h3>
+                  
+                  <div 
+                    className={`grid transition-all duration-500 ease-in-out ${
+                      isActive ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-brand-text/80 text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                      
+                      <div className="mt-4 border-l-2 border-brand-blue pl-4 py-0.5">
+                        <div className="flex items-start gap-2">
+                          <CheckCircle2 className="text-brand-blue w-4 h-4 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+                          <p className="text-sm text-brand-dark/80 font-medium leading-relaxed">
+                            {feature.benefit}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* GÜNCELLENEN CSS İLERLEME ÇUBUĞU (PROGRESS BAR) */}
+                      <div className="mt-5 h-1 w-full bg-brand-neutral rounded-full overflow-hidden">
+                        {isActive && (
+                          <div 
+                            // w-0 ile başlıyoruz ki ilk render anında dolu görünmesin
+                            className="h-full bg-brand-blue rounded-full w-0"
+                            key={`progress-${activeIndex}`}
+                            style={{
+                              animation: `fillProgress ${TAB_DURATION}ms linear forwards`
+                            }}
+                          ></div>
+                        )}
+                      </div>
+
+                    </div>
                   </div>
                 </div>
-              </div>
+              );
+            })}
+          </div>
 
-              {/* Görsel Alanı */}
-              <div 
-                className={`relative w-full max-w-2xl mx-auto ${
-                  isReverse ? "lg:order-1" : "lg:order-2"
-                }`}
+          {/* SAĞ KISIM: Video Alanı */}
+          <div className="lg:col-span-7 sticky top-24">
+            <div className="relative w-full aspect-[16/10] rounded-[2.5rem] overflow-hidden bg-brand-dark shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] ">
+              
+              <video
+                key={activeIndex}
+                src={FEATURES[activeIndex].video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover animate-[fadeIn_0.7s_ease-in-out]"
               >
-                {/* Havada Asılı Kurumsal Çerçeve (Floating Container) */}
-                <div className="relative bg-white p-2 md:p-3 rounded-[20px] md:rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-black/[0.04]">
-                  
-                  {/* İç Görsel Kutusu */}
-                  <div className="relative rounded-[12px] md:rounded-[18px] overflow-hidden border border-black/[0.03] bg-gray-50/50">
-                    {/* 
-                      Fill yerine width/height kullanarak görselin doğal olarak esnemesini sağladık.
-                      Bu sayede "zoom" veya "kırpılma" ihtimali tamamen ortadan kalktı.
-                    */}
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      width={1200}
-                      height={800}
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="w-full h-auto object-contain transition-transform duration-700 hover:scale-[1.02]"
-                    />
-                  </div>
-                  
-                </div>
-              </div>
+                Tarayıcınız video oynatmayı desteklemiyor.
+              </video>
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
             </div>
-          );
-        })}
+          </div>
+
+        </div>
       </div>
+      
+      {/* 
+        TÜM STATİK KEYFRAME'LER BURADA TOPLANDI 
+        Böylece React render döngüsünde map içinde boğulmaz.
+      */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes fadeIn {
+          from { opacity: 0.5; transform: scale(1.02); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes fillProgress {
+          0% { width: 0%; }
+          100% { width: 100%; }
+        }
+      `}} />
     </section>
   );
 }
