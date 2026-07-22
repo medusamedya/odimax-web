@@ -4,6 +4,7 @@ import ModuleHero from "@/app/components/modules/ModuleHero";
 import ModuleFeatures from "@/app/components/modules/ModuleFeatures";
 import DynamicFaq from "@/app/components/modules/DynamicFaq";
 import ModuleContactCTA from "@/app/components/modules/ModuleContactCTA";
+import LogoMarquee from "@/app/components/home/LogoMarquee";
 
 // Tip tanımında params'ın artık bir Promise olduğunu belirtiyoruz
 interface PageProps {
@@ -42,6 +43,7 @@ export default async function ModulePage({ params }: PageProps) {
 
       {/* 3. Dinamik SSS (Faq) Alanı */}
       <DynamicFaq faqs={moduleData.faqs} />
+      <LogoMarquee />
 
       {/* 4. Siyah Dalgalı İletişim Kartı */}
       <ModuleContactCTA />

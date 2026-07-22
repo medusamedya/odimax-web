@@ -45,11 +45,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-24 bg-brand-neutral font-sans">
+    <section className="py-12 bg-brand-neutral font-sans">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Üst Başlık ve İletişim Alanı */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 max-w-3xl mx-auto flex flex-col items-center">
+          <span className="mb-2 inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
+            SSS
+          </span>
           <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Sıkça Sorulanlar.
           </h2>

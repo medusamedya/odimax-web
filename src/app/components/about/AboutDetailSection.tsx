@@ -3,31 +3,31 @@ import { ShieldCheck, Cloud, CheckCircle2 } from "lucide-react";
 
 export default function AboutDetailSection() {
   return (
-    <section className="py-24 bg-brand-neutral overflow-hidden relative font-sans">
+    <section className="py-12 bg-brand-neutral overflow-hidden relative font-sans">
       {/* Arka plan derinliği için çok hafif, dekoratif bir parlama */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* ORTALANMIŞ BAŞLIK VE ROZET */}
+        <div className=" mx-auto text-center mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
+              ODIMAX & MEDUSA GLOBAL
+            </span>
+          </div>
+
+          <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            Gerçek Operasyonlardan <br className="hidden md:block" />
+            Doğan Bir CRM
+          </h2>
+        </div>
+
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
           
           {/* Sol Kısım: İçerik */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-8">
             
-            {/* Üst Başlık & Badge */}
-            <div>
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
-                  ODIMAX & MEDUSA GLOBAL
-                </span>
-              </div>
-
-              {/* Alt kesilme sorununa karşı pb-2 ve leading-[1.15] eklendi */}
-              <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-2 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
-                Gerçek Operasyonlardan <br className="hidden md:block" />
-                Doğan Bir CRM
-              </h2>
-            </div>
-
             {/* Metin Paragrafları */}
             <div className="text-lg text-brand-text leading-relaxed space-y-6">
               <p>
@@ -81,7 +81,6 @@ export default function AboutDetailSection() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Resmin alt kısmına hafif bir gölge atarak üzerindeki UI elemanını belirginleştiriyoruz */}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent"></div>
             </div>
 

@@ -7,7 +7,7 @@ export default function ContactPage() {
       {/* 1. Dinamik İç Sayfa Herosu */}
       <InnerHero
         title="İletişim"
-        description="Aklınıza takılan sorular, destek talepleri veya demo görüşmeleri için bizimle iletişime geçin. Ekibimiz size yardımcı olmaktan mutluluk duyacaktır."
+        description="Aklınıza takılan sorular, destek talepleri veya demo görüşmeleri için bizimle iletişime geçin. "
         breadcrumbs={[{ label: "İletişim", href: "/contact" }]}
       />
 

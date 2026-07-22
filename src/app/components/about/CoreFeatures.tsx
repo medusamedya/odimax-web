@@ -27,7 +27,7 @@ const FEATURES = [
 
 export default function CoreFeatures() {
   return (
-    <section className="py-24 bg-brand-neutral font-sans">
+    <section className="py-12 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Üst Başlık Alanı */}
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -60,7 +60,7 @@ export default function CoreFeatures() {
                 </div>
 
                 {/* Başlık ve Açıklama */}
-                <h3 className="text-xl lg:text-2xl font-bold text-brand-header-text mb-4">
+                <h3 className="text-xl  font-semibold leading-tight text-brand-header-text mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-brand-text text-sm md:text-base leading-relaxed max-w-sm">

@@ -125,13 +125,13 @@ export default function StepsSlider() {
   };
 
   return (
-    <section className="py-24 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="py-12 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-         <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-4">
-  ODIMAX
-</span>
+        <div className="text-center max-w-4xl mx-auto mb-8">
+          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-2">
+            ODIMAX
+          </span>
           <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizin Temel Yönetim Sistemi Adım Adım Kurulsun.
           </h2>
@@ -147,7 +147,7 @@ export default function StepsSlider() {
           onTouchStart={startDrag}
           onTouchEnd={stopDrag}
           onTouchMove={onDrag}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 items-stretch cursor-grab [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6  items-stretch cursor-grab [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {STEPS.map((step) => {
             const Icon = step.icon;
@@ -175,7 +175,6 @@ export default function StepsSlider() {
                 <div className="flex-1 flex flex-col">
                   {/* İkon ve Başlık Yan Yana */}
                   <div className="flex items-center gap-4 mb-6">
-                   
                     <h3 className="font-sans text-2xl lg:text-3xl font-semibold text-brand-header-text leading-wide pr-4">
                       {step.title}
                     </h3>

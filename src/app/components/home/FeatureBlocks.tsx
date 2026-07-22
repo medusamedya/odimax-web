@@ -69,13 +69,17 @@ export default function FeatureBlocks() {
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-brand-neutral font-sans">
+    <section className="py-12 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-16  max-w-3xl">
-          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-4">
-            GÜNLÜK OPERASYONLAR
-          </span>
+        {/* ORTALANMIŞ BAŞLIK VE ROZET */}
+        <div className=" mx-auto text-center mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
+              GÜNLÜK OPERASYONLAR
+            </span>
+          </div>
+         
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight pb-2 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde Düzenleyin
           </h2>
@@ -122,7 +126,7 @@ export default function FeatureBlocks() {
                         {feature.description}
                       </p>
                       
-                      <div className="mt-4 border-l-2 border-brand-blue pl-4 py-0.5">
+                      <div className="mt-4 py-0.5">
                         <div className="flex items-start gap-2">
                           <CheckCircle2 className="text-brand-blue w-4 h-4 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                           <p className="text-sm text-brand-dark/80 font-medium leading-relaxed">
@@ -135,7 +139,6 @@ export default function FeatureBlocks() {
                       <div className="mt-5 h-1 w-full bg-brand-neutral rounded-full overflow-hidden">
                         {isActive && (
                           <div 
-                            // w-0 ile başlıyoruz ki ilk render anında dolu görünmesin
                             className="h-full bg-brand-blue rounded-full w-0"
                             key={`progress-${activeIndex}`}
                             style={{
@@ -175,10 +178,7 @@ export default function FeatureBlocks() {
         </div>
       </div>
       
-      {/* 
-        TÜM STATİK KEYFRAME'LER BURADA TOPLANDI 
-        Böylece React render döngüsünde map içinde boğulmaz.
-      */}
+      {/* TÜM STATİK KEYFRAME'LER BURADA TOPLANDI */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeIn {
           from { opacity: 0.5; transform: scale(1.02); }
