@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
+// Video yerine image yolları eklendi. (Kendi public klasöründeki yollarla güncelleyebilirsin)
 const FEATURES = [
   {
     id: "kasa-kontrol",
@@ -11,7 +13,7 @@ const FEATURES = [
     description:
       "Günlük gelir, gider ve toplam bakiyenizi anlık olarak görün. Nakit ve banka hareketlerini ayrı ayrı takip edin. Sürpriz yok, belirsizlik yok.",
     benefit: "Gün sonunda merkezin finansal durumu daha net görünür.",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    image: "/home/01Kasa.webp", 
   },
   {
     id: "cihaz-stok",
@@ -20,7 +22,7 @@ const FEATURES = [
     description:
       "İşitme cihazlarını marka, model, seri numarası ve GTIN ile takip edin. Stok giriş-çıkışları, satış ve ÜTS süreçleri aynı akışta izlensin.",
     benefit: "Hangi cihazın nerede olduğunu güvenli şekilde yönetirsiniz.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    image: "/home/02Stok.webp", 
   },
   {
     id: "satis-sureci",
@@ -29,7 +31,7 @@ const FEATURES = [
     description:
       "Satışları hasta, cihaz, kulak yönü, iskonto ve ödeme bilgileriyle birlikte kaydedin. Geriye dönük kontrol merkez hafızasında korunsun.",
     benefit: "Satış sonrası geriye dönük kontrol kolaylaşır.",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    image: "/home/03Satıs.webp", 
   },
   {
     id: "hasta-bilgileri",
@@ -38,7 +40,7 @@ const FEATURES = [
     description:
       "İletişim bilgileri, cihaz geçmişi, randevular ve satışlar tek hasta kartında tutulur. Personel değişse bile veri kaybolmaz.",
     benefit: "Personel değişse bile hasta geçmişi kaybolmaz.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    image: "/home/04Hasta.webp", 
   },
   {
     id: "randevu-takip",
@@ -47,29 +49,19 @@ const FEATURES = [
     description:
       "Kontrol görüşmelerini takvim üzerinden planlayın. Hatırlatma akışlarını merkezin standart işleyişine zahmetsizce dahil edin.",
     benefit: "Randevu karışıklıkları azalır, takip işleri gözden kaçmaz.",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    image: "/home/05Randevu.webp", 
   },
 ];
 
-const TAB_DURATION = 6000;
-
 export default function FeatureBlocks() {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % FEATURES.length);
-    }, TAB_DURATION);
-
-    return () => clearTimeout(timerId);
-  }, [activeIndex]);
 
   const handleTabClick = (index: number) => {
     setActiveIndex(index);
   };
 
   return (
-    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans">
+    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ORTALANMIŞ BAŞLIK VE ROZET */}
@@ -134,20 +126,6 @@ export default function FeatureBlocks() {
                           </p>
                         </div>
                       </div>
-                      
-                      {/* GÜNCELLENEN CSS İLERLEME ÇUBUĞU (PROGRESS BAR) */}
-                      <div className="mt-2 md:mt-5 h-1 w-full bg-brand-neutral rounded-full overflow-hidden">
-                        {isActive && (
-                          <div 
-                            className="h-full bg-brand-blue rounded-full w-0"
-                            key={`progress-${activeIndex}`}
-                            style={{
-                              animation: `fillProgress ${TAB_DURATION}ms linear forwards`
-                            }}
-                          ></div>
-                        )}
-                      </div>
-
                     </div>
                   </div>
                 </div>
@@ -155,38 +133,39 @@ export default function FeatureBlocks() {
             })}
           </div>
 
-          {/* SAĞ KISIM: Video Alanı */}
+         {/* SAĞ KISIM: Görsel Alanı */}
           <div className="lg:col-span-7 sticky top-24">
-            <div className="relative w-full aspect-[16/10] rounded-[2.5rem] overflow-hidden bg-brand-dark shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] ">
+            {/* 
+              DEĞİŞİKLİK: aspect-[15/10] kaldırıldı. 
+              Sadece kapsayıcıya yuvarlaklık, gölge ve border verildi.
+            */}
+            <div className="relative w-full rounded-[1.5rem] overflow-hidden bg-brand-light shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border-2 border-brand-dark/50">
               
-              <video
+              {/* 
+                DEĞİŞİKLİK: fill yerine width ve height eklendi.
+                w-full ve h-auto sayesinde görsel asla kırpılmaz, kendi doğal oranında büyür/küçülür.
+              */}
+              <Image
                 key={activeIndex}
-                src={FEATURES[activeIndex].video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover animate-[fadeIn_0.7s_ease-in-out]"
-              >
-                Tarayıcınız video oynatmayı desteklemiyor.
-              </video>
+                src={FEATURES[activeIndex].image}
+                alt={FEATURES[activeIndex].title}
+                width={1200}
+                height={900}
+                className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
+                priority // İlk görselin hızlı yüklenmesi için
+              />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
             </div>
           </div>
 
         </div>
       </div>
-      
-      {/* TÜM STATİK KEYFRAME'LER BURADA TOPLANDI */}
+      {/* Sadece Görsel Geçişleri İçin Kalan Animasyon */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeIn {
-          from { opacity: 0.5; transform: scale(1.02); }
+          from { opacity: 0.6; transform: scale(1.02); }
           to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes fillProgress {
-          0% { width: 0%; }
-          100% { width: 100%; }
         }
       `}} />
     </section>

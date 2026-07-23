@@ -42,32 +42,32 @@ export default function AboutDetailSection() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-0 md:pt-2">
               
               {/* 1. Kart */}
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
+              <div className="flex-1 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0 relative overflow-hidden">
                 <Cloud
-                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
+                  className="w-8 h-8 text-white flex-shrink-0 sm:mb-3 relative z-10"
                   strokeWidth={2}
                 />
-                <div>
-                  <h4 className="font-bold text-brand-dark mb-1">
+                <div className="relative z-10">
+                  <h4 className="font-bold text-white mb-1">
                     Bulut Altyapısı
                   </h4>
-                  <p className="text-sm text-brand-text">
+                  <p className="text-sm text-white/80">
                     Kurulum gerektirmeden her cihazdan güvenli ve hızlı erişim.
                   </p>
                 </div>
               </div>
               
               {/* 2. Kart */}
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
+              <div className="flex-1 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0 relative overflow-hidden">
                 <ShieldCheck
-                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
+                  className="w-8 h-8 text-white flex-shrink-0 sm:mb-3 relative z-10"
                   strokeWidth={2}
                 />
-                <div>
-                  <h4 className="font-bold text-brand-dark mb-1">
+                <div className="relative z-10">
+                  <h4 className="font-bold text-white mb-1">
                     Tam Uyum
                   </h4>
-                  <p className="text-sm text-brand-text">
+                  <p className="text-sm text-white/80">
                     ÜTS ve MEDULA sistemleriyle entegre ve mevzuata uygun yapı.
                   </p>
                 </div>
@@ -77,13 +77,13 @@ export default function AboutDetailSection() {
             
           </div>
 
-          {/* Sağ Kısım: Görsel Alanı */}
+         {/* Sağ Kısım: Görsel Alanı */}
           <div className="w-full lg:w-1/2 relative">
             
             {/* Ana Görsel Çerçevesi */}
             <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/60 bg-brand-light group">
               <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                src="/home/54-islem-kayitlari.png"
                 alt="Medusa Global ve Odimax İşbirliği"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -92,22 +92,22 @@ export default function AboutDetailSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent"></div>
             </div>
 
-            {/* Glassmorphism Floating Card (Medusa Global Güvencesi) */}
-            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl shadow-md md:shadow-xl max-w-[250px]">
+            {/* Premium Koyu Temalı Floating Card (Medusa Global Güvencesi) */}
+            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-6 rounded-2xl shadow-md md:shadow-xl max-w-[250px]">
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-6 h-6 text-brand-blue" />
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-lg font-black text-brand-dark leading-none">
+                  <div className="text-lg font-black text-white leading-none">
                     Medusa Global
                   </div>
-                  <div className="text-[11px] font-bold text-brand-text uppercase tracking-widest mt-0.5">
+                  <div className="text-[11px] font-bold text-white uppercase tracking-widest mt-0.5">
                     Güvencesiyle
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-brand-dark font-medium leading-snug">
+              <p className="text-sm text-white/80 font-medium leading-snug">
                 Saha deneyimi ve güçlü teknoloji altyapısı bir arada.
               </p>
             </div>

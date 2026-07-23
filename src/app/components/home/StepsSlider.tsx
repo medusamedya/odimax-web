@@ -125,7 +125,7 @@ export default function StepsSlider() {
   };
 
   return (
-    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">

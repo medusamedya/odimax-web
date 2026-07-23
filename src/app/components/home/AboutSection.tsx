@@ -3,7 +3,7 @@ import { CheckCircle2, ShieldCheck, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-6 sm:py-6 md:py-8 lg:py-12  bg-brand-neutral overflow-hidden relative font-sans">
+    <section className="py-8 md:py-8 lg:py-16  bg-brand-neutral overflow-hidden relative font-sans">
       {/* Arka plan derinliği için çok hafif, dekoratif bir parlama */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
@@ -43,30 +43,30 @@ export default function AboutSection() {
             {/* Özellik Listesi */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-0 md:pt-2">
               {/* 1. Kart */}
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
+              <div className="flex-1 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0 relative overflow-hidden">
                 <TrendingUp
-                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
+                  className="w-8 h-8 text-white flex-shrink-0 sm:mb-3 relative z-10"
                   strokeWidth={2}
                 />
-                <div>
-                  <h4 className="font-bold text-brand-dark mb-1">
+                <div className="relative z-10">
+                  <h4 className="font-bold text-white mb-1">
                     Operasyon Odaklı
                   </h4>
-                  <p className="text-sm text-brand-text">
+                  <p className="text-sm text-white/80">
                     Saha alışkanlıkları ve ihtiyaçlarına göre tasarlandı.
                   </p>
                 </div>
               </div>
 
               {/* 2. Kart */}
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
+              <div className="flex-1 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0 relative overflow-hidden">
                 <ShieldCheck
-                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
+                  className="w-8 h-8 text-white flex-shrink-0 sm:mb-3 relative z-10"
                   strokeWidth={2}
                 />
-                <div>
-                  <h4 className="font-bold text-brand-dark mb-1">Yasal Uyum</h4>
-                  <p className="text-sm text-brand-text">
+                <div className="relative z-10">
+                  <h4 className="font-bold text-white mb-1">Yasal Uyum</h4>
+                  <p className="text-sm text-white/80">
                     ÜTS ve mevzuat süreçlerine tam entegre çalışır.
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export default function AboutSection() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden  border border-white/60 bg-brand-light group">
               <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                src="/home/54-islem-kayitlari.png"
                 alt="Odimax İşitme Merkezi Yönetimi"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -87,21 +87,20 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent"></div>
             </div>
 
-            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl shadow-xl max-w-[250px]">
+            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-6 rounded-2xl shadow-xl max-w-[250px]">
               <div className="flex items-center gap-4 mb-3">
-                <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-6 h-6 text-brand-blue" />
+                {/* İkon arka planı koyu temaya uygun olarak white/10 yapıldı */}
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-black text-brand-dark">
-                    %100
-                  </div>
-                  <div className="text-[11px] font-bold text-brand-text uppercase tracking-widest">
+                  <div className="text-2xl font-black text-white">%100</div>
+                  <div className="text-[11px] font-bold text-white uppercase tracking-widest">
                     Sektör Uyumu
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-brand-dark font-medium leading-snug">
+              <p className="text-sm text-white/80 font-medium leading-snug">
                 Genel amaçlı bir yazılım değil, gerçek merkez ihtiyaçları.
               </p>
             </div>
