@@ -37,37 +37,37 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-12 bg-brand-neutral font-sans overflow-hidden">
+    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
-        <div className="text-center max-w-3xl mx-auto mb-8">
-          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-2">
-            KULLANICI YORUMLARI
-          </span>
-          <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
+              KULLANICI YORUMLARI
+            </span>
+          </div>
+
+          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Merkezlerin Odimax Deneyimi
           </h2>
-          <p
-            className="
-                    font-sans text-base md:text-lg text-brand-text max-w-3xl mx-auto leading-relaxed "
-          >
+          <p className="font-sans text-base md:text-lg text-brand-text leading-normal md:leading-relaxed">
             Günlük operasyonlarını Odimax ile yöneten işitme merkezlerinin ve
             yöneticilerin sistem hakkındaki düşüncelerine göz atın.
           </p>
         </div>
 
         {/* Yorum Kartları Grid Yapısı */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 relative z-10">
           {TESTIMONIALS.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-3xl p-8 md:p-10 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-black/[0.03] relative group"
+              className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-black/[0.03] relative group"
             >
               {/* Dekoratif Alıntı (Quote) İkonu */}
               <Quote className="absolute top-8 right-8 w-12 h-12 text-brand-light/50 rotate-12 group-hover:rotate-0 group-hover:text-brand-light transition-transform duration-500 -z-10" />
 
               {/* Yıldız Değerlendirmesi */}
-              <div className="flex items-center gap-1 mb-6">
+              <div className="flex items-center gap-1 mb-2 md:mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Yorum Metni */}
-              <p className="text-brand-text text-lg leading-relaxed mb-8 relative z-10">
+              <p className="text-brand-text text-base md:text-lg leading-relaxed mb-4 md:mb-8 relative z-10">
                 "{testimonial.content}"
               </p>
 

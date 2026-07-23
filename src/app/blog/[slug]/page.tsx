@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { blogsData } from "@/data/blogsData";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, ArrowLeft, Share2 } from "lucide-react";
 import InnerHero from "@/app/components/general/InnerHero";
 
 interface PageProps {
@@ -66,13 +67,15 @@ export default async function BlogDetailPage({ params }: PageProps) {
             />
           </div>
 
-          {/* Makale Gövdesi (Metinler) */}
-          <div className="prose prose-lg max-w-none text-brand-text leading-relaxed space-y-6">
-            {post.content.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="text-lg text-brand-dark/80 leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+          {/* 
+            Makale Gövdesi (Metinler)
+            split("\n\n") yerine ReactMarkdown kullanıldı. 
+            Tailwind Typography (prose) eklentisiyle kurumsal renklere uyarlandı.
+          */}
+          <div className="prose prose-lg prose-blue max-w-none prose-headings:text-brand-dark prose-headings:font-bold prose-p:text-brand-dark/80 prose-p:leading-relaxed prose-li:text-brand-dark/80 prose-strong:text-brand-dark">
+            <ReactMarkdown>
+              {post.content}
+            </ReactMarkdown>
           </div>
 
           {/* Alt Kısım: Geri Dönüş ve Paylaşım */}
@@ -87,7 +90,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
             <div className="flex items-center gap-3">
               <span className="text-sm font-medium text-brand-dark/60">Yazıyı Paylaş:</span>
-              <div className="w-10 h-10 rounded-full bg-brand-dark flex items-center justify-center hover:bg-brand-blue hover:text-white transition-colors cursor-pointer">
+              <div className="w-10 h-10 rounded-full text-white bg-brand-dark flex items-center justify-center hover:bg-brand-blue hover:text-white transition-colors cursor-pointer">
                 <Share2 className="w-4 h-4" />
               </div>
             </div>

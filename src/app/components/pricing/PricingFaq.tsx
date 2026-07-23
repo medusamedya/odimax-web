@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, X } from "lucide-react";
+import { ArrowRight, Link, Plus, X } from "lucide-react";
 
 const FAQ_DATA = [
   {
@@ -27,7 +27,7 @@ const FAQ_DATA = [
 ];
 
 export default function PricingFaq() {
-  const [openId, setOpenId] = useState<number | null>(1);
+  const [openId, setOpenId] = useState<number | null>(0);
 
   const toggleFaq = (id: number) => {
     setOpenId(openId === id ? null : id);
@@ -37,16 +37,22 @@ export default function PricingFaq() {
     <section className="py-12 bg-brand-neutral font-sans ">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className=" mx-auto text-center mb-8 flex flex-col items-center">
-          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
               SSS
             </span>
-          <h2 className="font-sans mb-4 text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
-            Sık Sorulan Sorular
+          </div>
+          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            Sıkça Sorulanlar.
           </h2>
+          <p className="font-sans text-base md:text-lg text-brand-text leading-normal mb-4 md:leading-relaxed">
+            Cevabını bulamadığınız bir konu varsa, ekibimize WhatsApp veya
+            e-posta ile yazın, aynı gün dönüş yapıyoruz.
+          </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-2 md:space-y-4">
           {FAQ_DATA.map((faq) => {
             const isOpen = openId === faq.id;
             
@@ -61,7 +67,7 @@ export default function PricingFaq() {
                   }`}
                 ></div>
 
-                <div className="relative z-10 bg-white rounded-[15px] px-5 sm:px-8 h-full">
+                <div className="relative z-10 bg-white rounded-[15px] px-4 sm:px-8 h-full">
                   <button
                     onClick={() => toggleFaq(faq.id)}
                     className="w-full py-6 flex items-center justify-between gap-4 text-left focus:outline-none"
@@ -95,7 +101,7 @@ export default function PricingFaq() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="font-sans text-brand-text/90 text-base leading-relaxed pr-8 sm:pr-12">
+                      <p className="font-sans text-brand-text/90 text-base leading-normal md:leading-relaxed pr-8 sm:pr-12">
                         {faq.answer}
                       </p>
                     </div>

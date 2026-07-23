@@ -10,26 +10,26 @@ export default function AboutDetailSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ORTALANMIŞ BAŞLIK VE ROZET */}
-        <div className=" mx-auto text-center mb-8 flex flex-col items-center">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
               ODIMAX & MEDUSA GLOBAL
             </span>
           </div>
 
-          <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Gerçek Operasyonlardan <br className="hidden md:block" />
             Doğan Bir CRM
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 md:gap-16 lg:gap-20 items-center">
           
           {/* Sol Kısım: İçerik */}
-          <div className="w-full lg:w-1/2 flex flex-col space-y-8">
+          <div className="w-full lg:w-1/2 flex flex-col space-y-4 md:space-y-8">
             
             {/* Metin Paragrafları */}
-            <div className="text-lg text-brand-text leading-relaxed space-y-6">
+            <div className="text-base md:text-lg text-brand-text leading-normal text-center md:text-start md:leading-relaxed space-y-2 md:space-y-6">
               <p>
                 Odimax, işitme cihazı satış merkezlerinin gerçek operasyonel ihtiyaçları doğrultusunda, <strong>Medusa Global Medya Yatırım AŞ.</strong> tarafından projelendirilen ve hayata geçirilen bir dijital yönetim platformudur.
               </p>
@@ -39,7 +39,7 @@ export default function AboutDetailSection() {
             </div>
 
             {/* Özellik Listesi - Modern Kartlar */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row gap-2 md:gap-4 pt-0 md:pt-2">
               <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <Cloud
                   className="w-8 h-8 text-brand-blue mb-3"
@@ -85,7 +85,7 @@ export default function AboutDetailSection() {
             </div>
 
             {/* Glassmorphism Floating Card (Medusa Global Güvencesi) */}
-            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-12 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl shadow-xl max-w-[260px]">
+            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-white/80 backdrop-blur-lg border border-white/50 p-6 rounded-2xl shadow-md md:shadow-xl max-w-[250px]">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
                   <CheckCircle2 className="w-6 h-6 text-brand-blue" />

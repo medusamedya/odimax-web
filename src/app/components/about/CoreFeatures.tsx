@@ -30,17 +30,19 @@ export default function CoreFeatures() {
     <section className="py-12 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Üst Başlık Alanı */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-4">
-            ÖZELLİKLER
-          </span>
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
+              ÖZELLİKLER
+            </span>
+          </div>
           <h2 className="font-sans text-4xl md:text-5xl  font-semibold tracking-wide leading-wide inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Odimax'ı Farklı Kılan Temel Özellikler
           </h2>
         </div>
 
         {/* 3 Kolonlu Grid Yapısı */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 ">
           {FEATURES.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -49,11 +51,11 @@ export default function CoreFeatures() {
                 className="flex flex-col items-center text-center group"
               >
                 {/* İkon Çerçevesi (Animasyonlu Border Yapısı) */}
-                <div className="mb-6 p-[2px] rounded-2xl bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] animate-text-gradient shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
+                <div className="mb-2 md:mb-6 p-[2px] rounded-2xl bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] animate-text-gradient shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
                   {/* İç Kutu (Beyaz arkaplan ile gradientin sadece sınırda kalmasını sağlıyor) */}
-                  <div className="bg-white p-4 rounded-[14px] flex items-center justify-center h-full w-full">
+                  <div className="bg-white p-3 md:p-4 rounded-[14px] flex items-center justify-center h-full w-full">
                     <Icon
-                      className="w-10 h-10 text-brand-blue group-hover:text-brand-dark transition-colors duration-300"
+                      className="w-8 h-8 md:w-10 md:h-10 text-brand-blue group-hover:text-brand-dark transition-colors duration-300"
                       strokeWidth={2}
                     />
                   </div>

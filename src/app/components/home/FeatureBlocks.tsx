@@ -69,23 +69,23 @@ export default function FeatureBlocks() {
   };
 
   return (
-    <section className="py-12 bg-brand-neutral font-sans">
+    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ORTALANMIŞ BAŞLIK VE ROZET */}
-        <div className=" mx-auto text-center mb-8 flex flex-col items-center">
+        <div className=" mx-auto text-center mb-4 md:mb-8 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 mb-2">
-            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
               GÜNLÜK OPERASYONLAR
             </span>
           </div>
          
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight pb-2 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde Düzenleyin
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-6 md:gap-8 lg:gap-12 items-center">
           
           {/* SOL KISIM: Sekmeler */}
           <div className="lg:col-span-5 flex flex-col space-y-2">
@@ -96,7 +96,7 @@ export default function FeatureBlocks() {
                 <div
                   key={feature.id}
                   onClick={() => handleTabClick(index)}
-                  className={`relative cursor-pointer pl-6 py-5 pr-4 rounded-xl transition-all duration-500 ${
+                  className={`relative cursor-pointer pl-3 md:pl-6 py-3 md:py-5 pr-0 md:pr-4 rounded-xl transition-all duration-500 ${
                     isActive 
                       ? "bg-white shadow-[0_8px_30px_-4px_rgba(0,0,0,0.06)]" 
                       : "hover:bg-black/[0.02]"
@@ -109,7 +109,7 @@ export default function FeatureBlocks() {
                   ></div>
 
                   <h3 
-                    className={`text-xl font-bold transition-colors duration-300 mb-2 ${
+                    className={`text-base md:text-xl font-bold transition-colors duration-300 mb-2 ${
                       isActive ? "text-brand-dark" : "text-brand-dark/50"
                     }`}
                   >
@@ -122,11 +122,11 @@ export default function FeatureBlocks() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-brand-text/80 text-base leading-relaxed">
+                      <p className="text-brand-text/80 text-base leading-normal md:leading-relaxed">
                         {feature.description}
                       </p>
                       
-                      <div className="mt-4 py-0.5">
+                      <div className="mt-1 md:mt-4 py-0.5">
                         <div className="flex items-start gap-2">
                           <CheckCircle2 className="text-brand-blue w-4 h-4 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                           <p className="text-sm text-brand-dark/80 font-medium leading-relaxed">
@@ -136,7 +136,7 @@ export default function FeatureBlocks() {
                       </div>
                       
                       {/* GÜNCELLENEN CSS İLERLEME ÇUBUĞU (PROGRESS BAR) */}
-                      <div className="mt-5 h-1 w-full bg-brand-neutral rounded-full overflow-hidden">
+                      <div className="mt-2 md:mt-5 h-1 w-full bg-brand-neutral rounded-full overflow-hidden">
                         {isActive && (
                           <div 
                             className="h-full bg-brand-blue rounded-full w-0"

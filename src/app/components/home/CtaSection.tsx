@@ -13,7 +13,7 @@ export default function CtaSection() {
   return (
     // Dış katman: Sayfanın genel rengi. 
     // Alt/üst boşlukları (padding) çok abartmamak ve kopukluk hissi vermemek için py-12 md:py-16 kullanıyoruz.
-    <section className="py-12  bg-brand-neutral font-sans">
+    <section className="py-6 sm:py-6 md:py-8 lg:py-12  bg-brand-neutral font-sans">
       <div className=" mx-auto px-8 sm:px-12 lg:px-24">
         
         {/* 
@@ -28,28 +28,28 @@ export default function CtaSection() {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-overlay filter blur-[128px] opacity-40 pointer-events-none"></div>
 
           {/* İçerik Alanı - Boşluklar (margin/padding) daha sıkı ve kompakt hale getirildi */}
-          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-12 md:pt-16 pb-10 flex flex-col items-center text-center">
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 md:pt-16 pb-4 md:pb-10 flex flex-col items-center text-center">
             
             <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide leading-tight text-white drop-shadow-sm pb-1">
               15 Günlük Demo ile Odimax'ı Kendi Merkeziniz Üzerinden Değerlendirin
             </h2>
             
-            <p className="text-base md:text-lg text-white/80 max-w-3xl leading-relaxed mb-8">
+            <p className="text-base  md:text-lg text-white/80 max-w-3xl leading-relaxed mb-8">
               Kurulum ve kullanım desteğiyle, sistemin merkezinizin günlük işleyişine nasıl uyum sağlayacağını görün.
             </p>
 
             <Link
               href="/demo"
-              className="flex mb-8 items-center justify-center gap-2 bg-white hover:bg-gray-50 text-brand-dark font-bold py-3.5 px-8 rounded-full transition-all duration-300 w-full sm:w-auto shadow-[0_10px_30px_rgba(111,231,255,0.2)] hover:shadow-[0_15px_40px_rgba(111,231,255,0.4)] hover:scale-105"
+              className="flex mb-4 md:mb-8  text-md items-center justify-center gap-2 bg-white hover:bg-gray-50 text-brand-dark font-bold py-2.5 px-4 md:py-3.5 md:px-8 rounded-full transition-all duration-300 w-full sm:w-auto shadow-[0_10px_30px_rgba(111,231,255,0.2)] hover:shadow-[0_15px_40px_rgba(111,231,255,0.4)] hover:scale-105"
             >
               15 Günlük Demo Talep Et
             </Link>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
               {CTA_FEATURES.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2.5">
-                  <Check className="w-5 h-5 text-[#6fe7ff]" strokeWidth={3} />
-                  <span className="text-white/90 text-base font-medium tracking-wide">
+                <div key={index} className="flex items-center gap-1 md:gap-2.5">
+                  <Check className="w-4 h-4 md:w-5 md:h-5 text-[#6fe7ff]" strokeWidth={3} />
+                  <span className="text-white/90 text-[14px] font-medium tracking-normal md:tracking-wide">
                     {feature}
                   </span>
                 </div>
@@ -58,7 +58,7 @@ export default function CtaSection() {
           </div>
           
           {/* SimpleFeatures Bileşeni - İnce bir ayırıcı çizgi ile kartın altına entegre edildi */}
-          <div className="relative z-10 px-4 sm:px-6 border-t border-white/10 pt-8 pb-8 md:pb-12">
+          <div className="relative z-10 px-4 sm:px-6  pt-0 sm:pt-8 pb-8 md:pb-12">
              <SimpleFeatures />
           </div>
           

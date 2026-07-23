@@ -37,7 +37,7 @@ export default function RootLayout({
           pb-20 (mobilde), masaüstünde md:pb-0 ekleyerek 
           mobil alt barın içeriği kesmesini engelliyoruz.
         */}
-        <main className="flex-1 flex flex-col w-full pb-20 md:pb-0">
+        <main className="flex-1 flex flex-col w-full ">
           {children}
         </main>
 

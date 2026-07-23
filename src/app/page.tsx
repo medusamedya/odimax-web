@@ -13,19 +13,16 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <AboutSection />  
+      <AboutSection />
+      <LogoMarquee />
       <ModulesSection />
       <FeatureBlocks />
       <TestimonialsSection />
       <StepsSlider />
-      
-      <FaqSection />
-      <LogoMarquee />
-      <CtaSection />
-      
-      
 
-      
+      <FaqSection />
+      <CtaSection />
+
       {/* Diğer section'lar buraya gelecek */}
     </>
   );

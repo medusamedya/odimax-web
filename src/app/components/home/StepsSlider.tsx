@@ -125,16 +125,37 @@ export default function StepsSlider() {
   };
 
   return (
-    <section className="py-12 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm mb-2">
-            ODIMAX
-          </span>
-          <h2 className="font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
+              ODIMAX
+            </span>
+          </div>
+          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizin Temel Yönetim Sistemi Adım Adım Kurulsun.
           </h2>
+           {/* Kullanıcıyı sağa kaydırmaya teşvik eden mobil indikatör - Ortalandı */}
+          <div className="flex items-center justify-center gap-2 mt-1 md:mt-6 text-brand-blue animate-pulse">
+            <span className="text-xs font-bold tracking-widest uppercase">
+              Yana Kaydırın
+            </span>
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </div>
         </div>
 
         {/* Slider Konteyneri */}
@@ -174,25 +195,25 @@ export default function StepsSlider() {
                 {/* İçerik */}
                 <div className="flex-1 flex flex-col">
                   {/* İkon ve Başlık Yan Yana */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <h3 className="font-sans text-2xl lg:text-3xl font-semibold text-brand-header-text leading-wide pr-4">
+                  <div className="flex items-center gap-4 mb-3 md:mb-6">
+                    <h3 className="font-sans text-xl md:text-2xl lg:text-3xl font-semibold text-brand-header-text leading-wide pr-0 md:pr-4">
                       {step.title}
                     </h3>
                   </div>
 
-                  <p className="font-sans text-brand-text text-lg leading-relaxed mb-4 relative z-10">
+                  <p className="font-sans text-brand-text text-base  md:text-lg leading-normal md:leading-relaxed mb-2 md:mb-4 relative z-10">
                     {step.description}
                   </p>
 
                   {/* Maddeler */}
-                  <ul className="space-y-4 mt-auto pt-8 border-t border-brand-neutral">
+                  <ul className="space-y-2 md:space-y-4 mt-auto pt-2 md:pt-8 border-t border-brand-neutral">
                     {step.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
+                      <li key={i} className="flex items-start gap-1 md:gap-3">
                         <CheckCircle2
                           className="w-6 h-6 text-brand-blue flex-shrink-0"
                           strokeWidth={2.5}
                         />
-                        <span className="text-brand-header-text font-medium text-lg leading-snug">
+                        <span className="text-brand-header-text font-medium text-base md:text-lg leading-normal md:leading-snug">
                           {item}
                         </span>
                       </li>

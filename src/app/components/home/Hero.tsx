@@ -4,15 +4,15 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-neutral">
+    <section className="relative pt-32  md:pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-brand-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Başlık ve Alt Metin */}
-        <div className="max-w-6xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-2 md:space-y-6">
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde
             Düzenleyin
           </h1>
-          <p className="font-sans text-lg md:text-xl text-brand-text max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-base md:text-xl text-brand-text max-w-3xl mx-auto leading-relaxed">
             Hasta takibi, randevu, stok, tahsilat, ÜTS işlemleri ve Tamir &
             Servis entegrasyonları ayrı ayrı yönetilmesin. Odimax ile
             merkezinizin günlük işleyişindeki kritik süreçlerini tek panelde
@@ -21,7 +21,7 @@ export default function Hero() {
         </div>
 
         {/* Aksiyon Butonları (CTA) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 lg:gap-4 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
           {/* Primary Button */}
           <Link
             href="/demo"
@@ -41,8 +41,8 @@ export default function Hero() {
         </div>
 
         {/* Panel Görseli (Mockup) */}
-        <div className="mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
-          <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden shadow-2xl border border-white/40 bg-white">
+        <div className="mt-8 sm:mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
+          <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden shadow-sm md:shadow-2xl border border-white/40 bg-white">
             <Image
               src="/home/hero.webp"
               alt="Odimax Tek Panel Yönetim Ekranı"

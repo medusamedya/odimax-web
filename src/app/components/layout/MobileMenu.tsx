@@ -108,7 +108,7 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                           key={subItem.name}
                           href={subItem.path}
                           onClick={onClose}
-                          className="py-2 text-base font-medium text-brand-text hover:text-brand-blue transition-colors"
+                          className="py-2 text-base font-medium text-brand-blue hover:text-brand-blue transition-colors"
                         >
                           {subItem.name}
                         </Link>

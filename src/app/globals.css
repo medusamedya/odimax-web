@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* Ana zemin rengi "Nötr Zemin" olarak ayarlandı */

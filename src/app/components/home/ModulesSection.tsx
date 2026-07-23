@@ -194,17 +194,20 @@ const MODULES = [
 
 export default function ModulesSection() {
   return (
-    <section className="py-12 bg-brand-neutral">
+    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Ortalanmış Bölüm Başlığı */}
-        <div className="text-center mb-8 max-w-3xl mx-auto flex flex-col items-center">
-          <span className="inline-block bg-gradient-to-r mb-2 from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm ">
-            MODÜLLERİMİZ
-          </span>
-          <h2 className="mb-4 font-sans text-4xl md:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
+              MODÜLLERİMİZ
+            </span>
+          </div>
+
+          <h2 className=" font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Tüm Süreçler Tek Platformda
           </h2>
-          <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed">
+          <p className="font-sans text-base md:text-lg text-brand-text leading-normal md:leading-relaxed">
             İşitme merkezinizin uçtan uca tüm ihtiyaçlarını karşılayacak şekilde
             özel olarak tasarlanmış modüllerimizi keşfedin.
           </p>
@@ -213,25 +216,25 @@ export default function ModulesSection() {
         {/* Animasyonlu Çerçeve (Animate Border) */}
         <div className="relative rounded-2xl p-[1px] overflow-hidden bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] animate-text-gradient shadow-sm">
           <div className="rounded-[15px] overflow-hidden bg-brand-light">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px">
+            <div className="grid  grid-cols-2 lg:grid-cols-3 gap-px">
               {MODULES.map((module) => {
                 const IconComponent = module.icon;
                 return (
                   <div
                     key={module.id}
-                    className="bg-white p-8 md:p-12 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between min-h-[220px]"
+                    className="bg-white p-4 sm:p-6 md:p-8 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between md:min-h-[220px]"
                   >
                     {/* Arka Plan Devasa Filigran İkonu (Watermark) */}
-                    <div className="absolute -bottom-8 -right-8 w-40 h-40 text-black/[0.03] group-hover:text-brand-blue/[0.07] transition-all duration-500 pointer-events-none transform group-hover:scale-110 group-hover:-rotate-6">
+                    <div className="absolute -bottom-2 md:-bottom-8 -right-4 md:-right-8 w-24 h-24 md:w-40 md:h-40 text-black/[0.03] group-hover:text-brand-blue/[0.07] transition-all duration-500 pointer-events-none transform group-hover:scale-110 group-hover:-rotate-6">
                       {IconComponent}
                     </div>
 
                     {/* İçerik (Z-index ile önde konumlanır) */}
                     <div className="relative z-10">
-                      <h3 className="font-sans text-xl font-bold text-brand-header-text mb-3">
+                      <h3 className="font-sans text-lg md:text-xl  font-bold text-brand-header-text mb-3">
                         {module.title}
                       </h3>
-                      <p className="text-brand-text leading-relaxed text-sm md:text-base">
+                      <p className="text-brand-text leading-normal md:leading-relaxed text-sm md:text-base">
                         {module.description}
                       </p>
                     </div>
