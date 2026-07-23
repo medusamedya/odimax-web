@@ -37,37 +37,64 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-24 bg-brand-neutral font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Başlık Alanı */}
-        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 mb-2">
-            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
+        <div className="text-center mb-8 md:mb-16 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
               KULLANICI YORUMLARI
             </span>
           </div>
 
-          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Merkezlerin Odimax Deneyimi
           </h2>
-          <p className="font-sans text-base md:text-lg text-brand-text leading-normal md:leading-relaxed">
+          <p className="font-sans text-base md:text-lg text-brand-text leading-relaxed mt-4 max-w-2xl mx-auto">
             Günlük operasyonlarını Odimax ile yöneten işitme merkezlerinin ve
             yöneticilerin sistem hakkındaki düşüncelerine göz atın.
           </p>
+
+          {/* Kullanıcıyı sağa kaydırmaya teşvik eden mobil indikatör */}
+          <div className="flex md:hidden items-center justify-center gap-2 mt-6 text-brand-blue animate-pulse">
+            <span className="text-xs font-bold tracking-widest uppercase">
+              Yana Kaydırın
+            </span>
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </div>
         </div>
 
-        {/* Yorum Kartları Grid Yapısı */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 relative z-10">
+        {/* 
+          Yorum Kartları Kapsayıcısı 
+          Mobilde: flex, overflow-x-auto (Yatay Kaydırma)
+          Tablet ve Masaüstünde (md:): grid, grid-cols-2/3 (Klasik Izgara)
+        */}
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pb-8 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 relative z-10">
           {TESTIMONIALS.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-black/[0.03] relative group"
+              // Mobilde minimum genişlik veriyoruz ki kartlar ezilmesin (min-w-[85vw])
+              // Masaüstünde genişlik kısıtlamasını kaldırıyoruz (md:min-w-0)
+              className="min-w-[85vw] sm:min-w-[360px] md:min-w-0 snap-center bg-white rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl transition-all duration-300 border border-black/[0.03] relative group flex flex-col text-left"
             >
               {/* Dekoratif Alıntı (Quote) İkonu */}
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-brand-light/50 rotate-12 group-hover:rotate-0 group-hover:text-brand-light transition-transform duration-500 -z-10" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-brand-light/60 rotate-12 group-hover:rotate-0 group-hover:text-brand-light transition-transform duration-500 -z-10" />
 
               {/* Yıldız Değerlendirmesi */}
-              <div className="flex items-center gap-1 mb-2 md:mb-6">
+              <div className="flex items-center gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -77,13 +104,13 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Yorum Metni */}
-              <p className="text-brand-text text-base md:text-lg leading-relaxed mb-4 md:mb-8 relative z-10">
+              <p className="text-brand-text text-base md:text-lg leading-relaxed mb-8 relative z-10 flex-grow">
                 "{testimonial.content}"
               </p>
 
               {/* Kullanıcı Profili */}
               <div className="flex items-center gap-4 mt-auto">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-brand-neutral">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-brand-neutral flex-shrink-0">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -93,10 +120,10 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold text-brand-dark text-base">
+                  <h4 className="font-bold text-brand-dark text-base leading-tight">
                     {testimonial.name}
                   </h4>
-                  <p className="text-brand-blue text-sm font-medium">
+                  <p className="text-brand-blue text-sm font-medium mt-0.5">
                     {testimonial.role}
                   </p>
                 </div>
@@ -104,6 +131,7 @@ export default function TestimonialsSection() {
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
