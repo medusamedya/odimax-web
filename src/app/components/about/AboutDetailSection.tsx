@@ -38,33 +38,41 @@ export default function AboutDetailSection() {
               </p>
             </div>
 
-            {/* Özellik Listesi - Modern Kartlar */}
-            <div className="flex flex-col sm:flex-row gap-2 md:gap-4 pt-0 md:pt-2">
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+          {/* Özellik Listesi - Modern Kartlar */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-0 md:pt-2">
+              
+              {/* 1. Kart */}
+              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
                 <Cloud
-                  className="w-8 h-8 text-brand-blue mb-3"
+                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
                   strokeWidth={2}
                 />
-                <h4 className="font-bold text-brand-dark mb-1">
-                  Bulut Altyapısı
-                </h4>
-                <p className="text-sm text-brand-text">
-                  Kurulum gerektirmeden her cihazdan güvenli ve hızlı erişim.
-                </p>
+                <div>
+                  <h4 className="font-bold text-brand-dark mb-1">
+                    Bulut Altyapısı
+                  </h4>
+                  <p className="text-sm text-brand-text">
+                    Kurulum gerektirmeden her cihazdan güvenli ve hızlı erişim.
+                  </p>
+                </div>
               </div>
               
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+              {/* 2. Kart */}
+              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
                 <ShieldCheck
-                  className="w-8 h-8 text-brand-blue mb-3"
+                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
                   strokeWidth={2}
                 />
-                <h4 className="font-bold text-brand-dark mb-1">
-                  Tam Uyum
-                </h4>
-                <p className="text-sm text-brand-text">
-                  ÜTS ve MEDULA sistemleriyle entegre ve mevzuata uygun yapı.
-                </p>
+                <div>
+                  <h4 className="font-bold text-brand-dark mb-1">
+                    Tam Uyum
+                  </h4>
+                  <p className="text-sm text-brand-text">
+                    ÜTS ve MEDULA sistemleriyle entegre ve mevzuata uygun yapı.
+                  </p>
+                </div>
               </div>
+
             </div>
             
           </div>

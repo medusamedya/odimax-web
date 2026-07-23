@@ -8,7 +8,6 @@ export default function AboutSection() {
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* YALNIZCA BAŞLIK VE ROZET ORTALANDI */}
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 mb-2">
@@ -24,10 +23,8 @@ export default function AboutSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-8 md:gap-16 lg:gap-20 items-center">
-          
           {/* Sol Kısım: Açıklama ve Kartlar (Orijinal yerinde kaldı) */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-8">
-            
             {/* Metin Paragrafları */}
             <div className="text-base md:text-lg text-brand-text leading-normal md:leading-relaxed space-y-2 md:space-y-6">
               <p>
@@ -44,31 +41,37 @@ export default function AboutSection() {
             </div>
 
             {/* Özellik Listesi */}
-            <div className="flex flex-col sm:flex-row gap-2 md:gap-4 pt-0 md:pt-2">
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-0 md:pt-2">
+              {/* 1. Kart */}
+              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
                 <TrendingUp
-                  className="w-8 h-8 text-brand-blue mb-3"
+                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
                   strokeWidth={2}
                 />
-                <h4 className="font-bold text-brand-dark mb-1">
-                  Operasyon Odaklı
-                </h4>
-                <p className="text-sm text-brand-text">
-                  Saha alışkanlıkları ve ihtiyaçlarına göre tasarlandı.
-                </p>
+                <div>
+                  <h4 className="font-bold text-brand-dark mb-1">
+                    Operasyon Odaklı
+                  </h4>
+                  <p className="text-sm text-brand-text">
+                    Saha alışkanlıkları ve ihtiyaçlarına göre tasarlandı.
+                  </p>
+                </div>
               </div>
-              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+
+              {/* 2. Kart */}
+              <div className="flex-1 bg-white border border-black/[0.04] p-5 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex items-start sm:block gap-4 sm:gap-0">
                 <ShieldCheck
-                  className="w-8 h-8 text-brand-blue mb-3"
+                  className="w-8 h-8 text-brand-blue flex-shrink-0 sm:mb-3"
                   strokeWidth={2}
                 />
-                <h4 className="font-bold text-brand-dark mb-1">Yasal Uyum</h4>
-                <p className="text-sm text-brand-text">
-                  ÜTS ve mevzuat süreçlerine tam entegre çalışır.
-                </p>
+                <div>
+                  <h4 className="font-bold text-brand-dark mb-1">Yasal Uyum</h4>
+                  <p className="text-sm text-brand-text">
+                    ÜTS ve mevzuat süreçlerine tam entegre çalışır.
+                  </p>
+                </div>
               </div>
             </div>
-            
           </div>
 
           {/* Sağ Kısım: Görsel Alanı (Orijinal yerinde kaldı) */}
@@ -103,7 +106,6 @@ export default function AboutSection() {
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
