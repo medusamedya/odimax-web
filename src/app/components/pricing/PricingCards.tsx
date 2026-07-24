@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
@@ -14,12 +16,12 @@ const FEATURES = [
 
 export default function PricingCards() {
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-brand-neutral font-sans">
+    <section className="py-12 md:py-16 lg:py-24 bg-brand-neutral font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Ortalanmış Bölüm Başlığı */}
-        <div className="text-center mb-10 md:mb-16 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 mb-2">
+        <div className="text-center mb-0 md:mb-16 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2 md:mb-2">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
               FİYATLANDIRMA
             </span>
@@ -29,11 +31,35 @@ export default function PricingCards() {
           </h2>
         </div>
 
-        {/* Fiyatlandırma Kartları Grid Yapısı */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {/* Yana Kaydır İndikatörü (Sadece Mobil) - StepsSlider ile birebir aynı */}
+        <div className="flex md:hidden items-center justify-center gap-2 mt-1 mb-4 text-brand-blue animate-pulse">
+          <span className="text-xs font-bold tracking-widest uppercase">
+            Yana Kaydırın
+          </span>
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </div>
+
+        {/* 
+          Fiyatlandırma Kartları Kapsayıcısı 
+          Mobilde: flex, yatay scroll, ve snap (hizalama) aktif
+          Masaüstünde (md): grid, 3 sütun
+        */}
+        <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scrollbar pb-8 md:pb-0 items-stretch -mx-4 px-4 md:mx-0 md:px-0">
           
           {/* Sol Kart (Aylık) */}
-          <div className="bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
+          <div className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 md:shrink snap-center bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
             <h3 className="text-xl md:text-3xl font-bold text-brand-dark mb-2">Aylık Ödeme</h3>
             <p className="text-brand-text mb-3 md:mb-6">Tek Şubeli Merkezler</p>
             <div className="text-xl md:text-[28px] font-black text-brand-dark mb-8 tracking-tight">
@@ -56,8 +82,7 @@ export default function PricingCards() {
           </div>
 
           {/* Orta Kart (Yıllık - Avantajlı) */}
-          <div className="bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden flex flex-col transform md:-translate-y-4">
-            {/* Arka plan dekoratif görseli (7.png) */}
+          <div className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 md:shrink snap-center bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-2xl relative overflow-hidden flex flex-col transform md:-translate-y-4">
             <div className="absolute inset-0 z-0 opacity-30 mix-blend-overlay pointer-events-none">
               <Image 
                 src="/7.png" 
@@ -91,10 +116,9 @@ export default function PricingCards() {
           </div>
 
           {/* Sağ Kart (Özel Fiyat) */}
-          <div className="bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
+          <div className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 md:shrink snap-center bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
             <h3 className="text-xl md:text-3xl font-bold text-brand-dark mb-2">Özel Fiyat için <br/> İletişime Geçin</h3>
             <p className="text-brand-text mb-3 md:mb-6">Birden Fazla Şubesi Olan Merkezler</p>
-            {/* Özel fiyat kartında sabit fiyat alanı boş bırakıldığı için boşluk (spacer) bırakıyoruz */}
             <div className="h-[2.5rem] md:mb-[1.8rem]"></div>
             
             <ul className="space-y-4 mb-10 flex-1">
@@ -114,6 +138,19 @@ export default function PricingCards() {
 
         </div>
       </div>
+
+      {/* Tailwind'de varsayılan scrollbar'ı gizlemek için küçük stil enjeksiyonu */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+        `
+      }} />
     </section>
   );
 }
