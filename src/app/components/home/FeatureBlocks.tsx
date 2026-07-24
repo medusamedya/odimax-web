@@ -11,8 +11,8 @@ const FEATURES = [
     tag: "FİNANS YÖNETİMİ",
     title: "Kasa Kontrolü Tek Ekranda",
     description:
-      "Günlük gelir, gider ve toplam bakiyenizi anlık olarak görün. Nakit ve banka hareketlerini ayrı ayrı takip edin. Sürpriz yok, belirsizlik yok.",
-    benefit: "Gün sonunda merkezin finansal durumu daha net görünür.",
+      "Günlük gelir, gider ve toplam bakiyenizi anlık olarak görün. Nakit ve banka hareketlerini ayrı ayrı takip edin.",
+    benefit: "Merkezin finansal durumu daha net görünür.",
     image: "/home/01Kasa.webp", 
   },
   {
@@ -20,8 +20,8 @@ const FEATURES = [
     tag: "STOK & ENVANTER",
     title: "Cihaz ve Stok Süreçleri Karışmasın",
     description:
-      "İşitme cihazlarını marka, model, seri numarası ve GTIN ile takip edin. Stok giriş-çıkışları, satış ve ÜTS süreçleri aynı akışta izlensin.",
-    benefit: "Hangi cihazın nerede olduğunu güvenli şekilde yönetirsiniz.",
+      "İşitme cihazlarını marka, model, seri numarası ve GTIN ile takip edin. Stok giriş-çıkışları kolaylıkla izlensin.",
+    benefit: "Hangi cihazın nerede olduğunu yönetirsiniz.",
     image: "/home/02Stok.webp", 
   },
   {
@@ -29,7 +29,7 @@ const FEATURES = [
     tag: "SATIŞ & OPERASYON",
     title: "Satış Süreci Eksiksiz İlerlesin",
     description:
-      "Satışları hasta, cihaz, kulak yönü, iskonto ve ödeme bilgileriyle birlikte kaydedin. Geriye dönük kontrol merkez hafızasında korunsun.",
+      "Satışları hasta, cihaz, kulak yönü, iskonto ve ödeme bilgileriyle birlikte kaydedin. ",
     benefit: "Satış sonrası geriye dönük kontrol kolaylaşır.",
     image: "/home/03Satıs.webp", 
   },
@@ -38,8 +38,8 @@ const FEATURES = [
     tag: "HASTA KARTLARI",
     title: "Hasta Bilgileri Kişilere Bağlı Kalmasın",
     description:
-      "İletişim bilgileri, cihaz geçmişi, randevular ve satışlar tek hasta kartında tutulur. Personel değişse bile veri kaybolmaz.",
-    benefit: "Personel değişse bile hasta geçmişi kaybolmaz.",
+      "İletişim bilgileri, cihaz geçmişi, randevular ve satışlar tek hasta kartında tutulur. ",
+    benefit: "Hasta geçmişi asla kaybolmaz.",
     image: "/home/04Hasta.webp", 
   },
   {
@@ -47,8 +47,8 @@ const FEATURES = [
     tag: "TAKVİM & PLANLAMA",
     title: "Randevu ve Takip Süreci Aksamadan İlerlesin",
     description:
-      "Kontrol görüşmelerini takvim üzerinden planlayın. Hatırlatma akışlarını merkezin standart işleyişine zahmetsizce dahil edin.",
-    benefit: "Randevu karışıklıkları azalır, takip işleri gözden kaçmaz.",
+      "Kontrol görüşmelerini ve hatırlatmalarınızı takvim üzerinden planlayın. ",
+    benefit: "Randevu karışıklıkları azalır, takip kolaylaşır.",
     image: "/home/05Randevu.webp", 
   },
 ];
@@ -61,7 +61,7 @@ export default function FeatureBlocks() {
   };
 
   return (
-    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans">
+    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ORTALANMIŞ BAŞLIK VE ROZET */}
@@ -120,8 +120,8 @@ export default function FeatureBlocks() {
                       
                       <div className="mt-1 md:mt-4 py-0.5">
                         <div className="flex items-start gap-2">
-                          <CheckCircle2 className="text-brand-blue w-4 h-4 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                          <p className="text-sm text-brand-dark/80 font-medium leading-relaxed">
+                          <CheckCircle2 className="text-brand-blue w-4 h-4 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                          <p className="text-sm md:text-base text-brand-dark/80 font-medium leading-relaxed">
                             {feature.benefit}
                           </p>
                         </div>

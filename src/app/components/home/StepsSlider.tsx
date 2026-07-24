@@ -125,7 +125,7 @@ export default function StepsSlider() {
   };
 
   return (
-    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
@@ -184,7 +184,7 @@ export default function StepsSlider() {
                 */}
                 <div className="absolute top-0 right-0 h-full w-2/3 pointer-events-none -z-10 opacity-15 sepia hue-rotate-[190deg] saturate-[300%] transition-opacity duration-500 group-hover:opacity-25">
                   <Image
-                    src="https://odimax.com.tr/wp-content/themes/odimax/assets/img/14.png"
+                    src="/14.png"
                     alt="Odimax Background"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

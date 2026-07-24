@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ModuleContactCTA() {
   return (
-    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-brand-dark shadow-2xl">
         
         {/* Dalgalı Arka Plan (SVG Pattern) */}

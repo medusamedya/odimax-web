@@ -11,7 +11,7 @@ const LOGOS = Array.from(
 
 export default function LogoMarquee() {
   return (
-    <section className="py-8 md:py-12 bg-brand-neutral overflow-hidden font-sans relative ">
+    <section className="py-12 md:py-16 bg-brand-neutral overflow-hidden font-sans relative ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı - max-w-3xl ile metnin çok uzamasını engelledik */}
         <div className="text-center mb-2  flex flex-col items-center">

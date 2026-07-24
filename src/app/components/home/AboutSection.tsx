@@ -3,7 +3,7 @@ import { CheckCircle2, ShieldCheck, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-8 md:py-8 lg:py-12  bg-brand-neutral overflow-hidden relative font-sans">
+    <section className="py-12 md:py-16 lg:py-18  bg-brand-neutral overflow-hidden relative font-sans">
       {/* Arka plan derinliği için çok hafif, dekoratif bir parlama */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 

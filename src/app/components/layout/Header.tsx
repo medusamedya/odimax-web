@@ -23,8 +23,8 @@ export interface MenuItemType {
 const MENU_ITEMS: MenuItemType[] = [
   { name: "Anasayfa", path: "/" },
   { name: "Hakkımızda", path: "/about" },
-  { 
-    name: "Modüller", 
+  {
+    name: "Modüller",
     subItems: [
       { name: "Hasta Yönetimi", path: "/modules/hasta-yonetimi" },
       { name: "Randevu & Takvim", path: "/modules/randevu-takvim" },
@@ -35,7 +35,7 @@ const MENU_ITEMS: MenuItemType[] = [
       { name: "Masraf Yönetimi", path: "/modules/masraf-yonetimi" },
       { name: "WhatsApp & Toplu Mesaj", path: "/modules/whatsapp-toplu-mesaj" },
       { name: "Raporlama & Dashboard", path: "/modules/raporlama-dashboard" },
-    ]
+    ],
   },
   { name: "Fiyatlandırma", path: "/pricing" },
   { name: "İletişim", path: "/contact" },
@@ -64,22 +64,21 @@ export default function Header() {
         }`}
       >
         <div className="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-          
           {/* LEFT: Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
+            className="flex-shrink-0 flex items-center cursor-pointer group"
           >
-            <div className="relative w-10 h-10 sm:w-14 sm:h-14 transition-transform duration-300 group-hover:scale-105">
-              <Image
-                src="/odimax/Logo2.png"
-                alt="Odimax Logo"
-                fill
-                sizes="(max-width: 768px) 40px, 48px"
-                priority
-                className="object-contain"
-              />
-            </div>
+            {/* Kapsayıcıyı kaldırdık, Image bileşenine w-auto vererek kendi oranını korumasını sağladık */}
+            <Image
+              src="/odimax/1.png"
+              alt="Odimax Logo"
+              width={180} // Logonun orijinal (veya yüksek çözünürlüklü) genişliğini yaz
+              height={48} // Logonun orijinal yüksekliğini yaz
+              priority
+              quality={100} // Next.js'in metin içeren PNG'leri bozmasını kesin olarak engeller
+              className="w-auto h-6 sm:h-8 md:h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* MIDDLE: Pill Menu (Sadece Masaüstü) */}
@@ -93,7 +92,6 @@ export default function Header() {
           >
             {MENU_ITEMS.map((item) => (
               <div key={item.name} className="relative group/dropdown">
-                
                 {/* Eğer alt menüsü varsa Dropdown Tetikleyici (Modüller) */}
                 {item.subItems ? (
                   <button className="font-sans flex items-center gap-1 text-[16px] px-4 py-1.5 text-brand-header-text font-semibold hover:text-brand-dark transition-colors duration-300 rounded-full hover:bg-brand-light/90 cursor-default">
@@ -126,7 +124,6 @@ export default function Header() {
                     </div>
                   </div>
                 )}
-                
               </div>
             ))}
           </nav>
@@ -157,7 +154,7 @@ export default function Header() {
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
-        menuItems={MENU_ITEMS} 
+        menuItems={MENU_ITEMS}
       />
     </>
   );

@@ -16,8 +16,8 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
-            İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde
+          <h1 className="font-sans text-3xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
+            İşitme Merkezinizde  Süreçleri Tek Panelde
             Düzenleyin
           </h1>
           <p className="font-sans text-base md:text-xl text-brand-text max-w-3xl mx-auto leading-relaxed">
@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
 
         {/* Panel Görseli (Mockup) */}
-        <div className="mt-8 sm:mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
+        <div className="mt-4 sm:mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
           <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden shadow-sm md:shadow-2xl border border-white/40 bg-white">
             <Image
               src="/home/hero.webp"

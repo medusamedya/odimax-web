@@ -14,9 +14,22 @@ const FEATURES = [
 
 export default function PricingCards() {
   return (
-    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans ">
+    <section className="py-12 md:py-16 lg:py-24 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Ortalanmış Bölüm Başlığı */}
+        <div className="text-center mb-10 md:mb-16 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm ">
+              FİYATLANDIRMA
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+            Merkeziniz İçin En Uygun Planı Seçin
+          </h2>
+        </div>
+
+        {/* Fiyatlandırma Kartları Grid Yapısı */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
           {/* Sol Kart (Aylık) */}
@@ -82,7 +95,7 @@ export default function PricingCards() {
             <h3 className="text-xl md:text-3xl font-bold text-brand-dark mb-2">Özel Fiyat için <br/> İletişime Geçin</h3>
             <p className="text-brand-text mb-3 md:mb-6">Birden Fazla Şubesi Olan Merkezler</p>
             {/* Özel fiyat kartında sabit fiyat alanı boş bırakıldığı için boşluk (spacer) bırakıyoruz */}
-            <div className="h-[2.5rem] "></div>
+            <div className="h-[2.5rem] md:mb-[1.8rem]"></div>
             
             <ul className="space-y-4 mb-10 flex-1">
               {FEATURES.map((feature, idx) => (

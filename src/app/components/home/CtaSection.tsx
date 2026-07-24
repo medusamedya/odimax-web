@@ -13,7 +13,7 @@ export default function CtaSection() {
   return (
     // Dış katman: Sayfanın genel rengi.
     // Alt/üst boşlukları (padding) çok abartmamak ve kopukluk hissi vermemek için py-12 md:py-16 kullanıyoruz.
-    <section className="py-8 md:py-8 lg:py-12  bg-brand-neutral font-sans">
+    <section className="py-12 md:py-16 lg:py-18  bg-brand-neutral font-sans">
       <div className=" mx-auto px-8 sm:px-12 lg:px-24">
         {/* 
           Yüzen Kutu (Floating Card): 
