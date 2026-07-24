@@ -134,6 +134,8 @@ export default function Header() {
             <div className="hidden lg:block">
               <Link
                 href="https://panel.odimax.com.tr/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-sans inline-flex items-center justify-center bg-gradient-to-r from-brand-blue via-[#02b6da] to-brand-dark bg-[length:200%_auto] animate-text-gradient text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 cursor-pointer"
               >
                 Giriş Yap

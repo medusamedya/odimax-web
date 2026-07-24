@@ -49,7 +49,7 @@ export default function VideoSliderSection() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-24 bg-brand-neutral overflow-hidden relative font-sans w-full">
+    <section id="video-alani" className="py-12 md:py-16 lg:py-24 bg-brand-neutral overflow-hidden relative font-sans w-full">
       {/* Arka plan derinliği için dekoratif parlama */}
       <div className="absolute top-0 left-0 -translate-y-12 -translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 

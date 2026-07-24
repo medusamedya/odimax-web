@@ -8,7 +8,6 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Başlık ve Alt Metin */}
         <div className="max-w-6xl mx-auto space-y-2 md:space-y-6">
-          
           {/* Üst Vurgu Metni (Badge) */}
           <div className="inline-flex items-center gap-2 mb-2">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm">
@@ -17,8 +16,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-sans text-3xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
-            İşitme Merkezinizde  Süreçleri Tek Panelde
-            Düzenleyin
+            İşitme Merkezinizde Süreçleri Tek Panelde Düzenleyin
           </h1>
           <p className="font-sans text-base md:text-xl text-brand-text max-w-3xl mx-auto leading-relaxed">
             Hasta takibi, randevu, stok, tahsilat, ÜTS işlemleri ve Tamir &
@@ -40,7 +38,7 @@ export default function Hero() {
           </Link>
           {/* Secondary Button */}
           <Link
-            href="/video"
+            href="#video-alani"
             className="font-sans flex items-center justify-center gap-2 bg-white hover:bg-brand-light text-brand-dark font-medium py-3.5 px-8 rounded-full transition-colors duration-300 w-full sm:w-auto border border-black/5 shadow-sm"
           >
             <PlayCircle className="w-5 h-5" />

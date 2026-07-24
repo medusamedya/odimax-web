@@ -25,28 +25,24 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${plusJakarta.variable} h-full antialiased`}
+      className={`${plusJakarta.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-brand-neutral text-brand-dark font-sans">
-        
         {/* Üstte sabit kalacak Header */}
         <Header />
-        
+
         {/* 
           Ana içerik alanı. 
           pb-20 (mobilde), masaüstünde md:pb-0 ekleyerek 
           mobil alt barın içeriği kesmesini engelliyoruz.
         */}
-        <main className="flex-1 flex flex-col w-full ">
-          {children}
-        </main>
+        <main className="flex-1 flex flex-col w-full ">{children}</main>
 
         {/* Altta yer alacak Footer */}
         <Footer />
 
         {/* Sadece mobilde aktif olacak alt navigasyon barı */}
         <MobileBottomNav />
-        
       </body>
     </html>
   );
