@@ -70,9 +70,9 @@ export default function Header() {
             href="/"
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
           >
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-10 h-10 sm:w-14 sm:h-14 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/home/logo.webp"
+                src="/odimax/Logo2.png"
                 alt="Odimax Logo"
                 fill
                 sizes="(max-width: 768px) 40px, 48px"

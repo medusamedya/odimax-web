@@ -18,7 +18,7 @@ export default function DynamicFaq({ faqs }: { faqs: FaqItem[] }) {
   };
 
   return (
-    <section className="py-12 bg-brand-neutral font-sans border-t border-black/[0.03]">
+    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans border-t border-black/[0.03]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Üst Başlık Alanı */}
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">

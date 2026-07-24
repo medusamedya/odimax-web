@@ -11,7 +11,7 @@ const LOGOS = Array.from(
 
 export default function LogoMarquee() {
   return (
-    <section className="py-12 md:py-16 bg-brand-neutral overflow-hidden font-sans relative ">
+    <section className="py-8 md:py-12 bg-brand-neutral overflow-hidden font-sans relative ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı - max-w-3xl ile metnin çok uzamasını engelledik */}
         <div className="text-center mb-2  flex flex-col items-center">
@@ -35,14 +35,14 @@ export default function LogoMarquee() {
             w-max: İçeriğin genişliği kadar uzamasını sağlar.
             gap-12 md:gap-20: Logolar arası boşluğu responsive yaptık.
           */}
-          <div className="flex w-max items-center gap-12 md:gap-20 animate-[marquee_40s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex w-max items-center gap-4 sm:gap-12 md:gap-20 animate-[marquee_40s_linear_infinite] hover:[animation-play-state:paused]">
             {/* 
               Kusursuz döngü (seamless loop) için orijinal diziyi arka arkaya 2 kez render ediyoruz.
             */}
             {[...LOGOS, ...LOGOS].map((logo, index) => (
               <div
                 key={index}
-                className="relative w-36 h-36 md:w-64 md:h-64 flex-shrink-0  opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0  opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               >
                 <Image
                   src={logo}

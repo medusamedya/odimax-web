@@ -14,16 +14,16 @@ const FEATURES = [
 
 export default function PricingCards() {
   return (
-    <section className="py-12 bg-brand-neutral font-sans ">
+    <section className="py-8 md:py-8 lg:py-12 bg-brand-neutral font-sans ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
           {/* Sol Kart (Aylık) */}
           <div className="bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
-            <h3 className="text-xl md:text-2xl font-bold text-brand-dark mb-2">Aylık Ödeme</h3>
+            <h3 className="text-xl md:text-3xl font-bold text-brand-dark mb-2">Aylık Ödeme</h3>
             <p className="text-brand-text mb-3 md:mb-6">Tek Şubeli Merkezler</p>
-            <div className="text-4xl font-black text-brand-dark mb-8 tracking-tight">
+            <div className="text-xl md:text-[28px] font-black text-brand-dark mb-8 tracking-tight">
               1.450 TL <span className="text-xl font-bold text-brand-dark/70">+ KDV / ay</span>
             </div>
             
@@ -55,9 +55,9 @@ export default function PricingCards() {
             </div>
 
             <div className="relative z-10 flex flex-col h-full">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Yıllık Ödeme <span className="font-medium">(Avantajlı)</span></h3>
+              <h3 className="text-xl md:text-3xl font-bold text-white mb-2">Yıllık Ödeme <span className="font-medium">(Avantajlı)</span></h3>
               <p className="text-white mb-3 md:mb-6">Yıllık peşin ödeme</p>
-              <div className="text-4xl font-black text-white mb-8 tracking-tight">
+              <div className="text-xl md:text-[28px] font-black text-white mb-8 tracking-tight">
                 990 TL <span className="text-xl font-bold text-white/80">+ KDV / ay</span>
               </div>
               
@@ -79,7 +79,7 @@ export default function PricingCards() {
 
           {/* Sağ Kart (Özel Fiyat) */}
           <div className="bg-white rounded-[2rem] p-6 md:p-8 lg:p-10 shadow-lg border border-black/[0.04] flex flex-col">
-            <h3 className="text-xl md:text-2xl font-bold text-brand-dark mb-2">Özel Fiyat için <br/> İletişime Geçin</h3>
+            <h3 className="text-xl md:text-3xl font-bold text-brand-dark mb-2">Özel Fiyat için <br/> İletişime Geçin</h3>
             <p className="text-brand-text mb-3 md:mb-6">Birden Fazla Şubesi Olan Merkezler</p>
             {/* Özel fiyat kartında sabit fiyat alanı boş bırakıldığı için boşluk (spacer) bırakıyoruz */}
             <div className="h-[2.5rem] "></div>

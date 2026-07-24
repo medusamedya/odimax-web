@@ -3,7 +3,7 @@ import { CheckCircle2, ShieldCheck, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="py-8 md:py-8 lg:py-16  bg-brand-neutral overflow-hidden relative font-sans">
+    <section className="py-8 md:py-8 lg:py-12  bg-brand-neutral overflow-hidden relative font-sans">
       {/* Arka plan derinliği için çok hafif, dekoratif bir parlama */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[800px] bg-brand-blue/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
@@ -87,23 +87,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/20 to-transparent"></div>
             </div>
 
-            <div className="absolute -bottom-6 -left-4 sm:bottom-8 sm:-left-4 bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue border border-white/10 p-6 rounded-2xl shadow-xl max-w-[250px]">
-              <div className="flex items-center gap-4 mb-3">
-                {/* İkon arka planı koyu temaya uygun olarak white/10 yapıldı */}
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-black text-white">%100</div>
-                  <div className="text-[11px] font-bold text-white uppercase tracking-widest">
-                    Sektör Uyumu
-                  </div>
-                </div>
-              </div>
-              <p className="text-sm text-white/80 font-medium leading-snug">
-                Genel amaçlı bir yazılım değil, gerçek merkez ihtiyaçları.
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>

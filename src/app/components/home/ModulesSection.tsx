@@ -6,15 +6,7 @@ const MODULES = [
     description:
       "Tüm hasta kayıtlarını tek merkezde toplayın; işitme geçmişi, cihaz bilgisi ve iletişim detayları her an elinizin altında olsun.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
         <circle cx="9" cy="7" r="4"></circle>
         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -28,15 +20,7 @@ const MODULES = [
     description:
       "Hasta randevularını tek takvimden planlayın; yoğunluğu görün, unutulan kontrolleri ortadan kaldırın.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
         <line x1="16" y1="2" x2="16" y2="6"></line>
         <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -51,15 +35,7 @@ const MODULES = [
     description:
       "Cihaz, pil ve aksesuar stoğunu anlık takip edin; hangi üründen kaç adet kaldığını tek bakışta görün.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="m7.5 4.27 9 5.15"></path>
         <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
         <path d="m3.3 7 8.7 5 8.7-5"></path>
@@ -73,15 +49,7 @@ const MODULES = [
     description:
       "İşitme cihazı ÜTS bildirimlerini sistem içinden yönetin; mevzuata uyumu manuel yük olmadan sağlayın.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
         <path d="m9 15 2 2 4-4"></path>
@@ -94,15 +62,7 @@ const MODULES = [
     description:
       "Tedarikçi kayıtlarını ve satın alma sürecini düzenleyin; siparişten stoğa kadar akışı kontrol altında tutun.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="8" cy="21" r="1"></circle>
         <circle cx="19" cy="21" r="1"></circle>
         <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
@@ -115,15 +75,7 @@ const MODULES = [
     description:
       "Tahsilat, ödeme ve nakit akışını tek kasadan izleyin; merkezinizin finansal durumunu her an net görün.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="1" x2="12" y2="23"></line>
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
       </svg>
@@ -135,15 +87,7 @@ const MODULES = [
     description:
       "Sabit ve değişken giderleri kalem kalem kaydedin; kârlılığınızı gerçek rakamlarla ölçün.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path>
         <line x1="16" y1="8" x2="8" y2="8"></line>
         <line x1="16" y1="12" x2="8" y2="12"></line>
@@ -157,15 +101,7 @@ const MODULES = [
     description:
       "Randevu hatırlatmalarını ve kampanyaları WhatsApp üzerinden otomatik gönderin; hastalarla bağı canlı tutun.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
       </svg>
     ),
@@ -176,20 +112,24 @@ const MODULES = [
     description:
       "Satış, hasta ve stok verilerini tek panelde görün; kararlarınızı tahminle değil veriyle alın.",
     icon: (
-      <svg
-        className="w-full h-full"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
         <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
       </svg>
     ),
   },
+  // YENİ EKLENEN 10. MODÜL (Sadece Mobilde/Tablette Görünür)
+  {
+    id: "tamir-servis",
+    title: "Tamir & Servis Entegrasyonu",
+    description: "Cihazlarınızın Tamir & Servis Entegrasyonlarını tek panelden takip edin.",
+    hideOnDesktop: true, // Bu özel değişken sayesinde masaüstünde render edilmeyecek
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+      </svg>
+    ),
+  }
 ];
 
 export default function ModulesSection() {
@@ -222,7 +162,13 @@ export default function ModulesSection() {
                 return (
                   <div
                     key={module.id}
-                    className="bg-white p-4 sm:p-6 md:p-8 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between md:min-h-[220px]"
+                    /* 
+                      Buradaki dinamik sınıf yapısı sayesinde hideOnDesktop değeri true olan 
+                      kartlar (yani 10. modülümüz) lg:hidden sınıfını alır ve masaüstünde gizlenir.
+                    */
+                    className={`bg-white p-4 sm:p-6 md:p-8 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between md:min-h-[220px] ${
+                      module.hideOnDesktop ? "block lg:hidden" : ""
+                    }`}
                   >
                     {/* Arka Plan Devasa Filigran İkonu (Watermark) */}
                     <div className="absolute -bottom-2 md:-bottom-8 -right-4 md:-right-8 w-24 h-24 md:w-40 md:h-40 text-black/[0.03] group-hover:text-brand-blue/[0.07] transition-all duration-500 pointer-events-none transform group-hover:scale-110 group-hover:-rotate-6">

@@ -8,6 +8,14 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Başlık ve Alt Metin */}
         <div className="max-w-6xl mx-auto space-y-2 md:space-y-6">
+          
+          {/* Üst Vurgu Metni (Badge) */}
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm">
+              İşitme Cihazı Merkezinizin Dijital Aklı
+            </span>
+          </div>
+
           <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight pb-2 inline-block bg-gradient-to-r from-[#222324] from-60% to-[#595A5B] bg-clip-text text-transparent">
             İşitme Merkezinizde Dağınık İlerleyen Süreçleri Tek Panelde
             Düzenleyin

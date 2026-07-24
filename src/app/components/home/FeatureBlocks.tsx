@@ -126,6 +126,23 @@ export default function FeatureBlocks() {
                           </p>
                         </div>
                       </div>
+
+                      {/* 
+                        YENİ EKLENEN KISIM: MOBİL VE TABLET GÖRSELİ (Akordeon İçi) 
+                        lg:hidden ile masaüstünde gizlenir. Sadece aktif sekmede render olur.
+                      */}
+                      <div className="block lg:hidden mt-2 relative w-full rounded-2xl overflow-hidden bg-brand-light shadow-sm border-1 border-brand-dark/20">
+                        <Image
+                          src={feature.image}
+                          alt={feature.title}
+                          width={800}
+                          height={600}
+                          className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
+                          priority={index === 0}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -133,18 +150,12 @@ export default function FeatureBlocks() {
             })}
           </div>
 
-         {/* SAĞ KISIM: Görsel Alanı */}
-          <div className="lg:col-span-7 sticky top-24">
-            {/* 
-              DEĞİŞİKLİK: aspect-[15/10] kaldırıldı. 
-              Sadece kapsayıcıya yuvarlaklık, gölge ve border verildi.
-            */}
+          {/* 
+            SAĞ KISIM: Görsel Alanı (SADECE MASAÜSTÜ) 
+            hidden lg:block eklendi. Mobil ve tablette gizlenecek.
+          */}
+          <div className="hidden lg:block lg:col-span-7 sticky top-24">
             <div className="relative w-full rounded-[1.5rem] overflow-hidden bg-brand-light shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border-2 border-brand-dark/50">
-              
-              {/* 
-                DEĞİŞİKLİK: fill yerine width ve height eklendi.
-                w-full ve h-auto sayesinde görsel asla kırpılmaz, kendi doğal oranında büyür/küçülür.
-              */}
               <Image
                 key={activeIndex}
                 src={FEATURES[activeIndex].image}
@@ -152,16 +163,16 @@ export default function FeatureBlocks() {
                 width={1200}
                 height={900}
                 className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
-                priority // İlk görselin hızlı yüklenmesi için
+                priority 
               />
-
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
             </div>
           </div>
 
         </div>
       </div>
-      {/* Sadece Görsel Geçişleri İçin Kalan Animasyon */}
+      
+      {/* Animasyonlar */}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes fadeIn {
           from { opacity: 0.6; transform: scale(1.02); }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PricingHero() {
   return (
-    <section className="py-12  bg-brand-neutral overflow-hidden font-sans relative">
+    <section className="py-8 md:py-8 lg:py-12  bg-brand-neutral overflow-hidden font-sans relative">
       {/* Dekoratif Glow Efektleri */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ export default function PricingHero() {
           {/* Sağ Kısım: Özet Fiyat Kartı */}
           <div className="w-full max-w-full md:max-w-md  lg:ml-auto">
             <div className="bg-gradient-to-br from-brand-dark via-[#1a2642] to-brand-blue p-8 md:p-10 rounded-[2rem] text-white  relative overflow-hidden">
-              <h3 className="text-2xl md:text-3xl font-bold mb-8">
+              <h3 className="text-xl md:text-3xl font-bold mb-8">
                 Tüm Özellikler Dahil
               </h3>
 
@@ -53,7 +53,7 @@ export default function PricingHero() {
                 <span className="block text-sm font-medium mb-1 opacity-90">
                   Aylık Ödeme
                 </span>
-                <div className="text-2xl md:text-[28px] font-bold">
+                <div className="text-xl md:text-[28px] font-bold">
                   1.450 TL + KDV{" "}
                   <span className="text-lg font-normal">/ Ay</span>
                 </div>
@@ -65,7 +65,7 @@ export default function PricingHero() {
                 <span className="block text-sm font-medium mb-1 opacity-90">
                   Yıllık Ödeme (Avantajlı)
                 </span>
-                <div className="text-2xl md:text-[28px] font-bold">
+                <div className="text-xl md:text-[28px] font-bold">
                   990 TL + KDV <span className="text-lg font-normal">/ Ay</span>
                 </div>
               </div>
