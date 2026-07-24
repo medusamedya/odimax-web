@@ -178,17 +178,17 @@ export default function StepsSlider() {
                 // Kart boyutları büyütüldü: lg ekranda %45 genişlik
                 className="relative flex flex-col bg-white rounded-[32px] p-8 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-shadow duration-300 border border-black/[0.04] snap-start shrink-0 w-[90%] md:w-[60%] lg:w-[45%] group z-10 overflow-hidden"
               >
-                {/* 
-                  Sağdaki Odimax Dekoratif Görseli 
-                  CSS Filter ile PNG görselini Odimax kurumsal mavisine dönüştürüyoruz
+               {/* 
+                  Sağdaki Odimax Dekoratif Logosu 
+                  Orijinal logo eklendi, hafif yatık (-rotate-12) ve yumuşak bir filigran (opacity) yapıldı.
                 */}
-                <div className="absolute top-0 right-0 h-full w-2/3 pointer-events-none -z-10 opacity-15 sepia hue-rotate-[190deg] saturate-[300%] transition-opacity duration-500 group-hover:opacity-25">
+                <div className="absolute top-[-120] right-[-58] h-full w-1/2 pointer-events-none -z-10 opacity-[0.1] transition-opacity duration-500 group-hover:opacity-30">
                   <Image
-                    src="/14.png"
-                    alt="Odimax Background"
+                    src="/odimax/Logo2.png"
+                    alt="Odimax Background Logo"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain object-right"
+                    className="object-contain object-right -rotate-10 scale-110 origin-center"
                   />
                 </div>
 

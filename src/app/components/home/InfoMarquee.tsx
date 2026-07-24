@@ -11,12 +11,12 @@ import {
 // Veri yapısını ayırarak kod kalabalığını önlüyoruz.
 // Görseldeki içeriklere en uygun Lucide ikonları seçildi.
 const MARQUEE_ITEMS = [
-  { id: 1, text: "Kurulum desteği dahil", icon: Wrench },
-  { id: 2, text: "Temel eğitim dahil", icon: GraduationCap },
-  { id: 3, text: "Demo ile ihtiyaç analizi", icon: MessageSquareText },
-  { id: 4, text: "Kolay muhasebe ve stok takibi", icon: Store },
-  { id: 5, text: "Müşteri & tedarikçi yönetimi tek listede", icon: Users },
-  { id: 6, text: "Kasa, banka kontrolü", icon: Landmark },
+  { id: 1, text: "Kurulum Desteği Dahil", icon: Wrench },
+  { id: 2, text: "Temel Eğitim Dahil", icon: GraduationCap },
+  { id: 3, text: "Demo ile İhtiyaç Analizi", icon: MessageSquareText },
+  { id: 4, text: "ÜTS Kaydı ve Yönetimi", icon: Store },
+  { id: 5, text: "Tamir & Servis Entegrasyonu ", icon: Users },
+  { id: 6, text: "Merkeziniz Tek Panelde", icon: Landmark },
 ];
 
 export default function InfoMarquee() {

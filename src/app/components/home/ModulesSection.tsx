@@ -144,7 +144,7 @@ export default function ModulesSection() {
             </span>
           </div>
 
-          <h2 className=" font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
+          <h2 className=" font-sans text-3xl md:text-4xl lg:text-5xl mb-4 font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Tüm Süreçler Tek Platformda
           </h2>
           <p className="font-sans text-base md:text-lg text-brand-text leading-normal md:leading-relaxed">

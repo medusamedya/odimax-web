@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
 
 const FEATURES = [
   "Hasta & randevu yönetimi",
@@ -70,13 +69,13 @@ export default function PricingCards() {
               {FEATURES.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2 md:gap-3 text-brand-dark/80 font-medium">
                   <div className="w-5 h-5 rounded-full bg-brand-dark/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3.5 h-3.5 text-brand-dark" strokeWidth={3} />
+                    <Image src="/odimax/Logo3.png" alt="Odimax Icon" width={12} height={12} className="object-contain" />
                   </div>
                   {feature}
                 </li>
               ))}
             </ul>
-            <button className="w-full py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-blue transition-colors">
+            <button className="w-full py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-dark-hover transition-colors">
               Demo Talep Et
             </button>
           </div>
@@ -103,13 +102,13 @@ export default function PricingCards() {
                 {FEATURES.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2 md:gap-3 text-white font-medium">
                     <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
+                      <Image src="/odimax/Logo4.png" alt="Odimax Icon" width={12} height={12} className="object-contain" />
                     </div>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl bg-white text-brand-dark font-bold hover:bg-gray-50 transition-colors shadow-lg">
+              <button className="w-full py-4 rounded-xl bg-white text-brand-dark font-bold hover:bg-gray-90 transition-colors ">
                 Demo Talep Et
               </button>
             </div>
@@ -125,13 +124,13 @@ export default function PricingCards() {
               {FEATURES.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2 md:gap-3 text-brand-dark/80 font-medium">
                   <div className="w-5 h-5 rounded-full bg-brand-dark/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-3.5 h-3.5 text-brand-dark" strokeWidth={3} />
+                    <Image src="/odimax/Logo3.png" alt="Odimax Icon" width={12} height={12} className="object-contain" />
                   </div>
                   {feature}
                 </li>
               ))}
             </ul>
-            <button className="w-full py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-blue transition-colors">
+            <button className="w-full py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-dark-hover transition-colors">
               İletişime Geç
             </button>
           </div>

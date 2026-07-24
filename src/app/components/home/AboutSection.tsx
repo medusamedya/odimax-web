@@ -26,7 +26,7 @@ export default function AboutSection() {
           {/* Sol Kısım: Açıklama ve Kartlar (Orijinal yerinde kaldı) */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-8">
             {/* Metin Paragrafları */}
-            <div className="text-base md:text-lg text-brand-text leading-normal md:leading-relaxed space-y-2 md:space-y-6">
+            <div className="text-base md:text-lg text-brand-text leading-normal md:leading-relaxed space-y-2 md:space-y-6 text-center md:text-start">
               <p>
                 Odimax, işitme cihazı satışı ve hizmeti veren merkezlerin günlük
                 operasyonlarını daha düzenli, izlenebilir ve kontrollü

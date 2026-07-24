@@ -63,13 +63,10 @@ export default function FaqSection() {
           <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-wide pb-1 leading-[1.15] inline-block bg-gradient-to-r from-brand-header-text from-60% to-[#595A5B] bg-clip-text text-transparent">
             Sıkça Sorulanlar.
           </h2>
-          <p className="font-sans text-base md:text-lg text-brand-text leading-normal mb-4 md:leading-relaxed">
-            Cevabını bulamadığınız bir konu varsa, ekibimize WhatsApp veya
-            e-posta ile yazın, aynı gün dönüş yapıyoruz.
-          </p>
+         
           <Link
             href="/contact"
-            className="font-sans inline-flex items-center gap-2 text-brand-blue font-semibold hover:text-brand-blue transition-colors duration-300 bg-white px-5 py-2.5 rounded-full shadow-sm border border-black/[0.05]"
+            className="font-sans inline-flex items-center gap-2 mt-2 text-brand-blue font-semibold hover:text-brand-blue transition-colors duration-300 bg-white px-5 py-2.5 rounded-full shadow-sm border border-black/[0.05]"
           >
             Bize ulaşın
             <ArrowRight className="w-4 h-4" />

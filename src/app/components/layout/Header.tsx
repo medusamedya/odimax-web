@@ -132,10 +132,11 @@ export default function Header() {
           <div className="flex items-center gap-3">
             {/* Masaüstü CTA Butonu */}
             <div className="hidden lg:block">
-              <Link href="/contact" className="inline-block">
-                <button className="bg-brand-blue hover:bg-brand-dark font-sans text-white font-medium py-2.5 px-6 rounded-full transition-colors duration-300 shadow-sm cursor-pointer">
-                  İletişime Geçin
-                </button>
+              <Link
+                href="/contact"
+                className="font-sans inline-flex items-center justify-center bg-gradient-to-r from-brand-blue via-[#02b6da] to-brand-dark bg-[length:200%_auto] animate-text-gradient text-white font-medium py-2.5 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 cursor-pointer"
+              >
+                İletişime Geçin
               </Link>
             </div>
             {/* Mobil Hamburger Butonu */}

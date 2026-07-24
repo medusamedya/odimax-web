@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Başlık Alanı */}
-        <div className="text-center mb-8 md:mb-16 flex flex-col items-center">
+        <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-widest uppercase text-sm">
               KULLANICI YORUMLARI
@@ -57,7 +57,7 @@ export default function TestimonialsSection() {
           </p>
 
           {/* Kullanıcıyı sağa kaydırmaya teşvik eden mobil indikatör */}
-          <div className="flex md:hidden items-center justify-center gap-2 mt-6 text-brand-blue animate-pulse">
+          <div className="flex md:hidden items-center justify-center gap-2 mt-1 md:mt-6 text-brand-blue animate-pulse">
             <span className="text-xs font-bold tracking-widest uppercase">
               Yana Kaydırın
             </span>
@@ -104,7 +104,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Yorum Metni */}
-              <p className="text-brand-text text-base md:text-lg leading-relaxed mb-8 relative z-10 flex-grow">
+              <p className="text-brand-text text-base md:text-lg leading-relaxed mb-4 md:mb-8 relative z-10 flex-grow">
                 "{testimonial.content}"
               </p>
 
