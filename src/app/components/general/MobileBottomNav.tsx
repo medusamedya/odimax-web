@@ -13,7 +13,7 @@ const BOTTOM_NAV_ITEMS = [
   // Modüller için href yerine action kullanıyoruz
   { id: "modules", label: "Modüller", href: "#", icon: LayoutGrid, isAction: true },
   { id: "pricing", label: "Fiyatlandırma", href: "/pricing", icon: Tag, isAction: false },
-  { id: "login", label: "Giriş Yap", href: "/giris", icon: UserCircle, isAction: false },
+  { id: "login", label: "Giriş Yap", href: "https://panel.odimax.com.tr/login", icon: UserCircle, isAction: false },
 ];
 
 export default function MobileBottomNav() {

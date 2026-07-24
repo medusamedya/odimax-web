@@ -2,10 +2,10 @@ import {
   Wrench,
   GraduationCap,
   MessageSquareText,
-  Store,
-  Users,
-  Landmark,
   ChevronRight,
+  FileCheck,
+  Settings,
+  LayoutDashboard,
 } from "lucide-react";
 
 // Veri yapısını ayırarak kod kalabalığını önlüyoruz.
@@ -14,9 +14,9 @@ const MARQUEE_ITEMS = [
   { id: 1, text: "Kurulum Desteği Dahil", icon: Wrench },
   { id: 2, text: "Temel Eğitim Dahil", icon: GraduationCap },
   { id: 3, text: "Demo ile İhtiyaç Analizi", icon: MessageSquareText },
-  { id: 4, text: "ÜTS Kaydı ve Yönetimi", icon: Store },
-  { id: 5, text: "Tamir & Servis Entegrasyonu ", icon: Users },
-  { id: 6, text: "Merkeziniz Tek Panelde", icon: Landmark },
+  { id: 4, text: "ÜTS Kaydı ve Yönetimi", icon: FileCheck },
+  { id: 5, text: "Tamir & Servis Entegrasyonu", icon: Settings },
+  { id: 6, text: "Merkeziniz Tek Panelde", icon: LayoutDashboard },
 ];
 
 export default function InfoMarquee() {
