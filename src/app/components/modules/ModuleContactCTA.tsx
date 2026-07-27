@@ -33,6 +33,9 @@ export default function ModuleContactCTA() {
             <a href="tel:08503026353" className="text-2xl md:text-4xl font-bold text-white hover:text-[#6fe7ff] transition-colors tracking-tight">
               0 850 302 63 53
             </a>
+             <a href="tel:05010773500" className="text-2xl md:text-4xl font-bold text-white hover:text-[#6fe7ff] transition-colors tracking-tight">
+              0 501 077 35 00
+            </a>
             <a href="mailto:info@odimax.com.tr" className="text-xl md:text-2xl font-medium text-white underline decoration-white/30 underline-offset-8 hover:decoration-[#6fe7ff] hover:text-[#6fe7ff] transition-all">
               info@odimax.com.tr
             </a>

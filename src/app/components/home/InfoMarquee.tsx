@@ -35,7 +35,7 @@ export default function InfoMarquee() {
             {/* 
               Kesintisiz akış için orijinal diziyi arka arkaya 2 kez render ediyoruz.
             */}
-            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, index) => {
+            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS,...MARQUEE_ITEMS,...MARQUEE_ITEMS].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div

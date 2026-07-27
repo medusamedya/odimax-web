@@ -14,7 +14,7 @@ const MENU_ITEMS = [
 const SOCIAL_LINKS = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/odimaxcomtr/",
+    href: "https://www.instagram.com/odimaxcrm/",
     svgPath: (
       <>
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
