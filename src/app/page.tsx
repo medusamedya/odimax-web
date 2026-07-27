@@ -17,7 +17,6 @@ export default function Home() {
     <>
       <Hero />
       <AboutSection />
-      <LogoMarquee />
       <ModulesSection />
       <FeatureBlocks />
       <InfoMarquee />

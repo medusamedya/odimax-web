@@ -64,22 +64,10 @@ export default function ContactPage() {
                       0 850 302 63 53
                     </a>
                     <a
-                      href="tel:05337203695"
-                      className="text-brand-text hover:text-brand-blue transition-colors text-sm font-medium"
-                    >
-                      0 533 720 36 95
-                    </a>
-                    <a
                       href="tel:05010773500"
                       className="text-brand-text hover:text-brand-blue transition-colors text-sm font-medium"
                     >
                       0 501 077 35 00
-                    </a>
-                    <a
-                      href="tel:05537343500"
-                      className="text-brand-text hover:text-brand-blue transition-colors text-sm font-medium"
-                    >
-                      0 553 734 35 00
                     </a>
                   </div>
                 </div>

@@ -171,12 +171,7 @@ export default function Footer() {
                   >
                     0 850 302 63 53
                   </a>
-                  <a
-                    href="tel:05337203695"
-                    className="hover:text-white transition-colors"
-                  >
-                    0 533 720 36 95
-                  </a>
+                 
                   <a
                     href="tel:05010773500"
                     className="hover:text-white transition-colors"
