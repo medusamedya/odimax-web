@@ -106,7 +106,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-brand-neutral   font-sans">
+      <section id="demo-form" className="py-20 bg-brand-neutral   font-sans">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <DemoForm />
         </div>
