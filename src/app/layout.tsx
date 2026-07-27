@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import MobileBottomNav from "./components/general/MobileBottomNav";
+import DesktopWhatsApp from "./components/general/DesktopWhatsApp";
 
 // Projemizin yeni kurumsal fontu: Plus Jakarta Sans
 const plusJakarta = Plus_Jakarta_Sans({
@@ -33,7 +34,6 @@ export default function RootLayout({
       className={`${plusJakarta.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-brand-neutral text-brand-dark font-sans">
-        
         {/* 1. Google Tag Manager (noscript) - Body etiketinin hemen sonrası */}
         <noscript>
           <iframe
@@ -57,12 +57,14 @@ export default function RootLayout({
         {/* Altta yer alacak Footer */}
         <Footer />
 
+        <DesktopWhatsApp />
+
         {/* Sadece mobilde aktif olacak alt navigasyon barı */}
         <MobileBottomNav />
 
         {/* --- GOOGLE SCRIPTS --- */}
         {/* Sayfa yüklendikten sonra çalışacak (afterInteractive) şekilde performansı koruyoruz */}
-        
+
         {/* 2. Google Tag Manager Script'i */}
         <Script
           id="gtm-script"

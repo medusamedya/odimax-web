@@ -200,9 +200,9 @@ export default function Footer() {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span className="text-white/80 text-sm leading-relaxed">
-                  1511. Sokak, No:3/A, Umurbey Mah.
+                  Çınarlı, 1587/1. Sk. 4/1, 35170
                   <br />
-                  Alsancak, Konak/İzmir
+                  Konak/İzmir, Türkiye
                 </span>
               </li>
             </ul>
