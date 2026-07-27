@@ -14,8 +14,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Odimax | Modern Web Çözümleri",
-  description: "Odimax kurumsal web sitesi.",
+  title: "Odimax | İşitme Cihazı Merkezleri için Yönetim Sistemi",
+  description: "Odimax ile merkezinizi tek panelden yönetin.",
   verification: {
     // Google Search Console'dan aldığın "google-site-verification" içerik kodunu buraya ekleyeceksin.
     // Örnek: google: "aB1c2D3e4F5g6H7i8J9k0L1m2N3o4P5q",

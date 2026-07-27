@@ -10,8 +10,7 @@ interface InnerHeroProps {
 
 export default function InnerHero({ title, description, breadcrumbs }: InnerHeroProps) {
   return (
-    <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-brand-dark overflow-hidden font-sans">
-      
+<section className="relative h-[400px] lg:h-[480px] flex flex-col justify-center pt-24 lg:pt-32 bg-brand-dark overflow-hidden font-sans">      
       {/* 
         SaaS SOUNDWAVE (SES DALGASI) EFEKTİ
         Dalgalar artık daha belirgin ve logodan yayılıyor hissi veriyor.
@@ -60,7 +59,8 @@ export default function InnerHero({ title, description, breadcrumbs }: InnerHero
         
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* İçeriğin tam genişlikte kalması için w-full eklendi */}
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Breadcrumb (Sayfa Yolu) Navigasyonu */}
         <nav className="flex items-center gap-2 text-sm font-medium mb-8 lg:mb-10">

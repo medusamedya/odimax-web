@@ -88,9 +88,12 @@ export default function PricingCards() {
                 </li>
               ))}
             </ul>
-            <button className="w-full py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-dark-hover transition-colors">
+            <Link
+              href="/contact#demo-form"
+              className="w-full block pointer text-center py-4 rounded-xl bg-brand-dark text-white font-bold hover:bg-brand-dark-hover transition-colors"
+            >
               Demo Talep Et
-            </button>
+            </Link>
           </div>
 
           {/* Orta Kart (Yıllık - Avantajlı) */}
@@ -135,9 +138,12 @@ export default function PricingCards() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-4 rounded-xl bg-white text-brand-dark font-bold hover:bg-gray-90 transition-colors ">
+              <Link
+                href="/contact#demo-form"
+                className="w-full block text-center py-4 rounded-xl bg-white text-brand-dark font-bold hover:bg-gray-90 transition-colors"
+              >
                 Demo Talep Et
-              </button>
+              </Link>
             </div>
           </div>
 
