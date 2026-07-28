@@ -11,7 +11,7 @@ export default function Hero() {
           {/* Üst Vurgu Metni (Badge) */}
           <div className="inline-flex items-center gap-2 mb-2">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm">
-              İşitme Cihazı Merkezinizin Dijital Aklı
+              Işıtme Cıhazı Merkezınızın Dıjıtal Aklı
             </span>
           </div>
 

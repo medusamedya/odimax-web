@@ -59,8 +59,7 @@ export default function RootLayout({
 
         <DesktopWhatsApp />
 
-        {/* Sadece mobilde aktif olacak alt navigasyon barı */}
-        <MobileBottomNav />
+       
 
         {/* --- GOOGLE SCRIPTS --- */}
         {/* Sayfa yüklendikten sonra çalışacak (afterInteractive) şekilde performansı koruyoruz */}
