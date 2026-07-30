@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+        pathname: "/**", // Bu domaine ait tüm görsellere izin veriyoruz
+      },
     ],
   },
   

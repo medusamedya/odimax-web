@@ -17,11 +17,11 @@ export default function Home() {
     <>
       <Hero />
       <AboutSection />
+      <TestimonialsSection />
       <ModulesSection />
       <FeatureBlocks />
       <InfoMarquee />
       <VideoSliderSection />
-      <TestimonialsSection />
       <StepsSlider />
 
       <FaqSection />
