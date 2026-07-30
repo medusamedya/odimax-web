@@ -4,7 +4,7 @@ export const testimonialsData = [
   {
     id: 1,
     name: "M.Fatih Günay",
-    role: "Yerel Rehber",
+    role: "",
     content: "Odimax'ı merkezime entegre ettiğimden beri hasta, stok, tedarik gibi takip etmem gereken her şeyi tek ekrandan takip edebildim. Ne var ne yoksa odimax panelinden görebiliyorum. Teşekkürler",
     rating: 5,
     avatar: "https://ui-avatars.com/api/?name=Fatih+Gunay&background=02b6da&color=fff", // Geliştirme aşaması için dinamik avatar
@@ -21,8 +21,8 @@ export const testimonialsData = [
   },
   {
     id: 3,
-    name: "Kemal Demir",
-    role: "Firma Sahibi",
+    name: "Tanju Çelebi",
+    role: "",
     content: "Finans, stok ve hasta takibini ayrı ayrı programlarda yapmaktan kurtulduk. Odimax sayesinde her şey tek bir yerde, bulut tabanlı ve çok güvenli. Kesinlikle tüm meslektaşlarıma tavsiye ederim.",
     rating: 5,
     avatar: "https://ui-avatars.com/api/?name=Kemal+Demir&background=02b6da&color=fff",
