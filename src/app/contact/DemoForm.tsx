@@ -3,6 +3,11 @@
 import React, { useState } from "react";
 import { Lock } from "lucide-react";
 
+// Performans için iller dizisini bileşen dışında tanımlıyoruz
+const turkeyCities = [
+  "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "Mersin", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
+];
+
 export default function DemoForm() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -10,8 +15,9 @@ export default function DemoForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    centerName: "",
     email: "",
+    centerName: "",
+    city: "", // Yeni eklenen İl alanı
     branchCount: "",
     consent1: false,
     consent2: false,
@@ -40,8 +46,9 @@ export default function DemoForm() {
 
       if (response.ok) {
         setStatus("success");
+        // Başarılı gönderim sonrası form temizlenirken city de sıfırlanıyor
         setFormData({
-          name: "", phone: "", centerName: "", email: "", branchCount: "", consent1: false, consent2: false
+          name: "", phone: "", email: "", centerName: "", city: "", branchCount: "", consent1: false, consent2: false
         });
       } else {
         setStatus("error");
@@ -71,8 +78,9 @@ export default function DemoForm() {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        
+        {/* Satır 1: Ad Soyad ve Telefon */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Ad Soyad */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-brand-dark">Ad Soyad *</label>
             <input
@@ -85,7 +93,6 @@ export default function DemoForm() {
               className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all placeholder:text-brand-text/50"
             />
           </div>
-          {/* Telefon */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-brand-dark">Telefon *</label>
             <input
@@ -100,52 +107,76 @@ export default function DemoForm() {
           </div>
         </div>
 
-        {/* Merkez Adı */}
-        <div>
-          <label className="block text-sm font-semibold mb-2 text-brand-dark">Merkez Adı *</label>
-          <input
-            required
-            type="text"
-            name="centerName"
-            value={formData.centerName}
-            onChange={handleChange}
-            placeholder="İşitme merkezinizin adı"
-            className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all placeholder:text-brand-text/50"
-          />
-        </div>
-
-        {/* E-posta */}
-        <div>
-          <label className="block text-sm font-semibold mb-2 text-brand-dark">E-posta *</label>
-          <input
-            required
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="ornek@sirketiniz.com"
-            className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all placeholder:text-brand-text/50"
-          />
-        </div>
-
-        {/* Şube Sayısı */}
-        <div>
-          <label className="block text-sm font-semibold mb-2 text-brand-dark">Şube Sayısı *</label>
-          <div className="relative">
-            <select
+        {/* Satır 2: E-posta ve Merkez Adı */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-sm font-semibold mb-2 text-brand-dark">E-posta *</label>
+            <input
               required
-              name="branchCount"
-              value={formData.branchCount}
+              type="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
-              className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all appearance-none cursor-pointer"
-            >
-              <option value="" disabled>Lütfen seçiniz...</option>
-              <option value="1">1 Şube</option>
-              <option value="2-3">2-3 Şube</option>
-              <option value="4+">4+ Şube</option>
-            </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-              <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-brand-blue"></div>
+              placeholder="ornek@sirketiniz.com"
+              className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all placeholder:text-brand-text/50"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold mb-2 text-brand-dark">Merkez Adı *</label>
+            <input
+              required
+              type="text"
+              name="centerName"
+              value={formData.centerName}
+              onChange={handleChange}
+              placeholder="İşitme merkezinizin adı"
+              className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all placeholder:text-brand-text/50"
+            />
+          </div>
+        </div>
+
+        {/* Satır 3: İl ve Şube Sayısı */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-sm font-semibold mb-2 text-brand-dark">Bulunduğunuz İl *</label>
+            <div className="relative">
+              <select
+                required
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all appearance-none cursor-pointer"
+              >
+                <option value="" disabled>İl seçiniz...</option>
+                {turkeyCities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-brand-blue"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label className="block text-sm font-semibold mb-2 text-brand-dark">Şube Sayısı *</label>
+            <div className="relative">
+              <select
+                required
+                name="branchCount"
+                value={formData.branchCount}
+                onChange={handleChange}
+                className="w-full bg-[#f8f9fa] border border-black/10 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-blue focus:bg-white transition-all appearance-none cursor-pointer"
+              >
+                <option value="" disabled>Lütfen seçiniz...</option>
+                <option value="1">1 Şube</option>
+                <option value="2-3">2-3 Şube</option>
+                <option value="4+">4+ Şube</option>
+              </select>
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-brand-blue"></div>
+              </div>
             </div>
           </div>
         </div>

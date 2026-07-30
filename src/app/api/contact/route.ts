@@ -4,7 +4,8 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, phone, centerName, email, branchCount } = body;
+    // 1. city değişkenini frontend'den gelen verilerin arasından çıkarıyoruz
+    const { name, phone, centerName, email, city, branchCount } = body;
 
     // SMTP Ayarları (odimax.com.tr sunucu bilgilerini .env dosyasından çekeceğiz)
     const transporter = nodemailer.createTransport({
@@ -67,6 +68,13 @@ export async function POST(request: Request) {
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Merkez Adı</span><br/>
                     <strong style="font-size: 16px; color: #1a1a1a;">${centerName}</strong>
+                  </td>
+                </tr>
+                <!-- 2. İl bilgisi tabloya eklendi -->
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
+                    <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Bulunduğu İl</span><br/>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${city}</strong>
                   </td>
                 </tr>
                 <tr>
