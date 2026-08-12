@@ -76,7 +76,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-white/80 text-sm leading-relaxed max-w-md mb-8">
-              Odimax, Medusa Global tarafından, işitme cihazı satış ve uygulama
+              Odimax, Medusa Global Medya AŞ. tarafından, işitme cihazı satış ve uygulama
               merkezlerinin gerçek operasyonel ihtiyaçları dikkate alınarak
               geliştirilmiştir.
             </p>
@@ -209,11 +209,31 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Alt Kısım: Copyright ve Linkler */}
+        {/* Alt Kısım: Copyright, Medusa Global Logo ve Linkler */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 text-center md:text-left">
-          <p className="text-white/60 text-xs">
-            © {new Date().getFullYear()} Medusa Global. Tüm hakları saklıdır.
-          </p>
+          
+          {/* Logo ve Telif Hakkı Alanı */}
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4">
+            <Link 
+              href="https://medusaglobal.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/logos/MedusaLogoBeyaz1.png" // Kendi projendeki Medusa logo yoluna göre burayı güncelle
+                alt="Medusa Global"
+                width={120}
+                height={32}
+                className="w-auto h-6 object-contain"
+              />
+            </Link>
+            <span className="hidden md:block text-white/20">|</span>
+            <p className="text-white/60 text-xs">
+              © {new Date().getFullYear()} Medusa Global. Tüm hakları saklıdır.
+            </p>
+          </div>
+
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             <Link
               href="/privacy"
