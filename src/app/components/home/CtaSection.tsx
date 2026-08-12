@@ -38,7 +38,7 @@ export default function CtaSection() {
             </p>
 
             <Link
-              href="/demo"
+              href="/contact#demo-form"
               className="flex mb-4 md:mb-8  text-md items-center justify-center gap-2 bg-white hover:bg-gray-50 text-brand-dark font-bold py-2.5 px-4 md:py-3.5 md:px-8 rounded-full transition-all duration-300 w-full sm:w-auto shadow-[0_10px_30px_rgba(111,231,255,0.2)] hover:shadow-[0_15px_40px_rgba(111,231,255,0.4)] hover:scale-105"
             >
               15 Günlük Demo Talep Et

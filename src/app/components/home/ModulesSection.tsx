@@ -1,3 +1,5 @@
+import Link from "next/link"; // Link bileşenini dahil ettik
+
 // Veri yapısını ayırmak kod bütünlüğünü ve yönetilebilirliği artırır
 const MODULES = [
   {
@@ -57,7 +59,7 @@ const MODULES = [
     ),
   },
   {
-    id: "tedarikci-yonetimi",
+    id: "tedarikci-satin-alma", // Header'daki URL yolu ile eşleşmesi için 'tedarikci-yonetimi' yerine 'tedarikci-satin-alma' olarak düzelttim
     title: "Tedarikçi & Satın Alma",
     description:
       "Tedarikçi kayıtlarını ve satın alma sürecini düzenleyin; siparişten stoğa kadar akışı kontrol altında tutun.",
@@ -70,7 +72,7 @@ const MODULES = [
     ),
   },
   {
-    id: "finans-yonetimi",
+    id: "finans-kasa", // Header ile uyumlu olması için id güncellendi
     title: "Finans (Kasa)",
     description:
       "Tahsilat, ödeme ve nakit akışını tek kasadan izleyin; merkezinizin finansal durumunu her an net görün.",
@@ -96,7 +98,7 @@ const MODULES = [
     ),
   },
   {
-    id: "whatsapp-mesaj",
+    id: "whatsapp-toplu-mesaj", // Header ile uyumlu olması için id güncellendi
     title: "WhatsApp & Toplu Mesaj",
     description:
       "Randevu hatırlatmalarını ve kampanyaları WhatsApp üzerinden otomatik gönderin; hastalarla bağı canlı tutun.",
@@ -156,17 +158,15 @@ export default function ModulesSection() {
         {/* Animasyonlu Çerçeve (Animate Border) */}
         <div className="relative rounded-2xl p-[1px] overflow-hidden bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] animate-text-gradient shadow-sm">
           <div className="rounded-[15px] overflow-hidden bg-brand-light">
-            <div className="grid  grid-cols-2 lg:grid-cols-3 gap-px">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-px">
               {MODULES.map((module) => {
                 const IconComponent = module.icon;
                 return (
-                  <div
+                  // div etiketini Link bileşenine çevirdik ve href değerini dinamik id'ye bağladık
+                  <Link
                     key={module.id}
-                    /* 
-                      Buradaki dinamik sınıf yapısı sayesinde hideOnDesktop değeri true olan 
-                      kartlar (yani 10. modülümüz) lg:hidden sınıfını alır ve masaüstünde gizlenir.
-                    */
-                    className={`bg-white p-4 sm:p-6 md:p-8 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between md:min-h-[220px] ${
+                    href={`/modules/${module.id}`}
+                    className={`bg-white p-4 sm:p-6 md:p-8 hover:bg-brand-neutral/30 transition-colors duration-300 group relative overflow-hidden flex flex-col justify-between md:min-h-[220px] cursor-pointer ${
                       module.hideOnDesktop ? "block lg:hidden" : ""
                     }`}
                   >
@@ -177,14 +177,14 @@ export default function ModulesSection() {
 
                     {/* İçerik (Z-index ile önde konumlanır) */}
                     <div className="relative z-10">
-                      <h3 className="font-sans text-lg md:text-xl  font-bold text-brand-header-text mb-3">
+                      <h3 className="font-sans text-lg md:text-xl font-bold text-brand-header-text mb-3">
                         {module.title}
                       </h3>
                       <p className="text-brand-text leading-normal md:leading-relaxed text-sm md:text-base">
                         {module.description}
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

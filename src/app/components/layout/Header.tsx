@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
+import { usePathname } from "next/navigation";
 
 // Menü öğeleri için Tip (Type) tanımlaması yaparak TypeScript hatalarının önüne geçiyoruz
 export interface SubMenuItem {
@@ -54,6 +55,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const pathname = usePathname();
+  const isInnerPage = pathname !== "/" && !pathname.startsWith("/modules");
+  const logoSrc =
+    isInnerPage && !isScrolled ? "/odimax/4.png" : "/odimax/1.png";
+
   return (
     <>
       <header
@@ -71,7 +77,7 @@ export default function Header() {
           >
             {/* Kapsayıcıyı kaldırdık, Image bileşenine w-auto vererek kendi oranını korumasını sağladık */}
             <Image
-              src="/odimax/1.png"
+              src={logoSrc}
               alt="Odimax Logo"
               width={180} // Logonun orijinal (veya yüksek çözünürlüklü) genişliğini yaz
               height={48} // Logonun orijinal yüksekliğini yaz

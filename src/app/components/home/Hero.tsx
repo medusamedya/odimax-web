@@ -11,7 +11,7 @@ export default function Hero() {
           {/* Üst Vurgu Metni (Badge) */}
           <div className="inline-flex items-center gap-2 mb-2">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm">
-              İşitme Cihazı Merkezinizin Dijital Aklı
+              Işıtme Cıhazı Merkezınızın Dıjıtal Aklı
             </span>
           </div>
 
@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 lg:gap-4 mt-4 sm:mt-6 md:mt-8 lg:mt-10">
           {/* Primary Button */}
           <Link
-            href="/demo"
+            href="/contact#demo-form"
             className="font-sans flex items-center justify-center gap-2 bg-gradient-to-r from-brand-blue via-[#02b6da] to-brand-dark bg-[length:200%_auto] animate-text-gradient text-white font-medium py-3.5 px-8 rounded-full transition-all duration-300 w-full sm:w-auto shadow-md hover:shadow-lg hover:scale-105"
           >
             15 Günlük Demo Talep Et
