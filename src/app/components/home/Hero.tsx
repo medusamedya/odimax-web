@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="mt-4 sm:mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
           <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden shadow-sm md:shadow-2xl border border-white/40 bg-white">
             <Image
-              src="/home/hero.webp"
+              src="/modul/Anasayfa.jpeg"
               alt="Odimax Tek Panel Yönetim Ekranı"
               width={1600}
               height={1200}
