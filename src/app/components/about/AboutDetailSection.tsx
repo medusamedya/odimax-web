@@ -83,7 +83,7 @@ export default function AboutDetailSection() {
             {/* Ana Görsel Çerçevesi */}
             <div className="relative aspect-[4/3] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/60 bg-brand-light group">
               <Image
-                src="/home/54-islem-kayitlari.png"
+                src="/modul/Hakkımızda.jpeg"
                 alt="Medusa Global ve Odimax İşbirliği"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
