@@ -10,7 +10,7 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Hasta01.png",
-          description: "Hastanın kişisel bilgileri görüntülenebilir.",
+          description: "Hasta hakkında işlemler görüntülenebilir.",
         },
         {
           src: "/modul/Hasta02.png",
@@ -92,7 +92,7 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Randevu01.png",
-          description: "Ay içerisinde gelecek randevular görüntülenebilir.",
+          description: "Kolayca randevu oluşturabilirsiniz.",
         },
       ],
     },
@@ -172,11 +172,11 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Stok01.png",
-          description: "Firmanın toplam ürün stok bilgileri görüntülenebilir.",
+          description: "Ürünllerinizi kolayca ekleyebilirsiniz.",
         },
         {
           src: "/modul/Stok02.png",
-          description: "Ürünlerin ÜTS üzerinden kayıtlı olup olmadığı kontrol edilebilir.",
+          description: "Stoklarınızı görüntüleyip kolayca takibini yapabilirsiniz.",
         },
       ],
     },
@@ -420,11 +420,11 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Kasa01.png",
-          description: "Şube içerisindeki gelir ve giderleri ayırmak amacıyla birden fazla kasa oluşturulabilir.",
+          description: "Şube içindeki para giriş ve çıkışları kasa hareketleri üzerinden takip edilebilir.",
         },
         {
           src: "/modul/Kasa02.png",
-          description: "Şube içindeki para giriş ve çıkışları kasa hareketleri üzerinden takip edilebilir.",
+          description: "Şube içerisindeki gelir ve giderleri ayırmak amacıyla birden fazla kasa oluşturulabilir.",
         },
       ],
     },
@@ -504,11 +504,11 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Masraf01.png",
-          description: "Kira, personel, operasyonel, günlük ve aylık giderler kayıt altına alınabilir.",
+          description: "Ödemeler görüntülenebilir ve takip edilebilir.",
         },
         {
           src: "/modul/Masraf02.png",
-          description: "Düzenli ödemeler görüntülenebilir ve takip edilebilir.",
+          description: "Kira, personel, operasyonel, günlük ve aylık giderler kayıt altına alınabilir.",
         },
       ],
     },
@@ -667,11 +667,11 @@ export const modulesData = {
       images: [
         {
           src: "/modul/Rapor01.png",
-          description: "Sistem üzerinde bulunan toplam hasta sayısı görüntülenebilir.",
+          description: "Raporlama ekranlarımız sayesinde verilerinize kolayca erişebilirsiniz.",
         },
         {
           src: "/modul/Rapor02.png",
-          description: "Kasa ve cari bilgiler takip edilebilir.",
+          description: "Sistem üzerinde bulunan toplam hasta sayısı görüntülenebilir.",
         },
       ],
     },

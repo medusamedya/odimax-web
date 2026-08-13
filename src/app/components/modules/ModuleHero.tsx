@@ -75,7 +75,7 @@ export default function ModuleHero({
         {/* Dinamik Panel Görseli (Mockup) */}
         <div className="mt-16 md:mt-24 relative mx-auto w-full max-w-5xl">
           <div className="relative">
-            <div className="relative aspect-[2/1] overflow-hidden rounded-2xl border border-white/40 bg-white shadow-2xl md:rounded-[32px]">
+            <div className="relative aspect-[2/1] overflow-hidden rounded-2xl border border-white/40 bg-white  md:rounded-[32px]">
               {images.map((image, index) => (
                 <Image
                   key={image.src}
