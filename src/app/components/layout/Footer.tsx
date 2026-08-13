@@ -194,7 +194,7 @@ export default function Footer() {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <span className="text-white/80 text-sm leading-relaxed">
-                  Çınarlı, 1587/1. Sk. 4/1, 35170
+                  Çınarlı, 1587/1. Sk. 4/1E, 35170
                   <br />
                   Konak/İzmir, Türkiye
                 </span>

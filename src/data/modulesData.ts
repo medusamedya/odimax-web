@@ -7,7 +7,16 @@ export const modulesData = {
       badge: "Modüller > Hasta Yönetimi",
       title: "Hasta bilgileri tek ekranda, merkezinizin kontrolünde.",
       description: "Odimax Hasta Yönetimi, işitme merkezinizdeki tüm hasta kayıtlarını düzenli şekilde takip etmenizi sağlar. Hasta iletişim bilgileri, yakın bilgileri, randevular, cihaz süreçleri, notlar ve geçmiş işlemler tek hasta kartı altında toplanır. Böylece bilgiler defterlerde, Excel dosyalarında ya da personel hafızasında dağınık kalmaz.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Hasta01.png",
+          description: "Hastanın kişisel bilgileri görüntülenebilir.",
+        },
+        {
+          src: "/modul/Hasta02.png",
+          description: "Hastanın hangi şubeye kayıtlı olduğu görülebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -80,7 +89,12 @@ export const modulesData = {
       badge: "Modüller > Randevu & Takvim",
       title: "Hasta randevularınızı ve takiplerinizi düzenli planlayın.",
       description: "Odimax Randevu & Takvim, işitme merkezinizdeki hasta randevularını ve satış sonrası takip süreçlerini tek panelden yönetmenizi sağlar. Randevu tarihleri, takip planları, hasta notları ve hatırlatma süreçleri düzenli şekilde kayıt altında tutulur.",
-      image: "/home/04Hasta.webp",  
+      images: [
+        {
+          src: "/modul/Randevu01.png",
+          description: "Ay içerisinde gelecek randevular görüntülenebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -155,7 +169,16 @@ export const modulesData = {
       badge: "Modüller > Stok Yönetimi",
       title: "Cihaz ve ürün stoklarınızı düzenli takip edin.",
       description: "Odimax Stok Yönetimi, işitme merkezinizdeki cihaz, aksesuar ve sarf malzemelerinizi düzenli şekilde yönetmenizi sağlar. Ürün bilgileri, marka-model detayları, seri numaraları, stok durumu ve hareket geçmişi tek panelde takip edilir.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Stok01.png",
+          description: "Firmanın toplam ürün stok bilgileri görüntülenebilir.",
+        },
+        {
+          src: "/modul/Stok02.png",
+          description: "Ürünlerin ÜTS üzerinden kayıtlı olup olmadığı kontrol edilebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -230,7 +253,12 @@ export const modulesData = {
       badge: "Modüller > ÜTS Yönetimi",
       title: "ÜTS süreçlerinizi daha düzenli takip edin.",
       description: "Odimax ÜTS Yönetimi, işitme merkezinizde ürün hareketlerine bağlı ÜTS süreçlerini daha kontrollü yönetmenizi sağlar. Cihaz girişleri, satış ve teslim bildirimleri, bekleyen işlemler ve ürün durumları tek panelden takip edilir.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/ÜTS01.png",
+          description: "ÜTS ile ilgili işlemler ve ürün kayıtları bu ekran üzerinden yönetilebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -305,7 +333,16 @@ export const modulesData = {
       badge: "Modüller > Tedarikçi & Satın Alma",
       title: "Alış ve tedarikçi süreçlerinizi düzenli yönetin.",
       description: "Odimax Tedarikçi & Satın Alma Yönetimi, işitme merkezinizin ürün alışlarını, tedarikçi kayıtlarını ve ödeme süreçlerini tek panelden takip etmenizi sağlar. Satın alma süreci dağınık dosyalara veya manuel takiplere bağlı kalmaz.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Tedarikci01.png",
+          description: "ÜTS üzerindeki tedarikçiler sisteme eklenebilir.",
+        },
+        {
+          src: "/modul/Tedarikci02.png",
+          description: "Anlaşmalı tedarikçilerle ilgili borç ve alacak bilgileri görüntülenebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -380,7 +417,16 @@ export const modulesData = {
       badge: "Modüller > Finans (Kasa)",
       title: "Tahsilat ve kasa hareketlerinizi tek panelden takip edin.",
       description: "Odimax Finans (Kasa), işitme merkezinizdeki gelir, ödeme ve kasa hareketlerini düzenli şekilde yönetmenizi sağlar. Satış tahsilatları, tamir ücretleri, hızlı satış ödemeleri ve kasa giriş-çıkışları tek sistemde tutulur.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Kasa01.png",
+          description: "Şube içerisindeki gelir ve giderleri ayırmak amacıyla birden fazla kasa oluşturulabilir.",
+        },
+        {
+          src: "/modul/Kasa02.png",
+          description: "Şube içindeki para giriş ve çıkışları kasa hareketleri üzerinden takip edilebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -455,7 +501,16 @@ export const modulesData = {
       badge: "Modüller > Masraf Yönetimi",
       title: "Merkez giderlerinizi düzenli şekilde takip edin.",
       description: "Odimax Masraf Yönetimi, işitme merkezinizde oluşan giderleri kayıt altında tutmanızı sağlar. Kira, personel, operasyonel giderler ve günlük masraflar sistemde işlenir. Merkezinizin gelirleri kadar giderleri de görünür hale gelir.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Masraf01.png",
+          description: "Kira, personel, operasyonel, günlük ve aylık giderler kayıt altına alınabilir.",
+        },
+        {
+          src: "/modul/Masraf02.png",
+          description: "Düzenli ödemeler görüntülenebilir ve takip edilebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -529,7 +584,16 @@ export const modulesData = {
       badge: "Modüller > WhatsApp & Toplu Mesaj",
       title: "Hasta iletişiminizi otomatikleştirin ve düzenleyin.",
       description: "Odimax WhatsApp & Toplu Mesaj modülü ile randevu hatırlatmaları, takip bildirimleri, servis bilgilendirmeleri ve toplu mesaj gönderimlerini sistem üzerinden yönetebilirsiniz. İletişimi tek tek yapılan manuel işlemlerden çıkarın.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Whatsapp01.png",
+          description: "Şubede kayıtlı bulunan hastalara WhatsApp üzerinden toplu mesaj gönderilebilir.",
+        },
+        {
+          src: "/modul/Whatsapp02.png",
+          description: "NetGSM entegrasyonu ile SMS gönderimleri gerçekleştirilebilir.",
+        },
+      ],
     },
     features: [
       {
@@ -600,7 +664,16 @@ export const modulesData = {
       badge: "Modüller > Raporlama & Dashboard",
       title: "Merkezinizin durumunu tek bakışta görün.",
       description: "Odimax Raporlama & Dashboard modülü; hasta, satış, kasa, randevu, stok ve ÜTS süreçlerinden gelen özetleri anlaşılır kartlar ve raporlarla merkezinize genel bakış sağlar. Kararlarınızı dağınık bilgilerle değil net verilerle yönetin.",
-      image: "/home/04Hasta.webp", 
+      images: [
+        {
+          src: "/modul/Rapor01.png",
+          description: "Sistem üzerinde bulunan toplam hasta sayısı görüntülenebilir.",
+        },
+        {
+          src: "/modul/Rapor02.png",
+          description: "Kasa ve cari bilgiler takip edilebilir.",
+        },
+      ],
     },
     features: [
       {

@@ -35,7 +35,7 @@ export default async function ModulePage({ params }: PageProps) {
         badge={moduleData.hero.badge}
         title={moduleData.hero.title}
         description={moduleData.hero.description}
-        image={moduleData.hero.image}
+        images={moduleData.hero.images}
       />
 
       {/* 2. Özelleştirilmiş 4 Başlıklı Bento Grid Alanı */}
