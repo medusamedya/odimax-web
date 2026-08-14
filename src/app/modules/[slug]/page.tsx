@@ -43,7 +43,6 @@ export default async function ModulePage({ params }: PageProps) {
 
       {/* 3. Dinamik SSS (Faq) Alanı */}
       <DynamicFaq faqs={moduleData.faqs} />
-      <LogoMarquee />
 
       {/* 4. Siyah Dalgalı İletişim Kartı */}
       <ModuleContactCTA />
