@@ -1,30 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { blogsData } from "@/data/blogsData";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import InnerHero from "../components/general/InnerHero";
+import type { Metadata } from "next";
 
-// Türkçe tarih formatını (Örn: "15 Ağustos 2026") JavaScript'in sıralayabileceği zaman damgasına çeviren yardımcı fonksiyon
-const parseTurkishDate = (dateString: string) => {
-  const months: { [key: string]: number } = {
-    "Ocak": 0, "Şubat": 1, "Mart": 2, "Nisan": 3, "Mayıs": 4, "Haziran": 5,
-    "Temmuz": 6, "Ağustos": 7, "Eylül": 8, "Ekim": 9, "Kasım": 10, "Aralık": 11
-  };
-  
-  const parts = dateString.split(" ");
-  if (parts.length !== 3) return 0; // Beklenmeyen bir format gelirse hata vermesini önler
-  
-  const day = parseInt(parts[0], 10);
-  const month = months[parts[1]];
-  const year = parseInt(parts[2], 10);
-  
-  return new Date(year, month, day).getTime();
+export const metadata: Metadata = {
+  title: "Blog ve Sektörel İçgörüler | Odimax",
+  description: "İşitme merkezleri için operasyon, mevzuat, hasta yönetimi ve dijital dönüşüm içeriklerini inceleyin.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
   // Verileri bozmadan kopyalayıp (spread operator), en yeniden en eskiye (descending) sıralıyoruz
   const sortedBlogs = [...blogsData].sort((a, b) => {
-    return parseTurkishDate(b.date) - parseTurkishDate(a.date);
+    return b.publishedAt.localeCompare(a.publishedAt);
   });
 
   return (
@@ -61,10 +51,10 @@ export default function BlogPage() {
                 {/* Blog İçerik Özeti */}
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-4 text-xs text-brand-dark/50 mb-3 font-medium">
-                    <span className="flex items-center gap-1.5">
+                    <time dateTime={post.publishedAt} className="flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />
                       {post.date}
-                    </span>
+                    </time>
                     <span>•</span>
                     <span className="flex items-center ">
                        {post.category}

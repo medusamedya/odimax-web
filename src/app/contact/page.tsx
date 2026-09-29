@@ -1,6 +1,13 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import InnerHero from "../components/general/InnerHero";
 import DemoForm from "./DemoForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "İletişim ve Demo Talebi | Odimax",
+  description: "Odimax hakkında bilgi almak, destek ekibine ulaşmak veya demo talebinde bulunmak için bizimle iletişime geçin.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (

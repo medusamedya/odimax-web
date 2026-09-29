@@ -9,6 +9,7 @@ import PricingFaq from "../components/pricing/PricingFaq";
 export const metadata: Metadata = {
   title: "Fiyatlandırma | Odimax",
   description: "Odimax işitme merkezi yönetim sistemi fiyatlandırma planları ve paket detayları.",
+  alternates: { canonical: "/pricing" },
 };
 
 export default function PricingPage() {

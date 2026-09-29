@@ -1,4 +1,11 @@
 import InnerHero from "../components/general/InnerHero";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "KVKK Aydınlatma Metni | Odimax",
+  description: "Odimax'ın 6698 sayılı KVKK kapsamındaki kişisel veri işleme süreçlerine ilişkin aydınlatma metnini inceleyin.",
+  alternates: { canonical: "/kvkk" },
+};
 
 export default function KvkkPage() {
   return (

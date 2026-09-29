@@ -11,6 +11,13 @@ import StepsSlider from "./components/home/StepsSlider";
 import TestimonialsSection from "./components/home/TestimonialsSection";
 import VideoSliderSection from "./components/home/VideoSliderSection";
 import PricingCards from "./components/pricing/PricingCards";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Odimax | İşitme Cihazı Merkezleri için Yönetim Sistemi",
+  description: "Hasta, randevu, stok, ÜTS, finans ve raporlama süreçlerini Odimax ile tek panelden yönetin.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

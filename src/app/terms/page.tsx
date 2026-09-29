@@ -1,4 +1,11 @@
 import InnerHero from "../components/general/InnerHero";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kullanım Şartları | Odimax",
+  description: "Odimax hizmetlerinin kullanım koşullarını, tarafların haklarını ve yükümlülüklerini inceleyin.",
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsOfServicePage() {
   return (

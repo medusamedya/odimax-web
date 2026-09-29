@@ -1,4 +1,11 @@
 import InnerHero from "../components/general/InnerHero";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gizlilik ve Çerez Politikası | Odimax",
+  description: "Odimax web sitesinde kişisel verilerin ve çerezlerin nasıl işlendiğine ilişkin gizlilik politikasını inceleyin.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPolicyPage() {
   return (

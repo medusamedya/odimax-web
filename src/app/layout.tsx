@@ -15,6 +15,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.odimax.com.tr"),
   title: "Odimax | İşitme Cihazı Merkezleri için Yönetim Sistemi",
   description: "Odimax ile merkezinizi tek panelden yönetin.",
   verification: {

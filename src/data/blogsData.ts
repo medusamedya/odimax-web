@@ -6,6 +6,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   date: string;
+  publishedAt: string;
   readTime: string;
   category: string;
   image: string;
@@ -40,6 +41,7 @@ Manuel sistemler, günümüzün veri koruma standartlarını karşılamakta yete
 
 Güvenli bir bulut altyapısı kullanmak, işletmenizi sadece siber saldırılardan değil, yerel veri kayıplarından da korur. Hasta kayıt gizliliği sağlanmış bir merkezde, hastalar kendilerini daha güvende hisseder ve bu da uzun vadeli sadakat oluşturur.`,
     date: "23 Temmuz 2026",
+    publishedAt: "2026-07-23",
     readTime: "5 dk okuma",
     category: "Mevzuat & KVKK",
     image: "/home/04Hasta.webp",
@@ -72,6 +74,7 @@ Teknoloji ne kadar ilerlerse ilerlesin, bu süreci yönetecek güçlü bir altya
 
 Klinik içi süreçlerin dijital odyoloji standartlarına taşınması, hata payını minimize eder. 2026'da başarılı bir işitme merkezi olmanın yolu, en son teknoloji cihazları en akıllı yönetim yazılımlarıyla birleştirmekten geçiyor.`,
     date: "23 Temmuz 2026",
+    publishedAt: "2026-07-23",
     readTime: "6 dk okuma",
     category: "Teknoloji & Gelecek",
     image: "/home/hero.webp",
@@ -84,6 +87,7 @@ Klinik içi süreçlerin dijital odyoloji standartlarına taşınması, hata pay
 
 Odimax gibi merkezi yazılımlar, işitme merkezlerinin bu operasyonel yükünü ortadan kaldırarak tüm geçmişi tek bir dijital kart altında toplar. Personel değişimlerinde bile bilgi akışı kesintiye uğramaz ve hasta deneyimi en üst seviyede tutulur.`,
     date: "12 Haziran 2026",
+    publishedAt: "2026-06-12",
     readTime: "4 dk okuma",
     category: "Sektörel",
     image: "/home/hero.webp",
@@ -96,6 +100,7 @@ Odimax gibi merkezi yazılımlar, işitme merkezlerinin bu operasyonel yükünü
 
 Entegre sistemler kullanarak ÜTS bildirimlerini doğrudan satış ve stok hareketleriyle bağlamak, manuel veri girişinden kaynaklanan hataları sıfıra indirir.`,
     date: "5 Haziran 2026",
+    publishedAt: "2026-06-05",
     readTime: "3 dk okuma",
     category: "Mevzuat",
     image: "/home/04Hasta.webp",
@@ -108,6 +113,7 @@ Entegre sistemler kullanarak ÜTS bildirimlerini doğrudan satış ve stok harek
 
 Sistematik bir takip planı oluşturmak, hastaların merkezinizle olan bağını güçlendirir ve tavsiye (referans) oranlarını doğrudan artırır.`,
     date: "28 Mayıs 2026",
+    publishedAt: "2026-05-28",
     readTime: "5 dk okuma",
     category: "Operasyon",
     image: "/home/hero.webp",
@@ -154,6 +160,7 @@ Hayır, sağlıklı bir işitme merkezi yönetimi için prim sistemine servis ka
 **Odimax üzerinden personel bazlı satış takibi nasıl yapılır?**
 Odimax Dashboard paneli üzerinden her personelin yaptığı işlem ve satışları filtreleyebilir, gelişmiş satış raporlama araçlarıyla performans çıktılarını saniyeler içinde alabilirsiniz.`,
     date: "30 Temmuz 2026",
+    publishedAt: "2026-07-30",
     readTime: "6 dk okuma",
     category: "Yönetim & İK",
     image: "/home/04Hasta.webp",
@@ -200,6 +207,7 @@ Hastanın sorunuyla gerçekten ilgilenildiğini gösteren hızlı bir geri dön�
 **Odimax iade oranlarını nasıl düşürür?**
 Odimax, adaptasyon sürecindeki hatırlatmaları ve hasta geri bildirimlerini sistematik takip ederek, işitme cihazı iade süreci başlamadan müdahale etmenizi ve sorunları çözmenizi sağlar.`,
     date: "30 Temmuz 2026",
+    publishedAt: "2026-07-30",
     readTime: "5 dk okuma",
     category: "Müşteri İlişkileri",
     image: "/home/hero.webp",
@@ -255,6 +263,7 @@ Cihaz kalitesine ve lokasyona bağlı olarak işitme merkezi açma maliyeti 2024
 
 Yasal bir zorunluluk olmasa da, KVKK uyumluluğu ve ÜTS takibi için dijital bir altyapı kullanmak işitme merkezi açma şartları kadar hayati bir gerekliliktir.`,
     date: "13 Ağustos 2026",
+    publishedAt: "2026-08-13",
     readTime: "6 dk okuma",
     category: "Girişimcilik & Mevzuat",
     image: "/home/04Hasta.webp",
@@ -308,6 +317,7 @@ E-fatura senaryosuna göre 7 gün içerisinde sistem üzerinden ret veya iptal t
 
 Teknik olarak mümkün olsa da, işitme cihazı e-fatura kesme sonrası ÜTS bildirimi yapılmazsa tıbbi cihaz yönetmeliğine aykırı hareket edilmiş olur ve SGK ödemesi alınamaz.`,
     date: "13 Ağustos 2026",
+    publishedAt: "2026-08-13",
     readTime: "6 dk okuma",
     category: "Finans & Mevzuat",
     image: "/home/hero.webp",
@@ -367,6 +377,7 @@ Evet, klinik verimlilik artırma hedefi için manuel yöntemler yetersiz kalır;
 
 Hasta takip sistemleri üzerinden bu hastaları segmente ederek onlara özel indirimler veya eğitim içerikleri göndererek yeniden iletişim kurulmalıdır.`,
     date: "20 Ağustos 2026",
+    publishedAt: "2026-08-20",
     readTime: "6 dk okuma",
     category: "Satış & Operasyon",
     image: "/home/04Hasta.webp",
@@ -421,6 +432,7 @@ Evet, doğru hedeflemeli reklamlarla sağlık turizmi işitme cihazı aramaları
 
 Reklamlardan gelen her telefon veya formun CRM sistemine kaydedilmesiyle; randevu oranı ve satış başı maliyet analiz edilerek yerel klinik pazarlaması başarısı ölçülür.`,
     date: "20 Ağustos 2026",
+    publishedAt: "2026-08-20",
     readTime: "6 dk okuma",
     category: "Pazarlama & Büyüme",
     image: "/home/hero.webp",

@@ -5,12 +5,32 @@ import ModuleFeatures from "@/app/components/modules/ModuleFeatures";
 import DynamicFaq from "@/app/components/modules/DynamicFaq";
 import ModuleContactCTA from "@/app/components/modules/ModuleContactCTA";
 import LogoMarquee from "@/app/components/home/LogoMarquee";
+import type { Metadata } from "next";
 
 // Tip tanımında params'ın artık bir Promise olduğunu belirtiyoruz
 interface PageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export function generateStaticParams() {
+  return Object.keys(modulesData).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const moduleData = modulesData[slug as keyof typeof modulesData];
+
+  if (!moduleData) {
+    return { title: "Modül Bulunamadı | Odimax", robots: { index: false, follow: false } };
+  }
+
+  return {
+    title: `${moduleData.hero.badge.replace("Modüller > ", "")} | Odimax`,
+    description: moduleData.hero.description,
+    alternates: { canonical: `/modules/${moduleData.slug}` },
+  };
 }
 
 // 1. Bileşenimizi 'async' yapıyoruz

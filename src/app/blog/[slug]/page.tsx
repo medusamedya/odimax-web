@@ -5,11 +5,31 @@ import ReactMarkdown from "react-markdown";
 import { blogsData } from "@/data/blogsData";
 import { Calendar, ArrowLeft, Share2 } from "lucide-react";
 import InnerHero from "@/app/components/general/InnerHero";
+import type { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export function generateStaticParams() {
+  return blogsData.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogsData.find((item) => item.slug === slug);
+
+  if (!post) {
+    return { title: "Yazı Bulunamadı | Odimax", robots: { index: false, follow: false } };
+  }
+
+  return {
+    title: `${post.title} | Odimax`,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+  };
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
@@ -42,10 +62,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
           {/* Yazar ve Tarih Bilgi Barı */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-8 mb-12 border-b border-black/[0.08]">
             <div className="flex items-center gap-4 text-sm text-brand-dark/60 font-medium">
-              <span className="flex items-center gap-2">
+              <time dateTime={post.publishedAt} className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-brand-blue" />
                 {post.date}
-              </span>
+              </time>
             </div>
 
             <div className="flex items-center gap-2">

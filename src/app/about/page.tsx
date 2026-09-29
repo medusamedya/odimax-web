@@ -2,6 +2,13 @@ import InnerHero from "../components/general/InnerHero";
 import FaqSection from "../components/home/FaqSection";
 import AboutDetailSection from "../components/about/AboutDetailSection";
 import CoreFeatures from "../components/about/CoreFeatures";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hakkımızda | Odimax",
+  description: "Odimax'ın işitme merkezlerinin günlük operasyonlarını daha düzenli, izlenebilir ve verimli hale getiren yaklaşımını keşfedin.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (
