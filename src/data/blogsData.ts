@@ -436,5 +436,194 @@ Reklamlardan gelen her telefon veya formun CRM sistemine kaydedilmesiyle; randev
     readTime: "6 dk okuma",
     category: "Pazarlama & Büyüme",
     image: "/home/hero.webp",
+  },
+  {
+    slug: "isitme-cihazi-tamir-servis-takibi",
+    title: "İşitme Cihazı Tamir ve Servis Takibi Nasıl Yönetilir?",
+    excerpt: "Servise alınan işitme cihazlarını teslimden sonuçlandırmaya kadar düzenli takip ederek gecikmeleri ve bilgi kayıplarını nasıl azaltabileceğinizi öğrenin.",
+    content: `İşitme cihazı satışı tamamlandıktan sonra hasta ile merkez arasındaki ilişki devam eder. Bakım, arıza, parça değişimi ve teknik servis işlemleri satış sonrası deneyimin önemli bir parçasıdır. Servise bırakılan bir cihazın hangi hastaya ait olduğu, ne zaman teslim alındığı, hangi arızanın bildirildiği ve güncel durumunun ne olduğu açık biçimde takip edilmediğinde hem ekip hem de hasta için belirsizlik oluşur.
+
+## Servis Kaydı Hangi Bilgileri İçermelidir?
+
+Her cihaz için hasta bilgisi, marka, model, seri numarası, teslim alınan aksesuarlar ve hastanın bildirdiği sorun kaydedilmelidir. İşlem dış teknik servise gönderilecekse gönderim tarihi ve firma bilgisi; merkez içinde çözülecekse yapılan işlem ve sorumlu kişi kayda eklenebilir. Planlanan teslim tarihi, ücret ve ödeme durumu da aynı kayıt altında tutulduğunda ekip farklı listelere bakmak zorunda kalmaz.
+
+## Süreç Durumlarını Standartlaştırın
+
+Servis kayıtlarında herkesin aynı durumları kullanması takip kolaylığı sağlar:
+
+- Teslim alındı
+- İnceleme bekliyor
+- Teknik servise gönderildi
+- Onay bekliyor
+- İşlem tamamlandı
+- Hasta bilgilendirildi
+- Teslim edildi
+
+Bu yapı sayesinde bekleyen cihazlar toplu olarak görülebilir. Uzun süredir aynı aşamada kalan işlemler fark edilir ve hastaya verilecek bilgi güncel kayıttan alınır.
+
+## Hasta İletişimini Servis Kaydıyla Birlikte Yönetin
+
+Hastanın cihazının durumunu öğrenmek için tekrar tekrar merkezi araması yerine, önemli aşamalarda kısa bilgilendirmeler yapılabilir. Cihaz servise gönderildiğinde, ücret onayı gerektiğinde ve teslimata hazır olduğunda yapılan iletişim kayıt altına alınmalıdır. Böylece farklı bir çalışan görüşmeyi devraldığında geçmişi görebilir.
+
+## Odimax ile Tamir ve Servis Süreci
+
+Odimax Tamir & Servis modülü, servis kaydını hasta ve cihaz geçmişiyle ilişkilendirir. Arıza açıklaması, işlem durumu, servis notları, ücret ve teslim bilgileri tek yerde tutulur. Tamamlanan işlem hasta kartının geçmişinde kalır; aynı cihaz yeniden servise geldiğinde önceki kayıtlar incelenebilir. Bu yaklaşım, satış sonrası hizmetin kişisel notlara bağlı kalmadan merkez genelinde aynı düzenle yürütülmesine yardımcı olur.
+
+## Sıkça Sorulan Sorular
+
+**Servis kaydında seri numarası tutulmalı mı?**
+
+Evet. Aynı hastaya ait birden fazla cihaz olabileceği için seri numarası doğru cihazın izlenmesini kolaylaştırır.
+
+**Tamamlanan servis kayıtları saklanmalı mı?**
+
+Evet. Geçmiş işlemler, tekrar eden arızaları ve cihazın servis geçmişini değerlendirmek için yararlıdır.
+
+**Hasta ne zaman bilgilendirilmelidir?**
+
+Teslim alma, fiyat veya işlem onayı, gecikme ve cihazın hazır olması gibi hastanın kararını ya da planını etkileyen aşamalarda bilgilendirme yapılması faydalıdır.`,
+    date: "30 Eylül 2026",
+    publishedAt: "2026-09-30",
+    readTime: "5 dk okuma",
+    category: "Servis & Operasyon",
+    image: "/home/54-islem-kayitlari.png",
+  },
+  {
+    slug: "isitme-cihazi-adaptasyonu-memnuniyet-aramasi",
+    title: "İşitme Cihazı Adaptasyonunda Memnuniyet Araması ve Hasta Takibi",
+    excerpt: "Cihaz tesliminden sonraki takip görüşmelerini planlayarak adaptasyon sorunlarını erken fark edin ve hasta deneyimini daha düzenli yönetin.",
+    content: `İşitme cihazını teslim etmek hasta yolculuğunun sonu değildir. Kullanıcının yeni seslere alışması, cihazı doğru takması ve günlük kullanım alışkanlığı geliştirmesi zaman alabilir. Bu dönemde yapılan planlı memnuniyet aramaları, küçük bir sorunun cihazın kullanılmamasına veya iade talebine dönüşmeden fark edilmesini sağlar.
+
+## İlk Takip Görüşmesi Neden Önemlidir?
+
+Hasta ilk günlerde seslerin farklı gelmesi, kendi sesini yüksek duyması veya cihazı takıp çıkarırken zorlanması gibi deneyimler yaşayabilir. Merkezin kısa bir takip görüşmesi yapması, hastanın yalnız olmadığını hissettirir ve gerekli durumda kontrol randevusu oluşturulmasını sağlar. Görüşmenin amacı tıbbi değerlendirme yapmak değil; kullanım deneyimini anlamak ve uzman desteğine ihtiyaç olup olmadığını belirlemektir.
+
+## Memnuniyet Görüşmesinde Neler Sorulabilir?
+
+- Cihaz günlük olarak ne kadar süre kullanılıyor?
+- Takma, çıkarma veya bakım konusunda güçlük yaşanıyor mu?
+- Belirli ortamlarda rahatsızlık oluşuyor mu?
+- Telefon, televizyon veya kalabalık ortam deneyimi nasıl?
+- Kontrol randevusuna ihtiyaç var mı?
+- Hastanın merkezden beklediği ek bir destek bulunuyor mu?
+
+Yanıtlar standart alanlarla kaydedildiğinde ekip yalnızca görüşme yapmış olmaz; adaptasyon sürecinin nasıl ilerlediğini de izleyebilir.
+
+## Takibi Kişisel Hatırlatmalara Bırakmayın
+
+Aranacak hastaların defterde veya çalışanların kişisel takvimlerinde tutulması, yoğun günlerde takibin atlanmasına neden olabilir. Teslim tarihine bağlı takip planları oluşturmak ve tamamlanan görüşmeleri hasta kartına kaydetmek süreci sürdürülebilir hale getirir. Personel değişse bile hastanın önceki geri bildirimleri korunur.
+
+## Odimax ile Adaptasyon Sürecini İzlemek
+
+Odimax üzerinde hasta, cihaz, satış ve randevu geçmişi birlikte görülebildiği için takip görüşmeleri bağlamından kopmaz. Görüşme sonucu not edilebilir, kontrol randevusu planlanabilir ve sonraki temas için hatırlatma oluşturulabilir. Böylece satış sonrası iletişim rastlantısal değil, merkezin standart iş akışının bir parçası olur.
+
+## Sıkça Sorulan Sorular
+
+**Memnuniyet araması satıştan ne kadar sonra yapılmalı?**
+
+Tek bir süre her hasta için uygun olmayabilir. Merkez, uzmanının önerdiği takip planını hastanın ihtiyacına ve cihaz deneyimine göre belirlemelidir.
+
+**Her geri bildirim için randevu gerekir mi?**
+
+Hayır. Bazı sorular kısa bir bilgilendirmeyle çözülebilir; ayar, fiziksel uyum veya klinik değerlendirme gerektiren durumlarda randevu oluşturulmalıdır.
+
+**Görüşme notları neden hasta kartında tutulmalı?**
+
+Notlar sonraki görüşmede aynı soruların tekrar edilmesini önler ve ekip üyelerinin hastaya tutarlı destek sunmasını kolaylaştırır.`,
+    date: "30 Eylül 2026",
+    publishedAt: "2026-09-30",
+    readTime: "5 dk okuma",
+    category: "Hasta Deneyimi",
+    image: "/home/04Hasta.webp",
+  },
+  {
+    slug: "cok-subeli-isitme-merkezi-yonetimi",
+    title: "Çok Şubeli İşitme Merkezleri İçin Yönetim Rehberi",
+    excerpt: "Şubeler arasında hasta, stok, kasa ve operasyon verilerini ortak standartlarla yönetmenin temel adımlarını inceleyin.",
+    content: `İşitme merkezinin şube sayısı arttıkça yalnızca işlem hacmi değil, koordinasyon ihtiyacı da büyür. Her şubenin farklı dosya, tablo veya çalışma alışkanlığı kullanması; merkez yönetiminin güncel durumu görmesini zorlaştırır. Çok şubeli yapıda amaç bütün şubeleri birbirinin aynısı yapmak değil, kritik verilerin aynı kurallarla kaydedilmesini ve yetkili kişilerin ihtiyaç duyduğu bilgiye zamanında ulaşmasını sağlamaktır.
+
+## Ortak Veri Standardı Oluşturun
+
+Hasta durumları, randevu türleri, stok hareketleri, masraf kategorileri ve satış kayıtları her şubede aynı anlamı taşımalıdır. Bir şubenin "potansiyel", diğerinin aynı durumu "bekleyen" olarak kaydetmesi raporları karşılaştırılamaz hale getirir. Kullanılacak alanlar ve işlem adımları merkez genelinde tanımlanmalıdır.
+
+## Yetki ve Sorumlulukları Şubeye Göre Belirleyin
+
+Her kullanıcının bütün verilere erişmesi gerekmez. Personel yalnızca görev yaptığı şubenin işlemlerini yürütürken bölge veya merkez yöneticileri toplu raporları görebilir. Rol bazlı yetkilendirme, hem operasyonel sadelik hem de hasta verilerinin kontrollü kullanımı açısından önemlidir.
+
+## Stok Hareketlerini Görünür Tutun
+
+Bir cihazın hangi şubede bulunduğu, başka bir şubeye ne zaman gönderildiği ve hangi hastaya ayrıldığı izlenebilmelidir. Şubeler arası transferler kayıt altına alınmadığında sistemde görünen stok ile fiziksel stok farklılaşabilir. Seri numarası bazlı hareket geçmişi, cihazın yolculuğunu takip etmeyi kolaylaştırır.
+
+## Şubeleri Aynı Metriklerle Değerlendirin
+
+Toplam satış tek başına yeterli değildir. Randevuya gelme oranı, denemeden satışa dönüşüm, tahsilat durumu, stok bekleme süresi ve takip görüşmeleri gibi göstergeler birlikte değerlendirilmelidir. Aynı tanımlarla üretilen raporlar, şubeler arasındaki farkların nedenlerini anlamaya yardımcı olur.
+
+## Odimax ile Çok Şubeli Yönetim
+
+Odimax; hasta, randevu, stok, satış, kasa ve raporlama süreçlerini ortak bir sistemde toplar. Kayıtlar ilgili şubeyle ilişkilendirilir ve kullanıcı erişimleri görev kapsamına göre düzenlenebilir. Merkez yönetimi genel tabloyu izlerken şubeler günlük işlerini kendi akışlarında sürdürebilir.
+
+## Sıkça Sorulan Sorular
+
+**Bir hasta farklı şubeden hizmet alabilir mi?**
+
+Merkezin çalışma düzenine ve kullanıcı yetkilerine göre hasta geçmişinin yetkili ekip tarafından görülmesi, sürecin kaldığı yerden devam etmesini kolaylaştırır.
+
+**Şubeler arası stok transferi neden kaydedilmeli?**
+
+Transfer kaydı, ürünün fiziksel konumunu ve hareket geçmişini doğrulamaya yardımcı olur.
+
+**Şube performansı nasıl karşılaştırılmalı?**
+
+Şubeler aynı tarih aralığı ve aynı tanımlı metriklerle değerlendirilmelidir; yalnızca ciroya dayalı karşılaştırma eksik sonuç verebilir.`,
+    date: "30 Eylül 2026",
+    publishedAt: "2026-09-30",
+    readTime: "6 dk okuma",
+    category: "Yönetim & Operasyon",
+    image: "/home/hero.webp",
+  },
+  {
+    slug: "isitme-testi-randevu-takibi",
+    title: "İşitme Testi Randevularında Düzenli Takip Rehberi",
+    excerpt: "İşitme testi taleplerini doğru kaydedin, randevu hatırlatmalarını planlayın ve başvurudan görüşmeye kadar süreci düzenli yönetin.",
+    content: `İşitme testi için merkeze ulaşan her kişi hemen randevu oluşturmayabilir; oluşturulan her randevu da planlanan saatte gerçekleşmeyebilir. Telefon, web formu, sosyal medya veya referans yoluyla gelen talepler farklı yerlerde tutulduğunda geri dönüşler gecikebilir. Düzenli bir randevu süreci, hastanın ilk temasından görüşmenin sonucuna kadar her adımın kayıt altında olmasını gerektirir.
+
+## İlk Temasta Hangi Bilgiler Kaydedilmeli?
+
+Ad ve iletişim bilgisinin yanında kişinin merkeze hangi kanaldan ulaştığı, tercih ettiği şube ve uygun olduğu zaman aralığı not edilebilir. Görüşmenin kısa sonucu da kaydedildiğinde başka bir ekip üyesi iletişimi devralabilir. Sağlıkla ilgili ayrıntılar yalnızca gerekli olduğu ölçüde ve uygun veri koruma süreçleriyle işlenmelidir.
+
+## Randevu Hatırlatmalarını Planlayın
+
+Unutulan randevular hem hasta hem de merkez için zaman kaybıdır. Randevudan önce gönderilen açık ve kısa bir bilgilendirme; tarih, saat, şube ve gerektiğinde iletişim bilgisini içerebilir. Hasta katılamayacaksa kolayca dönüş yapabilmeli ve yeni saat planlanabilmelidir.
+
+## Gelmeyen Randevuları Kaybetmeyin
+
+Randevuya gelmeyen kişileri yalnızca listeden silmek, talebin neden sonuçlanmadığını görünmez hale getirir. Ulaşılamadı, erteledi, farklı merkez tercih etti veya yeniden aranacak gibi durumlar kaydedilebilir. Uygun zamanda yapılan nazik bir geri dönüş, ilgisi devam eden kişinin yeniden planlanmasını sağlayabilir.
+
+## Talep Kaynağını ve Sonucu Birlikte İzleyin
+
+Bir reklamın veya yönlendirme kanalının yalnızca kaç telefon getirdiği değil, bu taleplerin kaçının randevuya ve görüşmeye dönüştüğü önemlidir. Kaynak bilgisi ile randevu sonucu birlikte tutulduğunda merkez hangi kanalın nitelikli başvuru oluşturduğunu daha doğru değerlendirebilir.
+
+## Odimax ile Randevu Takibi
+
+Odimax Randevu & Takvim modülü, randevuları hasta kayıtlarıyla ilişkilendirir. Günlük takvim, yaklaşan görüşmeler, işlem notları ve takip planları aynı sistemde görülebilir. WhatsApp ve mesaj süreçleriyle birlikte kullanıldığında hatırlatma ve yeniden planlama işlemleri daha düzenli yürütülebilir.
+
+## Sıkça Sorulan Sorular
+
+**Randevu talebi ile kesin randevu aynı şey midir?**
+
+Hayır. Talep henüz tarih ve saati kesinleşmemiş bir başvurudur; kesinleştiğinde takvim kaydı oluşturulmalıdır.
+
+**Gelmeyen hastalar tekrar aranmalı mı?**
+
+İletişim izni ve merkezin takip politikası çerçevesinde, uygun bir dille yeniden planlama teklif edilebilir.
+
+**Randevu kaynağını bilmek neden önemlidir?**
+
+Kaynak bilgisi, hangi iletişim ve pazarlama kanalının gerçek görüşmelere dönüştüğünü değerlendirmeyi kolaylaştırır.`,
+    date: "30 Eylül 2026",
+    publishedAt: "2026-09-30",
+    readTime: "5 dk okuma",
+    category: "Randevu & Hasta Takibi",
+    image: "/home/05Randevu.webp",
   }
 ];

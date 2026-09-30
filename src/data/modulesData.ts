@@ -658,6 +658,85 @@ export const modulesData = {
     ]
   },
 
+  "tamir-servis": {
+    slug: "tamir-servis",
+    hero: {
+      badge: "Modüller > Tamir & Servis",
+      title: "Cihaz servis süreçlerini baştan sona kayıt altında tutun.",
+      description: "Odimax Tamir & Servis modülü, hastadan teslim alınan işitme cihazlarının servis sürecini düzenli şekilde takip etmenizi sağlar. Cihaz bilgileri, bildirilen arıza, teslim tarihi, işlem durumu, servis notları ve ücret bilgileri aynı kayıt altında tutulur. Böylece cihazın hangi aşamada olduğu ekip tarafından kolayca görülebilir.",
+      images: [
+        {
+          src: "/home/54-islem-kayitlari.png",
+          description: "Tamir ve servis işlemleri hasta ve cihaz geçmişiyle birlikte takip edilebilir.",
+        },
+      ],
+    },
+    features: [
+      {
+        id: 1,
+        title: "Servis takibi neden düzenli tutulmalıdır?",
+        description: "İşitme cihazı servise alındığında hasta, cihaz ve teknik servis arasında bir takip süreci başlar. Bu bilgiler kağıt notlarda veya farklı mesajlarda tutulduğunda teslim tarihleri, yapılan işlemler ve cihazın güncel durumu karışabilir. Odimax, servis kaydını hasta ve cihaz bilgileriyle ilişkilendirerek sürecin merkez tarafından izlenebilir kalmasına yardımcı olur.",
+        isList: false,
+      },
+      {
+        id: 2,
+        title: "Tamir & Servis ile neleri takip edebilirsiniz?",
+        description: "",
+        isList: true,
+        listItems: [
+          "Servise alınan cihazın hasta bilgileri",
+          "Cihazın marka, model ve seri numarası",
+          "Hasta tarafından bildirilen arıza veya talep",
+          "Cihazın teslim alınma ve planlanan teslim tarihleri",
+          "Servis sürecinin güncel durumu",
+          "Yapılan işlem ve teknik servis notları",
+          "Tamir ücreti ve ödeme bilgileri",
+          "Geçmiş tamir ve servis kayıtları",
+          "Cihaz hazır olduğunda yapılacak hasta bilgilendirmeleri"
+        ]
+      },
+      {
+        id: 3,
+        title: "Odimax’ta servis süreci nasıl ilerler?",
+        description: "Cihaz teslim alındığında hasta ve cihaz seçilerek servis kaydı oluşturulur. Arıza açıklaması, aksesuarlar ve teslim bilgileri kaydedilir. Süreç ilerledikçe kayıt durumu ve servis notları güncellenir. Cihaz hastaya teslim edildiğinde işlem tamamlanır ve servis geçmişi ilgili hasta kartında korunur.",
+        isList: false,
+      },
+      {
+        id: 4,
+        title: "Merkezinize ne kazandırır?",
+        description: "Bekleyen ve tamamlanan servis işlemleri daha kolay kontrol edilir. Hastaya verilecek bilgi kişisel hafızaya bağlı kalmaz, cihazın geçmiş işlemleri kaybolmaz ve ekip aynı güncel kayıt üzerinden çalışır. Böylece teslim gecikmeleri ve eksik bilgilendirme riski azalırken satış sonrası hizmet daha düzenli yönetilir.",
+        isList: false,
+      }
+    ],
+    faqs: [
+      {
+        id: 1,
+        question: "Servis kaydı hasta ile ilişkilendirilebilir mi?",
+        answer: "Evet. Tamir ve servis kaydı ilgili hasta ve cihaz bilgileriyle birlikte oluşturulabilir."
+      },
+      {
+        id: 2,
+        question: "Cihazın servis durumu takip edilebilir mi?",
+        answer: "Evet. Cihazın teslim alınmasından hastaya geri verilmesine kadar geçen aşamalar kayıt üzerinden takip edilebilir."
+      },
+      {
+        id: 3,
+        question: "Geçmiş tamir işlemleri görüntülenebilir mi?",
+        answer: "Evet. Hastaya ve cihaza ait geçmiş servis kayıtları daha sonra görüntülenebilir."
+      },
+      {
+        id: 4,
+        question: "Tamir ücreti ve ödeme bilgisi kaydedilebilir mi?",
+        answer: "Evet. Servis işlemine ait ücret ve ödeme bilgileri kayıt altında tutulabilir ve kasa süreciyle birlikte takip edilebilir."
+      },
+      {
+        id: 5,
+        question: "Cihaz hazır olduğunda hastaya bilgi verilebilir mi?",
+        answer: "Evet. Servis durumu güncellendiğinde hastaya ilgili iletişim kanalları üzerinden bilgilendirme yapılabilir."
+      }
+    ]
+  },
+
   "raporlama-dashboard": {
     slug: "raporlama-dashboard",
     hero: {

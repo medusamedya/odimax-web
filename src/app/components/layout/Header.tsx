@@ -35,6 +35,7 @@ const MENU_ITEMS: MenuItemType[] = [
       { name: "Finans (Kasa)", path: "/modules/finans-kasa" },
       { name: "Masraf Yönetimi", path: "/modules/masraf-yonetimi" },
       { name: "WhatsApp & Toplu Mesaj", path: "/modules/whatsapp-toplu-mesaj" },
+      { name: "Tamir & Servis", path: "/modules/tamir-servis" },
       { name: "Raporlama & Dashboard", path: "/modules/raporlama-dashboard" },
     ],
   },
