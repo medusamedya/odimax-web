@@ -14,6 +14,129 @@ export interface BlogPost {
 
 export const blogsData: BlogPost[] = [
   {
+    slug: "isitme-merkezlerinde-gunluk-kasa-tahsilat-kontrolu",
+    title: "İşitme Merkezlerinde Günlük Kasa ve Tahsilat Kontrolü",
+    excerpt: "Satış, servis ve masraf hareketlerini günlük olarak kontrol edin; ödeme yöntemlerini ayırarak tahsilat kayıtlarındaki eksikleri daha kolay fark edin.",
+    content: `Bir işitme merkezinde gün boyunca cihaz satışının yanında aksesuar ödemesi, servis tahsilatı, tedarikçi ödemesi ve küçük harcamalar da gerçekleşir. Gün sonunda yalnızca toplam satış tutarına bakmak, bu hareketlerin tamamını açıklamaz. Düzenli kasa kontrolü için her ödemenin hangi işleme ait olduğu ve hangi yöntemle gerçekleştiği bilinmelidir.
+
+Günlük kontrolün amacı, para hareketleri ile kayıtlardaki bilgileri karşılaştırmaktır. İşlemler henüz güncelken yapılan kısa bir kontrol, daha sonra hatırlanması zorlaşacak eksikleri bulmayı kolaylaştırır.
+
+## Satış Kaydı ile Tahsilatı Ayrı Değerlendirin
+
+Bir satışın kaydedilmesi, bedelinin tamamının aynı gün ödendiği anlamına gelmez. Ödeme farklı tarihlerde veya birden fazla yöntemle yapılmış olabilir. Bu nedenle satış tutarı ile o gün alınan ödeme ayrı bilgiler olarak görülmelidir.
+
+Her tahsilatta ilgili hasta veya işlem, tutar, tarih ve ödeme yöntemi açık olmalıdır. Bir hasta daha önce yaptığı ödemenin durumunu sorduğunda ekip bu kayda ulaşabilmelidir. Yalnızca genel bir kasa açıklaması yazmak, ödemenin hangi satışla ilişkili olduğunu sonradan bulmayı zorlaştırabilir.
+
+## Nakit, Kart ve Havale Hareketlerini Ayırın
+
+Kasadaki fiziksel parayı kontrol ederken kartla yapılan tahsilatları aynı toplamın içinde değerlendirmek karışıklık yaratır. Nakit hareketleri fiziksel kasa ile, kart işlemleri ilgili işlem dökümüyle, havale kayıtları ise banka hareketleriyle karşılaştırılmalıdır.
+
+Örneğin gün içinde bir hastadan nakit, başka bir hastadan kartla ödeme alınmış olsun. İki ödeme de tahsilattır; ancak kartla alınan tutar çekmecedeki nakit miktarını artırmaz. Ödeme yönteminin doğru seçilmesi bu ayrımı korur.
+
+## Servis ve Küçük Harcamaları Atlamayın
+
+Tamir ücreti veya aksesuar satışı gibi işlemler, cihaz satışı kadar büyük tutarlı olmasa da günlük hareketlerin parçasıdır. Aynı şekilde kurye, malzeme veya başka bir merkez gideri için kasadan çıkan tutarın açıklaması da kaydedilmelidir.
+
+İşlemi gün sonunda topluca hatırlamaya çalışmak yerine gerçekleştiğinde kaydetmek faydalıdır. Bir harcama yanlış kasaya veya yanlış ödeme yöntemiyle girilmişse düzeltmenin nedeninin anlaşılır olması sonraki kontrolleri kolaylaştırır.
+
+## Gün Sonunda Uygulanabilecek Kontrol Sırası
+
+1. Kontrol edilen tarihi ve ilgili kasayı belirleyin.
+2. Tahsilatları satış, servis ve diğer işlem kayıtlarıyla eşleştirin.
+3. Nakit, kart ve havale hareketlerini kendi kayıtlarıyla karşılaştırın.
+4. Masraf ve tedarikçi ödemelerinin açıklamalarını kontrol edin.
+5. İade veya iptal edilen işlemlerin ödeme kayıtlarına etkisini inceleyin.
+6. Fark varsa kaynağını araştırıp yapılan düzeltmenin açıklamasını kaydedin.
+
+Bu sıra merkezin çalışma düzenine göre uyarlanabilir. Kontrolü kimin yaptığı ve çözülemeyen farkın kim tarafından inceleneceği belli olduğunda, konu bir sonraki güne belirsiz şekilde aktarılmaz.
+
+## Odimax ile İşlem ve Ödeme Bilgisini Birleştirin
+
+[Odimax Finans (Kasa)](/modules/finans-kasa), satış tahsilatlarını, tamir ücretlerini ve kasa giriş-çıkışlarını işlem bilgileriyle birlikte takip etmeye yardımcı olur. Tarih, tutar, ödeme yöntemi ve hasta bazlı geçmiş, bir hareketin kaynağını araştırırken birlikte değerlendirilebilir.
+
+Gider kayıtlarını düzenlemek için [Masraf Yönetimi](/modules/masraf-yonetimi), merkezin özet durumunu incelemek için [Raporlama & Dashboard](/modules/raporlama-dashboard) modüllerinden yararlanabilirsiniz. Düzenli kayıt ve günlük kontrol bir araya geldiğinde ekip, hangi ödemenin neye ait olduğunu daha kolay açıklayabilir.
+
+## Sıkça Sorulan Sorular
+
+**Günlük satış toplamı kasa bakiyesiyle aynı olmalı mı?**
+
+Hayır. Önceki günlerden kalan bakiye, farklı ödeme yöntemleri, henüz tahsil edilmemiş satışlar ve kasa çıkışları bu tutarları farklılaştırabilir.
+
+**Kasa farkı bulunduğunda doğrudan bakiye düzeltilmeli mi?**
+
+Önce eksik veya mükerrer kayıt, yanlış ödeme yöntemi ve yanlış kasa seçimi gibi olasılıklar incelenmelidir. Düzeltmenin dayanağı anlaşılır olmalıdır.
+
+**Servis tahsilatları ayrı bir yerde mi tutulmalı?**
+
+İlgili servis işlemiyle bağlantısı korunarak kasa hareketlerinde izlenmesi, ödemenin ne için alındığını daha sonra bulmayı kolaylaştırır.`,
+    date: "8 Ekim 2026",
+    publishedAt: "2026-10-08",
+    readTime: "3 dk okuma",
+    category: "Kasa & Operasyon",
+    image: "/home/01Kasa.webp",
+  },
+  {
+    slug: "isitme-merkezlerinde-seri-numarasi-stok-deneme-cihazi-takibi",
+    title: "İşitme Merkezlerinde Stok Yönetimi: Seri Numarası ve Deneme Cihazı Takibi",
+    excerpt: "Cihazları seri numarasıyla izleyin; deneme, satış ve iade hareketlerini düzenli kaydederek fiziksel stok ile sistem kayıtlarını eşleştirin.",
+    content: `Rafınızda aynı modelden iki işitme cihazı bulunabilir; ancak bu cihazların geçmişi aynı olmayabilir. Biri yeni teslim alınmışken diğeri denemeden dönmüş veya servis işlemi görmüş olabilir. Bu nedenle işitme merkezi stok yönetiminde yalnızca ürün adedini bilmek yeterli değildir. Hangi cihazın nerede olduğunu, hangi hastaya verildiğini ve son işlemini de görebilmek gerekir.
+
+## Ürün Modeli ile Tekil Cihazı Ayırın
+
+Marka ve model ürünün türünü tanımlar; seri numarası ise o cihazı diğerlerinden ayırır. Aynı modeldeki iki cihazı tek satırda toplam adet olarak izlemek, deneme ve iade işlemlerinde hangi cihazın işlem gördüğünü belirsiz bırakabilir.
+
+Yeni cihaz kaydında marka, model, seri numarası ve giriş bilgileri birlikte kontrol edilmelidir. Fiziksel cihaz üzerindeki bilgi ile kayıt arasındaki fark, ürün hastaya verilmeden önce giderilmelidir. Seri numarası bulunmayan sarf malzemeler ise uygun ürün ve miktar kayıtlarıyla takip edilebilir.
+
+## Deneme Cihazının Kimde Olduğunu Görünür Tutun
+
+Bir cihaz hastanın denemesinde olduğunda merkezde bulunmaz; ancak henüz satılmış da olmayabilir. Bu ayrım görünmüyorsa ekip aynı cihazı başka bir görüşme için uygun sanabilir. Deneme kaydında şu bilgiler birlikte tutulmalıdır:
+
+- İlgili hasta ve cihazın seri numarası
+- Cihazın teslim edildiği tarih
+- Planlanan kontrol veya geri dönüş tarihi
+- Cihazla birlikte verilen aksesuarlar
+- Denemenin güncel durumu ve görüşme notları
+
+Örneğin aynı modelden üç cihazın biri denemede, biri serviste, biri merkezde olabilir. Toplam adedin üç görünmesi, üçünün de hemen kullanıma hazır olduğu anlamına gelmez. Stok durumunu işlem geçmişiyle birlikte değerlendirmek bu karışıklığı azaltır.
+
+## İade ve Servis Dönüşünde Kaydı Tamamlayın
+
+Denemeden dönen cihazın seri numarası teslim kaydıyla karşılaştırılmalı, beraberindeki aksesuarlar kontrol edilmelidir. Cihazın yeniden kullanıma hazırlanmasıyla ilgili değerlendirme tamamlanmadan yalnızca rafa geri konması, kayıt ile gerçek durumun ayrışmasına neden olabilir.
+
+Satış, iade ve servis işlemleri aynı cihazın geçmişinde izlenmelidir. Böylece ekip bir cihazın neden merkezde bulunmadığını kişisel mesajlardan araştırmak zorunda kalmaz.
+
+## Sayım Farkının Kaynağını Araştırın
+
+Fiziksel sayım ile sistem kaydı farklıysa önce hareket geçmişini inceleyin. Kaydı tamamlanmamış bir deneme teslimi, yanlış seri numarası seçimi veya işlenmemiş bir iade farkın nedeni olabilir. Sebebi araştırmadan adedi düzeltmek, aynı sorunun sonraki sayımda tekrarlanmasına yol açabilir.
+
+Merkezdeki, denemedeki ve servisteki cihazları ayrı listelerle karşılaştırmak incelemeyi kolaylaştırır. Düzeltmenin nedeni kaydedildiğinde sonraki kontrolde işlemin açıklaması da bulunabilir.
+
+## Odimax ile Cihaz Geçmişini Birlikte Görün
+
+[Odimax Stok Yönetimi](/modules/stok-yonetimi), marka-model, seri numarası, ürün durumu ve hareket geçmişini takip etmenizi sağlar. Deneme, satış ve iade kayıtlarını aynı süreç içinde değerlendirmek, hangi cihazın nerede olduğuna ulaşmayı kolaylaştırır.
+
+Hasta ile ilişkili işlemler için [Hasta Yönetimi](/modules/hasta-yonetimi), servis geçmişi için [Tamir & Servis](/modules/tamir-servis) sayfalarını inceleyebilirsiniz.
+
+## Sıkça Sorulan Sorular
+
+**Aynı modeldeki cihazlar neden ayrı izlenmeli?**
+
+Her cihazın deneme, satış ve servis geçmişi farklı olabilir. Seri numarası doğru cihazın doğru işlemle eşleştirilmesini sağlar.
+
+**Deneme cihazı stoktan tamamen silinmeli mi?**
+
+Denemeye verilmesi cihazın satıldığı anlamına gelmez. Cihazın kimde olduğu ve deneme durumu görünür kalmalıdır.
+
+**Sayımda fark çıkarsa ilk neye bakılmalı?**
+
+Son giriş-çıkış hareketleri, deneme teslimleri, iadeler ve seri numarası eşleşmeleri kontrol edilmelidir.`,
+    date: "8 Ekim 2026",
+    publishedAt: "2026-10-08",
+    readTime: "3 dk okuma",
+    category: "Stok & Operasyon",
+    image: "/home/02Stok.webp",
+  },
+  {
     slug: "isitme-merkezlerinde-kvkk-uyumlulugu",
     title: "İşitme Merkezlerinde KVKK Uyumluluğu: Hasta Verilerini Korumak İçin Rehber",
     excerpt: "İşitme merkezinizi KVKK cezalarından nasıl korursunuz? Sağlıkta KVKK, hasta kayıt gizliliği ve dijital veri güvenliği hakkında bilmeniz gereken her şey bu rehberde.",
