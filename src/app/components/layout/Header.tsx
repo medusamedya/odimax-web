@@ -82,8 +82,8 @@ export default function Header() {
               alt="Odimax Logo"
               width={180} // Logonun orijinal (veya yüksek çözünürlüklü) genişliğini yaz
               height={48} // Logonun orijinal yüksekliğini yaz
-              priority
-              quality={100} // Next.js'in metin içeren PNG'leri bozmasını kesin olarak engeller
+              loading="eager"
+              sizes="(max-width: 639px) 96px, (max-width: 767px) 128px, 160px"
               className="w-auto h-6 sm:h-8 md:h-10 object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>

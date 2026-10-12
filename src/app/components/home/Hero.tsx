@@ -53,9 +53,11 @@ export default function Hero() {
               src="/modul/Anasayfa.jpeg"
               alt="Odimax Tek Panel Yönetim Ekranı"
               width={1600}
-              height={1200}
-              className="w-full object-cover"
-              priority
+              height={798}
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), (max-width: 1087px) calc(100vw - 64px), 1024px"
+              className="w-full h-auto object-cover"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
 

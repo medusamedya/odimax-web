@@ -31,7 +31,7 @@ export default function PricingCards() {
         </div>
 
         {/* Yana Kaydır İndikatörü (Sadece Mobil) - StepsSlider ile birebir aynı */}
-        <div className="flex md:hidden items-center justify-center gap-2 mt-1 mb-4 text-brand-blue animate-pulse">
+        <div className="flex md:hidden items-center justify-center gap-2 mt-1 mb-4 text-brand-dark">
           <span className="text-xs font-bold tracking-widest uppercase">
             Yana Kaydırın
           </span>

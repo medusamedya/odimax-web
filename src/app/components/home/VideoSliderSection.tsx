@@ -21,14 +21,18 @@ export default function VideoSliderSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   // Videoların oynatılma durumunu takip etmek için state
   const [playingState, setPlayingState] = useState<{ [key: number]: boolean }>({});
+  const [startedState, setStartedState] = useState<{ [key: number]: boolean }>({});
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
-  const togglePlay = (id: number) => {
+  const togglePlay = async (id: number) => {
     const video = videoRefs.current[id];
     if (video) {
       if (video.paused) {
-        video.play();
-        setPlayingState((prev) => ({ ...prev, [id]: true }));
+        try {
+          await video.play();
+        } catch {
+          setPlayingState((prev) => ({ ...prev, [id]: false }));
+        }
       } else {
         video.pause();
         setPlayingState((prev) => ({ ...prev, [id]: false }));
@@ -58,8 +62,9 @@ export default function VideoSliderSection() {
       <div className="hidden xl:block absolute left-0 top-7/12 -translate-y-1/2 -translate-x-1/2 w-[350px] xl:w-[500px] aspect-square pointer-events-none z-0">
         <Image
           src="/odimax/Logo3.png"
-          alt="Odimax Pattern"
+          alt=""
           fill
+          sizes="500px"
           className="object-contain"
         />
       </div>
@@ -69,8 +74,9 @@ export default function VideoSliderSection() {
       <div className="hidden xl:block absolute right-0 top-7/12 -translate-y-1/2 translate-x-1/2 w-[350px] xl:w-[500px] aspect-square pointer-events-none z-0">
         <Image
           src="/odimax/Logo3.png"
-          alt="Odimax Pattern"
+          alt=""
           fill
+          sizes="500px"
           className="object-contain"
         />
       </div>
@@ -81,7 +87,7 @@ export default function VideoSliderSection() {
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 mb-2">
             <span className="inline-block bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] bg-clip-text text-transparent animate-text-gradient font-bold tracking-normal md:tracking-widest uppercase text-sm">
-              ODİMAX'I YAKINDAN TANIYIN
+              ODİMAX&apos;I YAKINDAN TANIYIN
             </span>
           </div>
 
@@ -104,17 +110,31 @@ export default function VideoSliderSection() {
                   ref={(el) => {
                     videoRefs.current[video.id] = el;
                   }}
-                  onPlay={() => setPlayingState((prev) => ({ ...prev, [video.id]: true }))}
+                  onPlay={() => {
+                    setPlayingState((prev) => ({ ...prev, [video.id]: true }));
+                    setStartedState((prev) => ({ ...prev, [video.id]: true }));
+                  }}
                   onPause={() => setPlayingState((prev) => ({ ...prev, [video.id]: false }))}
                   className="w-full h-full object-cover animate-[fadeIn_0.5s_ease-in-out]"
                   controls={playingState[video.id] || false} 
                   controlsList="nodownload"
                   preload="none"
-                  poster={video.poster}
+                  playsInline
                 >
                   <source src={video.src} type="video/mp4" />
                   Tarayıcınız video oynatmayı desteklemiyor.
                 </video>
+
+                {/* Kapaklar yalnızca görünür alana yaklaşınca, uygun boyutta yüklenir. */}
+                {!startedState[video.id] && (
+                  <Image
+                    src={video.poster}
+                    alt=""
+                    fill
+                    sizes="(max-width: 639px) 280px, (max-width: 767px) 320px, (max-width: 1023px) 360px, 424px"
+                    className="object-cover pointer-events-none"
+                  />
+                )}
 
                 {/* ÖZEL PLAY BUTONU (Video Oynatılmıyorsa Ortada Görünür) */}
                 {!playingState[video.id] && (
@@ -135,6 +155,7 @@ export default function VideoSliderSection() {
             <div className="md:hidden block">
               <button
                 onClick={prevSlide}
+                aria-label="Önceki video"
                 className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] rounded-full shadow-lg border border-black/5 flex items-center justify-center text-brand-dark hover:text-brand-blue transition-all z-20"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
@@ -142,6 +163,7 @@ export default function VideoSliderSection() {
 
               <button
                 onClick={nextSlide}
+                aria-label="Sonraki video"
                 className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 bg-gradient-to-r from-brand-blue via-[#6fe7ff] to-brand-dark bg-[length:200%_auto] rounded-full shadow-lg border border-black/5 flex items-center justify-center text-brand-dark hover:text-brand-blue transition-all z-20"
               >
                 <ChevronRight className="w-6 h-6 text-white" />

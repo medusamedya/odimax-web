@@ -26,7 +26,7 @@ export default function TestimonialsSection() {
             yöneticilerin sistem hakkındaki düşüncelerine göz atın.
           </p>
 
-          <div className="flex md:hidden items-center justify-center gap-2 mt-1 md:mt-6 text-brand-blue animate-pulse">
+          <div className="flex md:hidden items-center justify-center gap-2 mt-1 md:mt-6 text-brand-dark">
             <span className="text-xs font-bold tracking-widest uppercase">
               Yana Kaydırın
             </span>
@@ -97,9 +97,9 @@ export default function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold text-brand-dark text-sm leading-tight">
+                  <p className="font-bold text-brand-dark text-sm leading-tight">
                     {testimonial.name}
-                  </h4>
+                  </p>
                   <p className="text-brand-text/70 text-xs mt-0.5 mb-1">
                     {testimonial.role}
                   </p>
@@ -107,9 +107,9 @@ export default function TestimonialsSection() {
                     href={testimonial.googleLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[#1a73e8] hover:text-[#1557b0] text-sm font-medium transition-colors"
+                    className="flex items-center gap-1 text-[#1557b0] hover:text-brand-dark text-sm font-medium transition-colors"
                   >
-                    Google'da Görüntüle
+                    Google&apos;da Görüntüle
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

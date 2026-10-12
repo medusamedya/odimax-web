@@ -138,7 +138,7 @@ export default function StepsSlider() {
             İşitme Merkezinizin Temel Yönetim Sistemi Adım Adım Kurulsun.
           </h2>
            {/* Kullanıcıyı sağa kaydırmaya teşvik eden mobil indikatör - Ortalandı */}
-          <div className="flex items-center justify-center gap-2 mt-1 md:mt-6 text-brand-blue animate-pulse">
+          <div className="flex items-center justify-center gap-2 mt-1 md:mt-6 text-brand-dark">
             <span className="text-xs font-bold tracking-widest uppercase">
               Yana Kaydırın
             </span>

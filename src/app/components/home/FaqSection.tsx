@@ -66,7 +66,7 @@ export default function FaqSection() {
          
           <Link
             href="/contact"
-            className="font-sans inline-flex items-center gap-2 mt-2 text-brand-blue font-semibold hover:text-brand-blue transition-colors duration-300 bg-white px-5 py-2.5 rounded-full shadow-sm border border-black/[0.05]"
+            className="font-sans inline-flex items-center gap-2 mt-2 text-brand-dark font-semibold hover:text-brand-dark-hover transition-colors duration-300 bg-white px-5 py-2.5 rounded-full shadow-sm border border-black/[0.05]"
           >
             Bize ulaşın
             <ArrowRight className="w-4 h-4" />

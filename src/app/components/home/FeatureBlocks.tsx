@@ -102,7 +102,7 @@ export default function FeatureBlocks() {
 
                   <h3 
                     className={`text-base md:text-xl font-bold transition-colors duration-300 mb-2 ${
-                      isActive ? "text-brand-dark" : "text-brand-dark/50"
+                      isActive ? "text-brand-dark" : "text-brand-dark/80"
                     }`}
                   >
                     {feature.title}
@@ -114,7 +114,7 @@ export default function FeatureBlocks() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-brand-text/80 text-base leading-normal md:leading-relaxed">
+                      <p className="text-brand-text text-base leading-normal md:leading-relaxed">
                         {feature.description}
                       </p>
                       
@@ -131,17 +131,19 @@ export default function FeatureBlocks() {
                         YENİ EKLENEN KISIM: MOBİL VE TABLET GÖRSELİ (Akordeon İçi) 
                         lg:hidden ile masaüstünde gizlenir. Sadece aktif sekmede render olur.
                       */}
-                      <div className="block lg:hidden mt-2 relative w-full rounded-2xl overflow-hidden bg-brand-light shadow-sm border-1 border-brand-dark/20">
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          width={800}
-                          height={600}
-                          className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
-                          priority={index === 0}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
-                      </div>
+                      {isActive && (
+                        <div className="block lg:hidden mt-2 relative w-full rounded-2xl overflow-hidden bg-brand-light shadow-sm border-1 border-brand-dark/20">
+                          <Image
+                            src={feature.image}
+                            alt={feature.title}
+                            width={800}
+                            height={600}
+                            className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
+                            sizes="(max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 54vw, 680px"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
+                        </div>
+                      )}
 
                     </div>
                   </div>
@@ -163,7 +165,7 @@ export default function FeatureBlocks() {
                 width={1200}
                 height={900}
                 className="w-full h-auto object-contain animate-[fadeIn_0.5s_ease-in-out]"
-                priority 
+                sizes="(max-width: 1023px) calc(100vw - 64px), (max-width: 1279px) 54vw, 680px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/5 to-transparent pointer-events-none"></div>
             </div>

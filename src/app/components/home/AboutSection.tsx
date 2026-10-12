@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, ShieldCheck, TrendingUp } from "lucide-react";
+import { ShieldCheck, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -49,9 +49,9 @@ export default function AboutSection() {
                   strokeWidth={2}
                 />
                 <div className="relative z-10">
-                  <h4 className="font-bold text-white mb-1">
+                  <h3 className="font-bold text-white mb-1">
                     Operasyon Odaklı
-                  </h4>
+                  </h3>
                   <p className="text-sm text-white/80">
                     Saha alışkanlıkları ve ihtiyaçlarına göre tasarlandı.
                   </p>
@@ -65,7 +65,7 @@ export default function AboutSection() {
                   strokeWidth={2}
                 />
                 <div className="relative z-10">
-                  <h4 className="font-bold text-white mb-1">Yasal Uyum</h4>
+                  <h3 className="font-bold text-white mb-1">Yasal Uyum</h3>
                   <p className="text-sm text-white/80">
                     ÜTS ve mevzuat süreçlerine tam entegre çalışır.
                   </p>

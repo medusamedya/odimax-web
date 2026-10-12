@@ -68,7 +68,7 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
               alt="Odimax Logo" 
               fill 
               className="object-contain object-left"
-              priority
+              sizes="144px"
             />
           </Link>
           

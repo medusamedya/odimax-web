@@ -69,7 +69,7 @@ export default function Footer() {
                 alt="Odimax Logo"
                 width={180} /* Logonuzun orijinal genişlik oranını girin */
                 height={48} /* Logonuzun orijinal yükseklik oranını girin */
-                priority /* Logo ekranın üst kısmında (above-the-fold) olduğu için hemen yüklenmesini sağlar */
+                sizes="(max-width: 767px) 128px, 160px"
                 className="w-auto h-8 md:h-10 object-contain drop-shadow-sm" /* Tailwind ile responsive boyutlandırma */
               />
             </Link>
@@ -107,9 +107,9 @@ export default function Footer() {
 
           {/* 2. Kolon: Kurumsal Menü (Mobilde tek kolon alır, iletişimle yan yana durur) */}
           <div className="col-span-1">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white mb-6">
+            <h2 className="text-sm font-bold tracking-widest uppercase text-white mb-6">
               KURUMSAL
-            </h4>
+            </h2>
             <ul className="space-y-4">
               {MENU_ITEMS.map((item) => (
                 <li key={item.name}>
@@ -126,9 +126,9 @@ export default function Footer() {
 
           {/* 3. Kolon: İletişim Bilgileri (Mobilde tek kolon alır) */}
           <div className="col-span-1 break-words">
-            <h4 className="text-sm font-bold tracking-widest uppercase text-white mb-6">
+            <h2 className="text-sm font-bold tracking-widest uppercase text-white mb-6">
               İLETİŞİM
-            </h4>
+            </h2>
             <ul className="space-y-6">
               <li className="flex items-start gap-1 md:gap-4 group">
                 <svg
