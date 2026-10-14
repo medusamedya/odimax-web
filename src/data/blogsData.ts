@@ -14,6 +14,134 @@ export interface BlogPost {
 
 export const blogsData: BlogPost[] = [
   {
+    slug: "isitme-merkezlerinde-ekip-ici-is-devri",
+    title: "İşitme Merkezlerinde Ekip İçi İş Devri: Yarım Kalan İşleri Kaybetmeyin",
+    excerpt: "İzin, vardiya değişimi veya personel ayrılığında işler aksamasın. Bekleyen işlemleri, sorumluları ve sonraki adımları anlaşılır bir devir düzeniyle takip edin.",
+    content: `Bir hasta sabah arayıp cihazının durumunu sorduğunda, önceki gün onunla görüşen ekip üyesi merkezde olmayabilir. Tedarikçiden beklenen yanıt, ertelenen bir randevu veya teslim alınacak bir cihaz da aynı şekilde başka bir çalışanın takibine geçebilir. İşin devam edebilmesi için yalnızca kimin aradığını değil, ne konuşulduğunu ve sırada hangi adımın bulunduğunu bilmek gerekir.
+
+Ekip içi iş devri, uzun toplantılar yapmak ya da her görüşmeyi ayrıntılı biçimde yeniden anlatmak değildir. Amaç, işi devralan kişinin geçmişi tahmin etmek zorunda kalmadan ilerleyebilmesidir. Aşağıdaki düzen, merkezin kendi çalışma biçimine göre uyarlanabilecek bir başlangıç çerçevesidir.
+
+## Tamamlanan İş ile Bekleyen İşi Ayırın
+
+Gün içinde yapılan her işlem ertesi güne taşınmaz. Sonuçlanan bir görüşme ile geri dönüş beklenen bir talep aynı listede tutulduğunda öncelikler karışabilir. Devir sırasında özellikle açık kalan işlere odaklanın: Henüz yanıtlanmamış bir soru mu var, bir teslimat mı bekleniyor, yoksa hasta uygun bir tarih bildirecek mi?
+
+“Hasta arandı” notu tek başına yeterli olmayabilir. Aramanın sonucu ve devamında yapılacak işlem açık olmalıdır. Örneğin “Görüşme yapıldı, hasta yeni randevu saatini yarın bildirecek” notu, sonraki adımı anlaşılır hale getirir. Kayda yalnızca işle ilgili gerekli bilgilerin eklenmesi, notların okunmasını da kolaylaştırır.
+
+## Her Açık İş İçin Dört Soruyu Yanıtlayın
+
+Devir notunu hazırlarken şu sorular üzerinden ilerleyebilirsiniz:
+
+- **Hangi işlem?** İlgili hasta kaydı, randevu veya servis işlemi hangisi?
+- **Son durum ne?** En son hangi görüşme yapıldı ve ne sonuç alındı?
+- **Sıradaki adım ne?** Arama, kontrol, teslim alma veya yeniden planlama mı gerekiyor?
+- **Kim, ne zaman ilgilenecek?** İşi devralacak kişi ve kontrol zamanı belli mi?
+
+Bu dört bilgi, “ilgilenilecek” gibi belirsiz bir ifadenin yerine uygulanabilir bir takip planı koyar. Kontrol zamanı belirlemek, mutlaka o tarihte sonuç alınacağı anlamına gelmez; işin yeniden gözden geçirileceği noktayı tarif eder.
+
+## İşi Devretmek ile Bilgi Vermek Aynı Şey Değildir
+
+Ekip grubuna mesaj göndermek, sorumluluğun kimde olduğunu her zaman netleştirmez. Aynı talebi iki kişinin ayrı ayrı araması da herkesin diğerinden yanıt beklemesi de mümkündür. Bu nedenle devralan kişinin işi gördüğünü ve sıradaki adımı anladığını teyit etmek faydalıdır.
+
+Örneğin tedarikçiden yanıt beklenen bir servis talebinde, sabah görevli ekip üyesi yanıtı kontrol eder; ardından ilgili hasta kaydına görüşmenin sonucunu ekler. İş tamamlanmadıysa yeni kontrol zamanı belirlenir. Böylece aynı konu her gün baştan araştırılmaz.
+
+## İzin Öncesi Kısa Bir Devir Kontrolü Yapın
+
+Planlı izinlerden önce açık işleri gözden geçirmek için kısa bir zaman ayırın. Yaklaşan randevular, geri dönüş sözü verilen görüşmeler ve teslimat bekleyen işlemler birlikte kontrol edilebilir. Her işin güncel kaydına nasıl ulaşılacağı da belli olmalıdır.
+
+Devir için ayrı ayrı hasta listeleri çoğaltmak yerine, yetkili ekibin ortak kayıtlara ulaşabildiği bir düzen tercih edin. Kişisel mesajlaşmalarda dağılmış notların ilgili işlemle ilişkilendirilmesi, sonraki görüşmede doğru geçmişe ulaşmayı kolaylaştırır.
+
+## Odimax Kayıtları Devir Sürecini Nasıl Destekler?
+
+Odimax'ta hasta notları, randevular ve işlem geçmişinin aynı sistemde takip edilmesi, işi devralan ekip üyesinin bağlamı görmesine yardımcı olur. [Hasta Yönetimi](/modules/hasta-yonetimi) ve [Randevu & Takvim](/modules/randevu-takvim) sayfalarından bu kayıt yapısı hakkında bilgi alabilirsiniz.
+
+Ortak bir sistem kullanmak tek başına yeterli değildir. Notların güncel tutulması, sorumlunun belirlenmesi ve tamamlanan işin sonucunun kaydedilmesi ekip tarafından sürdürülen bir çalışma alışkanlığı olmalıdır.
+
+## Sıkça Sorulan Sorular
+
+**Her iş için ayrıntılı devir raporu gerekir mi?**
+
+Hayır. Açık kalan işlemin son durumu, sonraki adımı, sorumlusu ve kontrol zamanı çoğu günlük devir için iyi bir başlangıçtır.
+
+**Hasta aynı konuyu tekrar anlattığında ne yapılmalı?**
+
+Önce ilgili geçmiş kayıt incelenmeli, ardından hastanın aktardığı yeni bilgi eklenmelidir. Önceki notun güncelliği varsayılmadan mevcut durum teyit edilmelidir.
+
+**Devir düzeninin işe yaradığını nasıl anlayabiliriz?**
+
+Sahibi belirsiz kalan işleri, tekrarlanan aramaları ve geciken geri dönüşleri düzenli gözden geçirin. Bu örnekler, hangi aşamada bilgi eksikliği yaşandığını gösterir.`,
+    date: "14 Ekim 2026",
+    publishedAt: "2026-10-14",
+    readTime: "3 dk okuma",
+    category: "Ekip & Operasyon",
+    image: "/blog/ekip-ici-is-devri.webp",
+  },
+  {
+    slug: "isitme-merkezlerinde-tedarikci-siparis-teslimat-kontrolu",
+    title: "İşitme Merkezlerinde Tedarikçi Siparişi ve Teslimat Kontrolü",
+    excerpt: "Siparişten ürün kabulüne kadar bilgileri bir arada tutun. Kısmi teslimatları, ürün farklılıklarını ve bekleyen kalemleri düzenli kontrol etmek için pratik bir rehber.",
+    content: `Bir işitme merkezine gelen kargo, her zaman siparişin tamamlandığı anlamına gelmez. İstenen ürünlerin bir bölümü daha sonra gönderilebilir, kutudaki model siparişle farklı olabilir veya bir aksesuar eksik çıkabilir. Teslimatı yalnızca koli sayısına göre değerlendirmek, bu ayrıntıların sonradan ortaya çıkmasına neden olabilir.
+
+Sipariş ve teslimat kontrolünün amacı; ne istendiğini, ne geldiğini ve neyin hâlâ beklendiğini aynı süreç içinde görebilmektir. Bu yazı günlük operasyon için örnek bir kontrol düzeni sunar; ürünlere özgü resmi bildirim veya muhasebe yükümlülüklerinin yerine geçmez.
+
+## Siparişi Göndermeden Önce İhtiyacı Netleştirin
+
+Siparişin hangi şube veya kullanım amacı için verildiği belli olmalıdır. Hastaya ayrılan bir ürün, genel stok ihtiyacı ve merkez içi kullanım için alınan malzeme aynı önceliğe sahip olmayabilir. İhtiyacın açıklanması, teslimat geciktiğinde hangi işin etkileneceğini anlamayı kolaylaştırır.
+
+Ürün adı tek başına her zaman yeterli değildir. Marka, model, ürün kodu, istenen adet ve varsa ilgili varyant birlikte kontrol edilmelidir. Tedarikçiyle teyit edilen teslimat bilgisini de kayda ekleyin; tahmini tarih ile kesinleşmiş gönderim tarihini birbirine karıştırmayın.
+
+## Gelen Ürünü Sipariş Kalemiyle Eşleştirin
+
+Teslim alma sırasında sipariş bilgisi ile fiziksel ürün birlikte değerlendirilmelidir. Kutunun üzerinde yazan model, teslim alınan adet ve ürünün genel durumu kontrol edilebilir. Seri numarasıyla izlenen cihazlarda numaranın doğru ürünle ilişkilendirildiğini doğrulamak da önemlidir.
+
+Örnek bir ürün kabul sırası şöyle olabilir:
+
+1. Gönderinin hangi tedarikçi ve siparişe ait olduğunu belirleyin.
+2. Gelen ürünleri model ve adet bazında siparişle karşılaştırın.
+3. Ambalaj veya üründe fark edilen hasarı not edin.
+4. Seri numarasıyla takip edilen cihazların bilgilerini kontrol edin.
+5. Eksik, farklı veya teyit bekleyen kalemleri ayrı belirtin.
+6. Kabul edilen ürünlerin ilgili stok kayıtlarıyla eşleştiğini doğrulayın.
+
+Bu sıra, merkezin ürün çeşitliliğine ve görev dağılımına göre sadeleştirilebilir. Kontrolü yapan kişinin ve teslim alma tarihinin belli olması, daha sonraki soruların yanıtlanmasını kolaylaştırır.
+
+## Kısmi Teslimatı Tamamlanmış Sipariş Gibi Görmeyin
+
+Örneğin beş ürün istenmiş ve üçü gelmiş olsun. Teslim alınan üç ürün ile beklenen iki ürün ayrı görünmelidir. Siparişi tamamen kapatmak kalan ürünlerin unutulmasına; beş ürünün tamamını gelmiş kabul etmek ise fiziksel stokla kayıtların farklılaşmasına yol açabilir.
+
+Bekleyen miktarın yanında tedarikçinin son açıklamasını ve bir sonraki kontrol zamanını tutun. Yeni teslimat geldiğinde önceki kayıtla birlikte değerlendirin. Böylece aynı sipariş için tekrar sipariş verme veya eksik kalemi gözden kaçırma ihtimali azaltılabilir.
+
+## Farklı Ürün ve Hasar Durumunda Sonraki Adımı Belirleyin
+
+Bir uyuşmazlık görüldüğünde yalnızca “sorun var” notu bırakmak yerine farkın ne olduğunu açıkça yazın. Model farklılığı, eksik adet veya hasarlı ambalaj farklı takipler gerektirebilir. Tedarikçiyle yapılan görüşmenin sonucunu, beklenen yanıtı ve merkez içinde konuyu takip edecek kişiyi belirleyin.
+
+Durumu netleşmemiş ürünü kullanıma hazır stokla karıştırmamak için merkezinizin ayırma düzenini uygulayın. Değişim veya iade kararı verildiğinde çıkış ve sonraki teslimat kayıtlarının birbiriyle ilişkisi korunmalıdır. Ürüne özgü kabul ve iade koşulları ayrıca kontrol edilmelidir.
+
+## Ürün Kabulü ile Ödeme Takibini Birlikte Gözden Geçirin
+
+Ürünün teslim alınması, ödemenin yapıldığı anlamına gelmez; ödeme yapılmış olması da tüm ürünlerin geldiğini göstermez. Bu iki durumu ayrı takip etmek, hem eksik teslimatın hem de bekleyen ödemenin görünür kalmasını sağlar.
+
+Odimax'ın [Tedarikçi ve Satın Alma](/modules/tedarikci-satin-alma) ile [Stok Yönetimi](/modules/stok-yonetimi) sayfaları, tedarikçi ve ürün kayıtlarının kapsamını incelemek için başlangıç noktasıdır. Kullanılan sistemin yanında, siparişi veren ve teslim alan kişiler arasında düzenli bilgi aktarımı da gerekir.
+
+## Sıkça Sorulan Sorular
+
+**Koli geldiğinde sipariş tamamlandı sayılır mı?**
+
+Hayır. Gelen ürünler sipariş kalemleriyle karşılaştırıldıktan sonra tamamlanan ve bekleyen miktarlar belirlenmelidir.
+
+**Eksik ürün için nasıl not tutulmalı?**
+
+İlgili sipariş, ürün, eksik miktar, tedarikçinin son yanıtı ve sonraki kontrol zamanı birlikte kaydedilebilir.
+
+**Bu kontrol düzeni resmi ürün bildirimlerinin yerine geçer mi?**
+
+Hayır. Buradaki adımlar merkez içi operasyonu düzenlemeye yöneliktir. Ürüne ve işleme bağlı resmi süreçler ayrıca yürütülmelidir.`,
+    date: "14 Ekim 2026",
+    publishedAt: "2026-10-14",
+    readTime: "3 dk okuma",
+    category: "Tedarik & Operasyon",
+    image: "/blog/tedarikci-teslimat-kontrolu.webp",
+  },
+  {
     slug: "isitme-merkezlerinde-gunluk-kasa-tahsilat-kontrolu",
     title: "İşitme Merkezlerinde Günlük Kasa ve Tahsilat Kontrolü",
     excerpt: "Satış, servis ve masraf hareketlerini günlük olarak kontrol edin; ödeme yöntemlerini ayırarak tahsilat kayıtlarındaki eksikleri daha kolay fark edin.",
