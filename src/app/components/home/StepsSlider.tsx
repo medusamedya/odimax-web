@@ -1,16 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useRef, useState } from "react";
-import {
-  CheckCircle2,
-  Building2,
-  Users,
-  Receipt,
-  Boxes,
-  CalendarDays,
-  PieChart,
-} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const STEPS = [
   {
@@ -18,7 +7,6 @@ const STEPS = [
     title: "Merkez Yapınızı Tanımlayın",
     description:
       "Şube, kullanıcı, kasa, yetki ve temel merkez ayarlarınızı oluşturun. Odimax, merkezinizin çalışma yapısına göre düzenlenerek ekibinizin kullanıma hazır hale gelmesini sağlar.",
-    icon: Building2,
     items: [
       "Şube ve kullanıcı yapısı",
       "Yetki ve rol tanımları",
@@ -30,7 +18,6 @@ const STEPS = [
     title: "Hasta Hafızanızı Sisteme Taşıyın",
     description:
       "Hasta kayıtları, iletişim bilgileri, cihaz geçmişi, randevular, satışlar, ödemeler ve notlar tek hasta kartında birleşir. Böylece merkezinizin hasta bilgisi kişilere veya dağınık dosyalara bağlı kalmaz.",
-    icon: Users,
     items: [
       "Hasta kartı ve geçmiş kayıtlar",
       "Cihaz, satış ve ödeme bilgileri",
@@ -42,7 +29,6 @@ const STEPS = [
     title: "Satış, Belge ve Tahsilat Akışınızı",
     description:
       "Cihaz satışı, kulak yönü, fiyat, iskonto, ödeme, cari kayıt, teslim tutanağı ve hasta beyanı gibi süreçler aynı akış içinde ilerler. Her satışın eksiksiz ve takip edilebilir şekilde kaydedilmesi kolaylaşır.",
-    icon: Receipt,
     items: [
       "Sağ / sol kulak ayrımıyla satış",
       "Tahsilat, cari ve ödeme takibi",
@@ -54,7 +40,6 @@ const STEPS = [
     title: "Stok ve ÜTS Süreçlerini Birlikte Yönetin",
     description:
       "Cihaz stokları, seri numaraları, GTIN bilgileri, satın alma, satış ve ÜTS bildirim durumları aynı yapı içinde takip edilir. Böylece cihaz hareketleri ve yasal süreçler birbirinden kopmadan ilerler.",
-    icon: Boxes,
     items: [
       "Seri numarası ve GTIN takibi",
       "Satın alma ve satış bağlantısı",
@@ -66,7 +51,6 @@ const STEPS = [
     title: "Randevu, Kontrol ve Hasta İletişimini Planlayın",
     description:
       "Muayene, kontrol, cihaz deneme, takip görüşmesi ve servis süreçlerini takvim üzerinden planlayın. Hatırlatmalar ve bilgilendirmelerle hasta iletişimini merkezin düzenli işleyişine dahil edin.",
-    icon: CalendarDays,
     items: [
       "Muayene ve kontrol randevuları",
       "WhatsApp hatırlatmaları",
@@ -78,7 +62,6 @@ const STEPS = [
     title: "Yönetim Raporlarınızı Görünür Hale Getirin",
     description:
       "Satış, tahsilat, stok, hasta, randevu ve operasyon verilerini raporlayın. Merkezinizde neyin iyi ilerlediğini, nerede aksama olduğunu ve hangi süreçlerin takip istediğini daha net görün.",
-    icon: PieChart,
     items: [
       "Satış ve tahsilat raporları",
       "Stok ve cihaz hareketleri",
@@ -88,44 +71,8 @@ const STEPS = [
 ];
 
 export default function StepsSlider() {
-  // Mouse Drag (Kaydırma) işlemleri için referans ve state'ler
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const startDrag = (e: React.MouseEvent | React.TouchEvent) => {
-    setIsDragging(true);
-    const pageX = "touches" in e ? e.touches[0].pageX : e.pageX;
-    if (sliderRef.current) {
-      setStartX(pageX - sliderRef.current.offsetLeft);
-      setScrollLeft(sliderRef.current.scrollLeft);
-      // Sürükleme sırasında pürüzsüzlük için snap (mıknatıs) özelliğini geçici olarak kapatıyoruz
-      sliderRef.current.classList.remove("snap-x", "snap-mandatory");
-      sliderRef.current.classList.add("cursor-grabbing");
-    }
-  };
-
-  const stopDrag = () => {
-    setIsDragging(false);
-    if (sliderRef.current) {
-      // Sürükleme bitince snap özelliğini ve normal imleci geri getiriyoruz
-      sliderRef.current.classList.add("snap-x", "snap-mandatory");
-      sliderRef.current.classList.remove("cursor-grabbing");
-    }
-  };
-
-  const onDrag = (e: React.MouseEvent | React.TouchEvent) => {
-    if (!isDragging || !sliderRef.current) return;
-    e.preventDefault();
-    const pageX = "touches" in e ? e.touches[0].pageX : e.pageX;
-    const x = pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Kaydırma hızı çarpanı
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="deferred-section py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Başlık Alanı */}
         <div className="text-center mb-4 md:mb-8 flex flex-col items-center">
@@ -160,18 +107,9 @@ export default function StepsSlider() {
 
         {/* Slider Konteyneri */}
         <div
-          ref={sliderRef}
-          onMouseDown={startDrag}
-          onMouseUp={stopDrag}
-          onMouseLeave={stopDrag}
-          onMouseMove={onDrag}
-          onTouchStart={startDrag}
-          onTouchEnd={stopDrag}
-          onTouchMove={onDrag}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6  items-stretch cursor-grab [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 items-stretch [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         >
           {STEPS.map((step) => {
-            const Icon = step.icon;
             return (
               <div
                 key={step.id}

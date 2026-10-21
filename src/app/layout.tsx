@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import MobileBottomNav from "./components/general/MobileBottomNav";
 import DesktopWhatsApp from "./components/general/DesktopWhatsApp";
 
 // Projemizin yeni kurumsal fontu: Plus Jakarta Sans
@@ -63,12 +62,12 @@ export default function RootLayout({
        
 
         {/* --- GOOGLE SCRIPTS --- */}
-        {/* Sayfa yüklendikten sonra çalışacak (afterInteractive) şekilde performansı koruyoruz */}
+        {/* Ana içerik yüklendikten sonra tarayıcı boşta kaldığında çalışır. */}
 
         {/* 2. Google Tag Manager Script'i */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -80,23 +79,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* 3. Google Analytics (gtag.js) Script'i */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GJKE4QRKV8"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-GJKE4QRKV8');
-            `,
-          }}
-        />
       </body>
     </html>
   );

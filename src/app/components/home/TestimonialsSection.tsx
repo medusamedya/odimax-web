@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
   const googleReviewLink = "https://www.google.com/search?sa=X&sca_esv=2c719d755bc25006&sxsrf=APpeQntUS7tUZ5uNocaQc-wdjf7Hvtm1VQ:1785414137777&q=Odimax+Yorumlar&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDeyNDI2szQzMbKwNDQ2NrA0Mt_AyPiKkd8_JTM3sUIhMr-oNDcnsWgRK7oIAMSl5Ho_AAAA&rldimm=17292369642891330927&tbm=lcl&hl=tr-TR&ved=2ahUKEwj_6dX7sfqVAxVKA9sEHQkfA_gQ9fQKegQIQhAG&biw=1920&bih=945&dpr=1#lkt=LocalPoiReviews";
 
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans overflow-hidden select-none">
+    <section className="deferred-section py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Başlık Alanı (Dokunulmadı) */}

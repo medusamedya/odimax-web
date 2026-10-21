@@ -61,7 +61,7 @@ export default function FeatureBlocks() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans">
+    <section className="deferred-section py-12 md:py-16 lg:py-18 bg-brand-neutral font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ORTALANMIŞ BAŞLIK VE ROZET */}
