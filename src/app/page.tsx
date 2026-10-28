@@ -4,9 +4,7 @@ import FaqSection from "./components/home/FaqSection";
 import FeatureBlocks from "./components/home/FeatureBlocks";
 import Hero from "./components/home/Hero";
 import InfoMarquee from "./components/home/InfoMarquee";
-import LogoMarquee from "./components/home/LogoMarquee";
 import ModulesSection from "./components/home/ModulesSection";
-import SimpleFeatures from "./components/home/SimpleFeatures";
 import StepsSlider from "./components/home/StepsSlider";
 import TestimonialsSection from "./components/home/TestimonialsSection";
 import VideoSliderSection from "./components/home/VideoSliderSection";
@@ -32,7 +30,9 @@ export default function Home() {
       <StepsSlider />
 
       <FaqSection />
-      <PricingCards />
+      <div className="deferred-section">
+        <PricingCards />
+      </div>
       <CtaSection />
 
       {/* Diğer section'lar buraya gelecek */}

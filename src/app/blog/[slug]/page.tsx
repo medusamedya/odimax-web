@@ -26,9 +26,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${post.title} | Odimax`,
-    description: post.excerpt,
+    title: post.metaTitle ?? `${post.title} | Odimax`,
+    description: post.metaDescription ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: post.metaTitle ?? post.title,
+      description: post.metaDescription ?? post.excerpt,
+      type: "article",
+      publishedTime: post.publishedAt,
+      images: [{ url: post.image, alt: post.title }],
+    },
   };
 }
 

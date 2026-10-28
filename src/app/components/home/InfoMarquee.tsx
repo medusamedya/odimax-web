@@ -23,7 +23,7 @@ export default function InfoMarquee() {
   return (
     // Görseldeki gibi açık mavi bir arka plan (bg-[#b5eefb] veya bg-brand-blue/20) kullanıyoruz.
     // Odimax marka renklerine uygun bir açık ton seçildi.
-    <section className="bg-brand-dark   border-y border-black/5 overflow-hidden font-sans">
+    <section className="deferred-section bg-brand-dark border-y border-black/5 overflow-hidden font-sans">
       <div className="py-2.5 md:py-3.5 w-full flex items-center">
         <div className="w-full overflow-hidden flex">
           {/* 
@@ -35,7 +35,7 @@ export default function InfoMarquee() {
             {/* 
               Kesintisiz akış için orijinal diziyi arka arkaya 2 kez render ediyoruz.
             */}
-            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS,...MARQUEE_ITEMS,...MARQUEE_ITEMS].map((item, index) => {
+            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div

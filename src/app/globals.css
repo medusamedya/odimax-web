@@ -58,3 +58,17 @@ body {
 .animate-text-gradient {
   animation: text-gradient 4s ease infinite;
 }
+
+/* Ekranın altındaki ağır bölümleri görünür olana kadar tarayıcı çizmez. */
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Mobilde background-position animasyonu compositing dışı çizim yükü oluşturuyor. */
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .animate-text-gradient {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
