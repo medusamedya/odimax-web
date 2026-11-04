@@ -16,6 +16,120 @@ export interface BlogPost {
 
 export const blogsData: BlogPost[] = [
   {
+    slug: "isitme-cihazi-pil-sarj-ve-aksesuar-takibi",
+    title: "İşitme Cihazı Pil, Şarj ve Aksesuar Takibi Nasıl Düzenlenir?",
+    excerpt: "Pil, şarj ünitesi ve aksesuar ihtiyaçlarını zamanında fark etmek için işitme merkezlerinde uygulanabilecek pratik stok ve takip yöntemlerini inceleyin.",
+    content: `İşitme cihazı kullanıcılarının merkezle iletişim kurduğu anların önemli bir bölümü cihazın kendisi kadar pil, şarj ünitesi, filtre ve diğer aksesuarlarla ilgilidir. Kullanıcı ihtiyacı oluştuğunda ürünün stokta bulunmaması, küçük görünen bir eksikliği beklenmedik bir memnuniyetsizliğe dönüştürebilir. Bu nedenle aksesuar takibi, yalnızca depoda kaç ürün kaldığını bilmekten ibaret değildir; hangi ürünün ne sıklıkta kullanıldığını ve ne zaman yenilenmesi gerekebileceğini düzenli görmeyi gerektirir.
+
+## Aksesuar Stoğunu Cihaz Stoğundan Ayrı Değerlendirin
+
+Cihazlar genellikle model ve seri numarası üzerinden takip edilirken piller, filtreler ve benzeri aksesuarlar farklı bir tüketim düzenine sahiptir. Bir cihazın stokta olması, o cihazla birlikte ihtiyaç duyulabilecek tüm aksesuarların da hazır olduğu anlamına gelmez. Bu iki grubu aynı liste içinde ayrıntısız biçimde izlemek, kritik seviyeye gelen küçük ürünleri gözden kaçırabilir.
+
+Ürün türü, marka veya uyumlu cihaz grubu, paket adedi ve minimum stok seviyesi gibi alanlar aksesuar kayıtlarını anlamlı hale getirir. Merkezinizin kullandığı ürün çeşitlerine göre sade ama tutarlı bir sınıflandırma oluşturabilirsiniz.
+
+## Tüketim Hızını Gözlemleyin
+
+Her ürünün yenilenme süresi aynı değildir. Çok kullanılan bir pil çeşidi kısa sürede azalırken, belirli bir cihaz modeline uygun filtre daha uzun süre rafta kalabilir. Son birkaç ayın çıkışlarını karşılaştırmak, yalnızca bugünkü sayıya bakmaktan daha sağlıklı bir planlama sağlar.
+
+Bu değerlendirmede şu sorular yardımcı olabilir:
+
+- Hangi ürünler en sık çıkış yapıyor?
+- Bir ürünün yeni siparişi kaç gün içinde geliyor?
+- Şubeler arasında belirgin tüketim farkı var mı?
+- Hangi ürünler uzun süre rafta bekliyor?
+- Yaklaşan teslimat varken mevcut stok ne kadar süre yeterli?
+
+Amaç gereğinden fazla ürün almak değil, ihtiyaç oluştuğunda merkezinizin hazırlıksız kalmasını önlemektir.
+
+## Şubeler Arasında Transferleri Kayıt Altında Tutun
+
+Çok şubeli yapılarda bir şubede fazla bulunan aksesuar başka bir şubenin acil ihtiyacını karşılayabilir. Ancak ürünün fiziksel olarak gönderilmesi, sistemdeki stok konumu güncellenmediğinde iki farklı kayda yol açabilir. Transfer tarihi, gönderen ve alan şube, ürün türü ve miktar birlikte kaydedilmelidir.
+
+Transfer tamamlanmadan ürünün yeni şubede kullanılabilir kabul edilmemesi, sayım farklarını azaltır. Böylece merkez yöneticisi toplam stoğu görürken her şubenin elindeki gerçek miktarı da ayırt edebilir.
+
+## Hastaya Ayrılan Ürün ile Genel Stoku Karıştırmayın
+
+Bir ürün belirli bir hasta için ayrıldıysa, rafta bulunması onun serbest stokta olduğu anlamına gelmez. Ayrılan ürünün hangi işlemle ilişkili olduğu, ne zaman teslim edileceği ve plan değişirse tekrar stoğa dönüp dönmeyeceği açık olmalıdır. Bu ayrım, özellikle sınırlı sayıda bulunan aksesuar veya belirli bir cihaza uyumlu ürünlerde önem kazanır.
+
+## Odimax ile Stok ve Aksesuar Süreçleri
+
+Odimax [Stok Yönetimi](/modules/stok-yonetimi) modülünde ürün, stok ve hareket bilgilerinin birlikte takip edilmesine yardımcı olur. [Hasta Yönetimi](/modules/hasta-yonetimi) ile ilişkili kayıtlar sayesinde hastaya ayrılan ürünlerin genel stoktan ayrılması daha düzenli yürütülebilir. Kullanılacak minimum stok seviyeleri ve sipariş onay akışı ise merkezin kendi çalışma prosedürüne göre belirlenmelidir.
+
+## Sıkça Sorulan Sorular
+
+**Pil ve aksesuar stoğu neden ayrı takip edilmeli?**
+
+Tüketim hızları ve yenilenme süreleri farklı olduğu için her ürün grubunun ihtiyacı ayrı değerlendirildiğinde kritik eksikler daha erken fark edilir.
+
+**Stok seviyesi hangi sıklıkta kontrol edilmeli?**
+
+Yoğunluğa göre günlük hareketler kaydedilmeli, haftalık veya aylık aralıklarla tüketim ve bekleyen siparişler birlikte gözden geçirilmelidir.
+
+**Ayrılan ürün stoktan düşürülmeli mi?**
+
+Merkezin kayıt düzenine göre “ayrılmış” ve “kullanılabilir” miktarlar ayrı gösterilmelidir. Böylece fiziksel stok ile serbest stok birbirine karıştırılmaz.`,
+    date: "4 Kasım 2026",
+    publishedAt: "2026-11-04",
+    readTime: "4 dk okuma",
+    category: "Stok & Operasyon",
+    image: "/home/02Stok.webp",
+  },
+  {
+    slug: "isitme-merkezlerinde-randevu-iptali-ve-yeniden-planlama",
+    title: "İşitme Merkezlerinde Randevu İptali ve Yeniden Planlama Yönetimi",
+    excerpt: "İptal olan randevuları kaybetmeden yeniden planlayın; bekleme listesini, iletişim notlarını ve uygun zamanları daha düzenli takip edin.",
+    content: `Bir randevunun iptal edilmesi, hasta sürecinin sona erdiği anlamına gelmez. Hasta başka bir güne geçmek isteyebilir, kısa süre içinde geri dönüş bekliyor olabilir veya o an için uygun olmadığı halde daha sonra yeniden iletişim kurulmasını tercih edebilir. Bu ayrımlar kaydedilmediğinde ekip ya gereksiz aramalar yapar ya da geri dönülmesi gereken kişiyi tamamen gözden kaçırır.
+
+Randevu iptali ve yeniden planlama sürecinin amacı, boşalan saatleri doldurmaktan önce hasta iletişimini doğru bağlamda sürdürmektir. Her iptal için aynı takip kuralını uygulamak yerine, iptal nedenini ve hastanın tercih ettiği sonraki adımı anlaşılır biçimde kaydetmek daha sağlıklı bir düzen oluşturur.
+
+## İptal Nedenini Kısa ve Anlaşılır Kaydedin
+
+İptal kaydında uzun açıklamalar yerine süreci yönlendirecek temel bilgi bulunmalıdır. Hasta uygun değil, ulaşım sorunu yaşadı, başka bir tarihe almak istiyor veya randevuyu tamamen sonlandırdı gibi durumlar birbirinden ayrılabilir. Bu bilgi, sonraki iletişimin tonunu ve zamanını belirlemeye yardımcı olur.
+
+İptalin sağlık bilgisi gibi gereksiz ayrıntılarla genişletilmemesi de önemlidir. Takip için gerekli olmayan hassas bilgileri kaydetmemek, hem notların sade kalmasını hem de veri güvenliği yaklaşımının korunmasını sağlar.
+
+## Yeni Zamanı Hastanın Tercihlerine Göre Arayın
+
+Yeniden arama sırasında yalnızca boş olan ilk saati önermek yerine hastanın daha önce belirttiği uygun gün ve saat aralığı dikkate alınabilir. Sabah, öğleden sonra veya belirli bir şubeyi tercih eden hastalar için bu bilgiler randevu notunda görünür olduğunda iletişim daha kısa sürer.
+
+Hasta kesin bir gün veremiyorsa, yeniden aranacağı zamanı birlikte belirlemek faydalıdır. “Müsait olduğunda arayın” gibi açık uçlu bir ifade yerine “gelecek hafta salı günü tekrar iletişim kurulacak” biçimindeki bir sonraki adım takip edilebilir hale gelir.
+
+## Boşalan Saatleri Bekleme Listesiyle Değerlendirin
+
+Yakın tarihte görüşme talep eden, ancak uygun saat bulamayan kişilerden oluşan bir bekleme listesi varsa iptal edilen zamanlar bu listeyle eşleştirilebilir. Bunun için kişilerin tercihleri, iletişim izinleri ve hangi hizmet için bekledikleri güncel olmalıdır.
+
+Bekleme listesindeki her kişiye aynı anda ulaşmak yerine, boşalan saatle uyumlu olan kişiler önceliklendirilebilir. Yanıt alınamadığında kimin ne zaman tekrar aranacağı da kaydedilmelidir. Böylece süreç tek bir çalışanın hafızasına bağlı kalmaz.
+
+## Randevu Geçmişini Silmek Yerine Sonuçlandırın
+
+İptal edilen randevuyu silmek, o görüşmenin neden gerçekleşmediğini görünmez hale getirir. İptal, ertelendi, yeniden planlandı veya ulaşılamadı gibi sonuçlar randevu geçmişinde korunabilir. Daha sonra hasta tekrar iletişim kurduğunda ekip, önceki süreci yeniden sormadan kaldığı yerden ilerleyebilir.
+
+## Odimax ile Randevu Takibini Düzenleyin
+
+Odimax [Randevu & Takvim](/modules/randevu-takvim) modülüyle yaklaşan randevuların, notların ve takip planlarının aynı sistemde görülmesine yardımcı olur. İptal edilen kaydın sonucu ve yeni planlanan tarih tutulduğunda ekip, boş kalan saatleri ve geri dönüş bekleyen kişileri daha düzenli takip edebilir.
+
+Hatırlatma veya mesaj süreçlerinin kullanılabilmesi için iletişim izinleri ve merkezin kendi uygulamaları dikkate alınmalıdır. Dijital araç, doğru iletişim kuralının yerini almaz; bu kuralı ekip için görünür kılar.
+
+## Sıkça Sorulan Sorular
+
+**İptal edilen randevu silinmeli mi?**
+
+Genellikle silmek yerine iptal nedeni ve sonraki adım ile sonuçlandırmak daha faydalıdır. Böylece hasta geçmişi ve operasyon raporları korunur.
+
+**Hasta yeni tarih vermediyse ne yapılmalı?**
+
+Hastanın iletişim tercihi ve uygunluk bilgisi doğrultusunda yeniden iletişim kurulacak tarih belirlenebilir. Kesin bir takip zamanı yoksa kayıt açık ve belirsiz bırakılmamalıdır.
+
+**Bekleme listesi kullanmak zorunlu mu?**
+
+Zorunlu değildir; ancak uygun saat arayan kişilerin ve boşalan randevuların eşleştirilmesini kolaylaştırabilir. Liste güncel değilse yeni bir karmaşa oluşturacağından düzenli gözden geçirilmelidir.`,
+    date: "4 Kasım 2026",
+    publishedAt: "2026-11-04",
+    readTime: "4 dk okuma",
+    category: "Randevu & Hasta Takibi",
+    image: "/home/05Randevu.webp",
+  },
+  {
     slug: "isitme-cihazi-sektorunde-musteri-deneyimi-ve-kisisellestirme",
     title: "İşitme Cihazı Sektöründe Müşteri Deneyimi (CX) ve Kişiselleştirme",
     excerpt: "İşitme cihazı müşteri deneyimi (CX) yönetimi ve veri analitiği ile kişiselleştirme stratejilerini keşfedin. Hastalarınızı özel hissettirerek sadakati artırın.",
