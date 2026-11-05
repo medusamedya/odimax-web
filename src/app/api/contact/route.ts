@@ -1,11 +1,21 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { sendToMedusa } from '@/lib/medusa';
+import { randomUUID } from 'node:crypto';
+
+export const maxDuration = 60;
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     // 1. city değişkenini frontend'den gelen verilerin arasından çıkarıyoruz
     const { name, phone, centerName, email, city, branchCount } = body;
+    if (![name, phone, centerName, email, city, branchCount].every((value) => typeof value === 'string' && value.trim() && value.length <= 500) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || body.consent1 !== true || body.consent2 !== true) {
+      return NextResponse.json({ error: 'Form alanlarını ve izinleri kontrol edin.' }, { status: 400 });
+    }
+    const eventId = typeof body.eventId === 'string' && /^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(body.eventId) ? body.eventId : randomUUID();
+    const submittedAt = typeof body.submittedAt === 'string' && Number.isFinite(Date.parse(body.submittedAt)) ? body.submittedAt : new Date().toISOString();
+    const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 
     // SMTP Ayarları (odimax.com.tr sunucu bilgilerini .env dosyasından çekeceğiz)
     const transporter = nodemailer.createTransport({
@@ -49,38 +59,38 @@ export async function POST(request: Request) {
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Ad Soyad</span><br/>
-                    <strong style="font-size: 16px; color: #1a1a1a;">${name}</strong>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${escapeHtml(name)}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Telefon Numarası</span><br/>
-                    <strong style="font-size: 16px; color: #02b6da;">${phone}</strong>
+                    <strong style="font-size: 16px; color: #02b6da;">${escapeHtml(phone)}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">E-Posta Adresi</span><br/>
-                    <strong style="font-size: 16px; color: #1a1a1a;">${email}</strong>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${escapeHtml(email)}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Merkez Adı</span><br/>
-                    <strong style="font-size: 16px; color: #1a1a1a;">${centerName}</strong>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${escapeHtml(centerName)}</strong>
                   </td>
                 </tr>
                 <!-- 2. İl bilgisi tabloya eklendi -->
                 <tr>
                   <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Bulunduğu İl</span><br/>
-                    <strong style="font-size: 16px; color: #1a1a1a;">${city}</strong>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${escapeHtml(city)}</strong>
                   </td>
                 </tr>
                 <tr>
                   <td style="padding: 12px 0;">
                     <span style="font-size: 12px; color: #888888; text-transform: uppercase; font-weight: bold;">Şube Sayısı</span><br/>
-                    <strong style="font-size: 16px; color: #1a1a1a;">${branchCount}</strong>
+                    <strong style="font-size: 16px; color: #1a1a1a;">${escapeHtml(branchCount)}</strong>
                   </td>
                 </tr>
               </table>
@@ -104,11 +114,13 @@ export async function POST(request: Request) {
         </div>
       `,
     };
+    mailOptions.html += `<p>Başvuru kimliği: ${eventId}</p>`;
     await transporter.sendMail(mailOptions);
+    await sendToMedusa({ eventId, submittedAt, name, phone, centerName, email, city, branchCount }).catch(() => false);
 
     return NextResponse.json({ message: "Mail başarıyla gönderildi." }, { status: 200 });
-  } catch (error) {
-    console.error("Mail gönderme hatası:", error);
+  } catch {
+    console.error("Demo formu e-postası gönderilemedi.");
     return NextResponse.json({ error: "Mail gönderilirken bir hata oluştu." }, { status: 500 });
   }
 }

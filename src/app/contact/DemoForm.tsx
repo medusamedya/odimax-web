@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Lock } from "lucide-react";
 
 // Performans için iller dizisini bileşen dışında tanımlıyoruz
@@ -11,6 +11,7 @@ const turkeyCities = [
 export default function DemoForm() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const submission = useRef<{eventId: string; submittedAt: string} | null>(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +31,7 @@ export default function DemoForm() {
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
+    submission.current = null;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,14 +40,16 @@ export default function DemoForm() {
     setStatus("idle");
 
     try {
+      submission.current ??= { eventId: crypto.randomUUID(), submittedAt: new Date().toISOString() };
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, ...submission.current }),
       });
 
       if (response.ok) {
         setStatus("success");
+        submission.current = null;
         // Başarılı gönderim sonrası form temizlenirken city de sıfırlanıyor
         setFormData({
           name: "", phone: "", email: "", centerName: "", city: "", branchCount: "", consent1: false, consent2: false
@@ -53,7 +57,7 @@ export default function DemoForm() {
       } else {
         setStatus("error");
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
     } finally {
       setLoading(false);
