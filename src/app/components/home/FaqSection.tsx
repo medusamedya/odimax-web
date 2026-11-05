@@ -13,30 +13,24 @@ const FAQS = [
   },
   {
     id: 2,
-    question: "Başlangıç ve Standart paketinin farkı nedir?",
-    answer:
-      "Başlangıç paketi temel yönetim özelliklerini barındırırken, standart paketimizde gelişmiş raporlama, stok takibi ve detaylı ÜTS entegrasyonu bulunmaktadır.",
-  },
-  {
-    id: 3,
     question: "Fiyatın içinde neler var?",
     answer:
       "Sistem lisans bedeli, güvenli bulut barındırma, günlük veri yedekleme, kurulum desteği ve standart teknik destek süreçleri fiyatlandırmamıza dahildir.",
   },
   {
-    id: 4,
+    id: 3,
     question: "e-Fatura, e-Arşiv ve e-İrsaliye kullanabilir miyim?",
     answer:
       "Evet, Odimax üzerinden e-Dönüşüm süreçlerinizi sisteminize tam entegre bir şekilde yönetebilir ve resmileştirebilirsiniz.",
   },
   {
-    id: 5,
+    id: 4,
     question: "Mevcut verilerimi Odimax'a nasıl taşırım?",
     answer:
       "Mevcut hasta, randevu ve stok verilerinizi hazırladığımız Excel şablonları aracılığıyla hızlı ve güvenli bir şekilde sisteme aktarabilirsiniz.",
   },
   {
-    id: 6,
+    id: 5,
     question: "Verilerim güvende mi?",
     answer:
       "Tüm verileriniz üst düzey güvenlik standartlarına sahip sunucularda barındırılır ve veri kaybını önlemek için düzenli olarak yedeklenir.",
