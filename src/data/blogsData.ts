@@ -16,6 +16,121 @@ export interface BlogPost {
 
 export const blogsData: BlogPost[] = [
   {
+    slug: "isitme-merkezlerinde-hasta-geri-bildirimi-iyilestirme",
+    title: "İşitme Merkezlerinde Hasta Geri Bildirimlerini İyileştirmeye Dönüştürme",
+    excerpt: "Hasta yorumlarını yalnızca memnuniyet ölçümü olarak değil, randevu, satış sonrası takip ve hizmet kalitesini geliştiren düzenli bir kaynak olarak değerlendirin.",
+    content: `Bir işitme merkezinde hastadan gelen her yorum, hizmetin yalnızca bir bölümünü değil, merkezin tüm deneyimini anlamak için değerli bir ipucudur. Randevu sırasında yaşanan bir gecikme, cihaz teslimindeki bir belirsizlik veya satış sonrasında yeterince aranmadığını düşünen bir hasta farklı noktalara işaret edebilir. Bu geri bildirimler kayda alınmadığında aynı sorunlar tekrar eder; düzenli değerlendirildiğinde ise günlük işleyişi geliştiren somut adımlara dönüşebilir.
+
+## Geri Bildirimi Şikâyetten Ayırmadan Dinleyin
+
+Her geri bildirim doğrudan bir şikâyet değildir. Bazı hastalar memnun kaldığı bir noktayı paylaşır, bazıları sürecin daha anlaşılır olmasını ister, bazıları ise yaşadığı sorunu açıkça belirtir. Bu ifadelerin tamamını yalnızca olumlu veya olumsuz olarak sınıflandırmak yerine konu başlığıyla kaydetmek daha anlamlıdır.
+
+Randevu, iletişim, cihaz kullanımı, teslimat, servis ve ödeme gibi başlıklar merkezin kendi hizmet akışına göre çoğaltılabilir. Notun içinde hastanın gereksiz hassas bilgileri yerine, sorunun hangi süreçte yaşandığı ve hangi çözümün konuşulduğu yer almalıdır.
+
+## Geri Bildirimi Aynı Gün Kayda Alın
+
+Bir görüşmenin ayrıntıları üzerinden zaman geçtikçe unutulabilir. Bu nedenle geri bildirim mümkün olduğunca görüşme sonrasında ilgili hasta veya işlem kaydına eklenmelidir. “Memnun değil” gibi genel bir not yerine “Cihaz tesliminde kullanım bilgilerini tekrar dinlemek istedi” ifadesi, ekibin sonraki adımını daha net gösterir.
+
+Her kayıt için şu dört bilgi yeterli bir başlangıç oluşturur:
+
+- Geri bildirimin konusu
+- Hastanın aktardığı durum
+- Verilen yanıt veya uygulanan çözüm
+- Yeniden kontrol edilmesi gereken tarih
+
+Bu yapı, geri bildirimi yalnızca arşivlenen bir yorum olmaktan çıkarıp sorumlusu ve takip zamanı olan bir işe dönüştürür.
+
+## Tek Bir Yoruma Değil, Tekrarlanan Desene Bakın
+
+Bir hastanın tekil deneyimi önemlidir; ancak yönetsel kararlar için tekrar eden konular da incelenmelidir. Aynı ay içinde birkaç hastanın randevu hatırlatmalarını yetersiz bulması, süreçte ortak bir iyileştirme ihtiyacı olduğunu gösterebilir. Benzer şekilde, cihaz tesliminde aynı soruların tekrar edilmesi bilgilendirme adımının sadeleştirilebileceğine işaret eder.
+
+Düzenli aralıklarla konu başlıklarını saymak, hangi sorunların sık tekrarlandığını görmeyi sağlar. Bu değerlendirmede yalnızca adetlere bakmak yerine, sorunun hasta deneyimini ve ekip zamanını nasıl etkilediği de dikkate alınmalıdır.
+
+## Çözümün Sonucunu Hastaya Bildirin
+
+Geri bildirim veren kişiye yalnızca “not aldık” demek çoğu zaman yeterli değildir. Uygun olduğunda hangi adımın atılacağı ve ne zaman tekrar iletişim kurulacağı açıklanmalıdır. Çözüm tamamlandığında kısa bir geri dönüş yapmak, hastanın görüşünün gerçekten değerlendirildiğini hissetmesine yardımcı olur.
+
+Bu iletişim satış amacı taşıyan bir mesajdan farklıdır. Öncelik, hastanın aktardığı durumun doğru anlaşıldığını ve merkezin sorumluluk aldığını göstermektir. İletişim izinleri ve merkezin veri koruma süreçleri her zaman gözetilmelidir.
+
+## Odimax ile Geri Bildirim Sürecini Takip Edin
+
+Odimax [Hasta Yönetimi](/modules/hasta-yonetimi) ve [Randevu & Takvim](/modules/randevu-takvim) modülleriyle hasta geçmişi, notlar ve takip adımlarının aynı sistemde görülmesine yardımcı olur. Geri bildirimin hangi işlemle ilişkili olduğu ve sonraki kontrolün ne zaman yapılacağı kaydedildiğinde ekip, önceki görüşmeyi yeniden araştırmadan sürece devam edebilir.
+
+## Sıkça Sorulan Sorular
+
+**Her geri bildirim için ayrı bir kayıt açılmalı mı?**
+
+Geri bildirim bir hasta, randevu veya servis işlemiyle ilişkiliyse ilgili kayda not düşmek geçmişi korumayı kolaylaştırır. Merkezin genelini ilgilendiren konular ayrıca toplu değerlendirmeye alınabilir.
+
+**Olumsuz geri bildirim nasıl yanıtlanmalı?**
+
+Önce hastanın yaşadığı durum anlaşılmalı, savunmaya geçmeden çözüm için hangi adımın atılacağı açıkça belirtilmelidir.
+
+**Geri bildirimler ne sıklıkta değerlendirilmelidir?**
+
+Yoğunluğa göre haftalık veya aylık değerlendirme yapılabilir. Amaç yalnızca rapor üretmek değil, tekrar eden sorunlar için uygulanabilir iyileştirmeler belirlemektir.`,
+    date: "11 Kasım 2026",
+    publishedAt: "2026-11-11",
+    readTime: "4 dk okuma",
+    category: "Hasta Deneyimi",
+    image: "/home/04Hasta.webp",
+  },
+  {
+    slug: "isitme-merkezlerinde-calisan-egitimi-surec-standardizasyonu",
+    title: "İşitme Merkezlerinde Çalışan Eğitimi ve Süreç Standardizasyonu",
+    excerpt: "Ekip büyüdükçe bilgiyi kişilere bağlı bırakmayın. Yeni çalışanların uyumunu ve günlük iş akışının tutarlılığını güçlendirecek pratik bir eğitim düzeni oluşturun.",
+    content: `İşitme merkezlerinde hizmet kalitesi, yalnızca kullanılan cihaz veya yazılımla değil, ekibin ortak çalışma biçimiyle de belirlenir. Yeni başlayan bir çalışanın hangi bilgiyi nerede bulacağı, bir randevu değişikliğinin nasıl kaydedileceği veya servis sürecinin kime devredileceği net değilse aynı iş farklı kişiler tarafından farklı biçimde yürütülebilir. Bu durum ekip büyüdükçe daha görünür hale gelir.
+
+Süreç standardizasyonu, herkesin aynı cümleleri kullanması ya da çalışanların karar verme alanını daraltmak değildir. Amaç, kritik adımların kişisel hafızaya bağlı kalmamasını ve ekip üyelerinin ihtiyaç duyduğu temel bilgiyi aynı çerçevede bulabilmesini sağlamaktır.
+
+## İlk Gün Bilgisi ile Sürekli Eğitimi Ayırın
+
+Yeni çalışana ilk gün çok fazla bilgi vermek, önemli adımların unutulmasına neden olabilir. İlk eğitimde merkezin hizmet akışı, görev sınırları, veri güvenliği kuralları ve acil durumda kime danışılacağı anlatılabilir. Ürün detayları veya raporlama gibi daha kapsamlı konular ise iş akışına yayılan kısa eğitimlerle desteklenebilir.
+
+Sürekli eğitim yalnızca hata olduğunda yapılmamalıdır. Yeni bir modül, farklı bir ürün grubu veya güncellenen bir iç prosedür geldiğinde ekip kısa bir bilgilendirmeyle ortak zeminde tutulabilir.
+
+## Kritik İşler İçin Kısa Kontrol Listeleri Oluşturun
+
+Her süreci uzun bir dokümana dönüştürmek yerine hata ihtimali yüksek adımlar için kısa kontrol listeleri hazırlayın. Örneğin yeni hasta kaydında temel iletişim bilgileri, gerekli izinler ve bir sonraki randevu adımı kontrol edilebilir. Cihaz tesliminde ürün eşleşmesi, teslim notu ve hastaya verilen temel kullanım bilgisi gözden geçirilebilir.
+
+Kontrol listesi çalışanın yerine karar vermez; önemli bir adımın yoğunluk içinde atlanmasını önler. Merkezin gerçek iş akışı değiştikçe listeler de güncellenmelidir.
+
+## Bilgiyi Kişiye Değil, Sisteme Bağlayın
+
+Bir çalışanın izinli olduğu gün yalnızca onun bildiği bir bilgiye ulaşmak zorlaşıyorsa süreç kişiye bağlı kalmış demektir. Hasta notları, randevu değişiklikleri, servis durumu ve tedarikçi yanıtları ilgili kayıt üzerinde tutulduğunda başka bir ekip üyesi de geçmişi görebilir.
+
+Bu düzenin işe yaraması için notların kısa, açık ve güncel olması gerekir. Kişisel mesajlarda kalan kritik bilgileri sonradan ilgili kayda aktarmak, ekip içi bilgi kaybını azaltır. Yetkiler ise görevin gerektirdiği erişimle sınırlı tutulmalıdır.
+
+## Eğitim Sonucunu Gözlemleyin
+
+Bir eğitimin tamamlanması, konunun günlük işte doğru uygulandığı anlamına gelmez. Yeni çalışanın ilk randevu kaydı, teslimat işlemi veya müşteri iletişimi gözlemlenerek hangi noktada desteğe ihtiyacı olduğu görülebilir. Bu değerlendirme cezalandırma amacıyla değil, doğru zamanda destek sağlamak için yapılmalıdır.
+
+Ekip toplantılarında aynı sorunun tekrar tekrar gündeme gelmesi, eğitim içeriğinin veya sürecin yeniden ele alınması gerektiğini gösterebilir. Böylece sorun yalnızca kişiye yüklenmez, iş akışının kendisi de iyileştirilir.
+
+## Odimax ile Ortak Çalışma Zeminini Güçlendirin
+
+Odimax; hasta, randevu, stok, servis ve finans kayıtlarının ortak bir sistemde takip edilmesine yardımcı olur. [Modüller](/modules) üzerinden çalışma kapsamını inceleyebilir, [Hasta Yönetimi](/modules/hasta-yonetimi) ve [Tamir & Servis](/modules/tamir-servis) sayfalarındaki kayıt yapısını ekip eğitimlerinde örnek olarak kullanabilirsiniz.
+
+## Sıkça Sorulan Sorular
+
+**Yeni çalışan eğitimi ne kadar sürmeli?**
+
+Merkezin görevlerine göre değişir. Temel iş akışı ilk gün anlatılabilir; uygulama, kısa tekrarlar ve gözlemle desteklenmelidir.
+
+**Her çalışan aynı görevi aynı şekilde mi yapmalı?**
+
+Kritik kayıt ve güvenlik adımlarında ortak standartlar olmalı; çalışanların görev kapsamı içinde karar verebildiği alanlar korunmalıdır.
+
+**Süreç dokümanları ne zaman güncellenmeli?**
+
+Yeni bir araç, görev dağılımı veya iş akışı değiştiğinde ilgili doküman ve kontrol listeleri gözden geçirilmelidir.`,
+    date: "11 Kasım 2026",
+    publishedAt: "2026-11-11",
+    readTime: "4 dk okuma",
+    category: "Ekip & Operasyon",
+    image: "/home/hero.webp",
+  },
+  {
     slug: "isitme-cihazi-pil-sarj-ve-aksesuar-takibi",
     title: "İşitme Cihazı Pil, Şarj ve Aksesuar Takibi Nasıl Düzenlenir?",
     excerpt: "Pil, şarj ünitesi ve aksesuar ihtiyaçlarını zamanında fark etmek için işitme merkezlerinde uygulanabilecek pratik stok ve takip yöntemlerini inceleyin.",
